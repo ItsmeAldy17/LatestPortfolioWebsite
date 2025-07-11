@@ -1,0 +1,23 @@
+[
+  {
+    "id": "python",
+    "name": "Python",
+    "icon": "/icons/python.png"
+  },
+  {
+    "id": "pytorch",
+    "name": "PyTorch",
+    "icon": "/icons/pytorch.png"
+  },
+  {
+    "id": "tensorflow",
+    "name": "TensorFlow",
+    "icon": "/icons/tensorflow.png"
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "icon": "/icons/docker.png"
+  }
+]
+

@@ -1,0 +1,83 @@
+[
+  {
+    "id": "gamaforce-ugm",
+    "name": "GAMAFORCE UGM",
+    "logo": "✈️",
+    "role": "Software Programmer",
+    "type": "Research Organization",
+    "period": "Dec 2023 - Present",
+    "startYear": 2023,
+    "location": "Kompleks UGM, Jl. Podocarpus II, Blok D No. 13, Kabupaten Sleman, Yogyakarta, Indonesia",
+    "description": "Contributed to the Khageswara Ground Control Station (GCS) subteam at GAMAFORCE UGM, a flying robot team focused on aerospace technology and UAV development, by developing GCS applications.",
+    "achievements": [
+      "Developed GCS applications for UAV",
+      "Collaborated with the team to achieve first place in Kontes Robot Terbang Indonesia 2024 (Technology Development Division)"
+    ],
+    "color": "from-blue-500 to-teal-600",
+    "documentation": [
+      { "id": 1, "title": "Kontes Robot Terbang Indonesia 2024", "type": "competition", "url": "#" }
+    ],
+    "photos": ["/images/organization/Team Research-Gamaforce.jpg"],
+    "companyInfo": {
+      "industry": "Team Research",
+      "size": "50-100 members",
+      "website": "https://gamaforce.wg.ugm.ac.id/"
+    }
+  },
+  {
+    "id": "assets-ugm",
+    "name": "Association of Software Engineering Technology Students UGM",
+    "logo": "💻",
+    "role": "Public Relation and Publication Staff",
+    "type": "Student Organization",
+    "period": "Mar 2024 - Mar 2025",
+    "startYear": 2024,
+    "location": "Sleman, Daerah Istimewa Yogyakarta, Indonesia",
+    "description": "Served as Public Relations and Publication Staff at ASSETS UGM, managing communication and social media content to promote the organization's activities and engage with the public.",
+    "achievements": [
+      "Created and disseminated social media content to increase organization visibility",
+      "Managed social media platforms, improving engagement through effective copywriting",
+      "Collaborated with team members to support organizational events and initiatives"
+    ],
+    "color": "from-purple-500 to-pink-600",
+    "documentation": [
+      { "id": 1, "title": "Social Media Campaign", "type": "project", "url": "#" },
+      { "id": 2, "title": "Event Promotion", "type": "event", "url": "#" },
+      { "id": 3, "title": "Content Creation", "type": "project", "url": "#" }
+    ],
+    "photos": ["/images/organization/Organisasi-Assets.jpg"],
+    "companyInfo": {
+      "industry": "Student Organization",
+      "size": "10-30 members",
+      "website": "https://assetsugm.id/"
+    }
+  },
+  {
+    "id": "gdsc-ugm",
+    "name": "Google Developer Student Clubs UGM",
+    "logo": "🔍",
+    "role": "Hacker",
+    "type": "Developer Community",
+    "period": "Oct 2023 - Nov 2023",
+    "startYear": 2023,
+    "location": "Daerah Istimewa Yogyakarta, Indonesia",
+    "description": "Actively participated in Google Developer Student Clubs (GDSC) UGM, contributing to the development of BIN-GO!, a mobile app addressing the waste crisis in Yogyakarta through Google Maps integration and waste management features.",
+    "achievements": [
+      "Developed the Bin-Locator map feature for BIN-GO! using Google Maps API and Firebase",
+      "Collaborated on debugging and optimizing the BIN-GO! app for enhanced user experience",
+      "Contributed to the Global Top 100 GDSC Solution Challenge 2024 with BIN-GO!"
+    ],
+    "color": "from-green-500 to-teal-600",
+    "documentation": [
+      { "id": 1, "title": "BIN-GO! App Development", "type": "project", "url": "#" },
+      { "id": 2, "title": "GDSC Solution Challenge 2024", "type": "competition", "url": "#" },
+      { "id": 3, "title": "Map Feature Implementation", "type": "project", "url": "#" }
+    ],
+    "photos": ["/images/organization/Community-GDSC.jpg"],
+    "companyInfo": {
+      "industry": "Developer Community",
+      "size": "20-50 members",
+      "website": "https://gdg.community.dev/gdg-on-campus-universitas-gadjah-mada-yogyakarta-indonesia/"
+    }
+  }
+]

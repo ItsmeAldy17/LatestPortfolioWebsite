@@ -1,0 +1,80 @@
+[
+  {
+      "id": 1,
+      "type": "achievement",
+      "name": "Juara 2",
+      "organization": "Hackaton elevAIte Indonesia 2025",
+      "year": "2025",
+      "date": "20 Juni 2025",
+      "description": "Recognized for developing SleepSense, an IoT device for real-time monitoring of Obstructive Sleep Apnea (OSA), integrating ECG, respiratory patterns, and pulse oximetry.",
+      "details": "This award was given for outstanding innovation in healthcare IoT. The SleepSense project involved designing an ergonomic belt-thorax sensor and pulse oximeter, with data processed via a web platform for clinical analysis.",
+      "image": "images/achievement/Aldy Ardiansyah - Hackathon elevAIte Hub Universitas Gadjah Mada 2025.jpg",
+      "category": "Competition",
+      "impact": "Enabled affordable at-home OSA monitoring for improved healthcare access"
+  },
+  {
+      "id": 2,
+      "type": "achievement",
+      "name": "Juara 2",
+      "organization": "Samsung Innovation Campus Batch 5",
+      "year": "2024",
+      "date": "7 September 2024",
+      "description": "Recognized for developing MotoRescue, an IoT and AI-powered road line detection system to enhance road safety and navigation.",
+      "details": "Awarded for creating MotoRescue, an IoT device integrated with a computer vision system using OpenCV and deployed on Streamlit, capable of detecting road lane markings in real-time from images and videos, demonstrating innovation in road safety applications.",
+      "image": "images/achievement/Sertifikat Juara 2 Kategori Mahasiswa - Samsung Innovation Campus Batch 5 (2023-2024).jpg",
+      "category": "Competition",
+      "impact": "Enhanced road safety through real-time lane detection technology"
+  },
+  {
+      "id": 3,
+      "type": "achievement",
+      "name": "People Choice Award",
+      "organization": "Samsung Innovation Campus Batch 5",
+      "year": "2024",
+      "date": "7 September 2024",
+      "description": "Received for developing MotoRescue, an IoT and AI-powered road line detection system, recognized for its user-friendly deployment and practical impact.",
+      "details": "MotoRescue was celebrated for its innovative integration of IoT and computer vision using OpenCV and Streamlit, providing an accessible and effective solution for real-time road lane detection, earning high praise from peers and judges.",
+      "image": "images/achievement/Sertifikat Juara PCA Kategori Mahasiswa - Samsung Innovation Campus Batch 5 (2023-2024).jpg",
+      "category": "Competition",
+      "impact": "Promoted accessible IoT and AI solutions for road safety"
+  },
+  {
+      "id": 4,
+      "type": "achievement",
+      "name": "Finalist ProtoTech Contest 2.0",
+      "organization": "Sandbox IEEE ITB",
+      "year": "2025",
+      "date": "12 April 2025",
+      "description": "Recognized as a finalist for developing SleepSense, an IoT device for real-time monitoring of Obstructive Sleep Apnea (OSA), integrating ECG, respiratory patterns, and pulse oximetry.",
+      "details": "The SleepSense project was selected as a finalist for its innovative approach to affordable healthcare IoT, featuring an ergonomic sensor design and web-based clinical analysis, though it did not secure a top position.",
+      "image": "images/achievement/Aldy Ardiansyah_PTC_Finalist.jpg",
+      "category": "Competition",
+      "impact": "Showcased potential for scalable OSA monitoring solutions"
+  },
+  {
+      "id": 5,
+      "type": "achievement",
+      "name": "Juara 1",
+      "organization": "Kontes Robot Terbang Indonesia 2024 (Divisi Technology Development)",
+      "year": "2024",
+      "date": "18 September 2024",
+      "description": "Contributed as a Technology Development team member by developing a Ground Control Station (GCS) for an unmanned aerial vehicle (UAV) focused on national self-reliance and sustainable progress.",
+      "details": "As part of the Technology Development sub-team for Ground Control Station (GCS), I contributed to research about computer vision to mapping aerial object.",
+      "image": "images/achievement/Aldy Ardiansyah_Sertifikat_Gamaforce.jpg",
+      "category": "Competition",
+      "impact": "Advanced UAV Ground Control Station technology for sustainable national development"
+  },
+  {
+      "id": 6,
+      "type": "achievement",
+      "name": "Global Top 100 GDSC Solution Challenge 2024",
+      "organization": "Google for Developers",
+      "year": "2024",
+      "date": "5 April 2024",
+      "description": "Recognized for developing BIN-GO!, a mobile app for waste management in Yogyakarta, integrating Google Maps and gamification features.",
+      "details": "The BIN-GO! app was selected among the top 100 solutions worldwide for its innovative approach to addressing environmental challenges through community engagement and alignment with impact on the SDGs.",
+      "image": "images/achievement/Aldy Ardiansyah_Global_Top_100.jpg",
+      "category": "Competition",
+      "impact": "Contributed as an android developers to sustainable waste management practices in Yogyakarta"
+  }
+]

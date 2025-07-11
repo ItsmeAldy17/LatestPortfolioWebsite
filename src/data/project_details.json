@@ -1,0 +1,526 @@
+[
+    {
+        "id": "1",
+        "name": "Shale Shaker Cutting Estimations",
+        "role": "Internship Machine Learning Engineer",
+        "timeline": "6 months",
+        "status": "Done",
+        "github_link": "restricted-area",
+        "demo_link": "restricted-area",
+        "card_image_src": "/images/portofolio/ml/comvis/Cover-PDU-Comvis.png",
+        "category": "ML",
+        "overview": "This project involved developing a computer vision system to monitor and analyze rock cuttings from shale shakers in real-time using CCTV footage. The system was designed to improve the efficiency and accuracy of drilling process monitoring by providing real-time data on rock coverage and composition, thereby supporting operational decision-making in the oil and gas industry.",
+        "challenge": "The primary challenges included processing video streams in real-time with minimal latency, accurately detecting and analyzing rock cuttings amidst varying lighting conditions and potential noise, and ensuring the system's reliability and scalability for integration with existing monitoring systems like the Early Monitoring System (EMS).",
+        "result": "The developed system successfully provided real-time monitoring of shale shaker cuttings, enabling more informed decision-making during drilling operations. It achieved high accuracy in detecting rock coverage and composition, with visualizations helping to identify trends in rock composition over time. The system was seamlessly integrated with the Early Monitoring System, enhancing overall operational efficiency and reducing manual monitoring efforts.",
+        "statistics": {
+            "Detection Accuracy": "90%",
+            "Processing Latency": "<300ms",
+            "System Uptime": "85%",
+            "Integration with EMS": "Successful"
+        },
+        "technologies_grouped": {
+            "Frontend": [
+                "Python",
+                "OpenCV",
+                "NumPy"
+            ],
+            "Backend": [
+                "Flask"
+            ],
+            "Database": [
+                "PostgreSQL"
+            ],
+            "Real-time": [
+                "Socket.IO"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Real-time Rock Detection",
+                "description": "Live feed with detected rock contours on the shale shaker.",
+                "src": "/images/portofolio/ml/comvis/Rock Detection.png"
+            },
+            {
+                "id": 2,
+                "title": "Trend Analysis Graph",
+                "description": "Graph showing trends in rock composition over time.",
+                "src": "/images/portofolio/ml/comvis/Analysis Stone Detection.png"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Aerial Image Segmentation",
+        "role": "Computer Vision Engineer",
+        "timeline": "3 months",
+        "status": "Done",
+        "github_link": "https://colab.research.google.com/drive/1Kbel_A4KvzEqVWZPMts8d52cISi-jCxN?usp=sharing",
+        "demo_link": "https://universe.roboflow.com/multipurpose/segmentation-aerial-image",
+        "card_image_src": "/images/portofolio/ml/segmentation/gmf/Cover-Aerial Image Segmentation.png",
+        "category": "ML",
+        "overview": "This research project explores aerial image segmentation techniques using computer vision and deep learning to map geographic features from satellite or drone imagery for my UAV Team's research at the University. The focus was on developing segmentation models to detect and classify objects such as buildings, roads, and vegetation, providing insights for geospatial analysis.",
+        "challenge": "Key challenges included handling variations in image resolution and lighting conditions, developing accurate segmentation models with limited annotated datasets, and optimizing model performance on resource-constrained hardware.",
+        "result": "The research produced a prototype segmentation model based on deep learning, demonstrating promising accuracy on a limited test dataset. It provided valuable insights into the challenges of aerial image segmentation and recommendations for future development, such as data augmentation and model fine-tuning.",
+        "statistics": {
+            "Training Time": "6 hours on entry-level GPU",
+            "Dataset Size": "500+ annotated aerial images"
+        },
+        "technologies_grouped": {
+            "Computer Vision": [
+                "Python",
+                "OpenCV",
+                "NumPy",
+                "COCO"
+            ],
+            "Deep Learning": [
+                "PyTorch"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Sample Segmentation Results",
+                "description": "Visualization of segmentation masks for buildings and roads on aerial imagery.",
+                "src": "/images/portofolio/ml/segmentation/gmf/Sample Segmentation Results.png"
+            },
+            {
+                "id": 2,
+                "title": "Sample Ground Truth Results",
+                "description": "Visualizing sample of ground truth annotations.",
+                "src": "/images/portofolio/ml/segmentation/gmf/Ground Truth.png"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Road Line Detection",
+        "role": "Machine Learning Engineer",
+        "timeline": "3 months",
+        "status": "Done",
+        "github_link": "https://github.com/aldyardnsyh/road_line_detection",
+        "demo_link": "https://motorescue-roadlinedetection.streamlit.app/",
+        "card_image_src": "/images/portofolio/ml/segmentation/sklv/Cover-SKLV-Road Line Detection.png",
+        "category": "ML",
+        "overview": "This project developed a model to detect road lane markings from image and video inputs at the Samsung Innovation Campus Batch 5 competition. The system was deployed using Streamlit, providing an interactive web interface for users to upload inputs and visualize detected lane lines in image and video processing, with potential applications in navigation and autonomous driving systems.",
+        "challenge": "Key challenges included handling varying conditions of image/video quality, developing a robust algorithm to detect different types of lane markings, and ensuring the Streamlit application was responsive and efficient for processing.",
+        "result": "The system successfully detected road lane markings from images and videos, with results visualized through an interactive Streamlit interface. Users could upload inputs and view detected lane lines with clear overlays, demonstrating potential for navigation systems or autonomous vehicle support.",
+        "statistics": {
+            "Supported Input Types": "Images (JPEG, PNG), Videos (MP4)",
+            "Frame Analysis": "Image analysis",
+            "Video Detection Analysis": "Generate results for videos",
+            "Deployment Status": "Successful on Streamlit"
+        },
+        "technologies_grouped": {
+            "Computer Vision": [
+                "Python",
+                "OpenCV",
+                "NumPy"
+            ],
+            "Data Processing": [
+                "Pandas"
+            ],
+            "Visualization": [
+                "Matplotlib"
+            ],
+            "Deployment": [
+                "Streamlit"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Road Line Detection Output",
+                "description": "Visualization of detected lane lines on an input image.",
+                "src": "/images/portofolio/ml/segmentation/sklv/Result Image Road Line Detection.jpg"
+            },
+            {
+                "id": 2,
+                "title": "IOT Devive",
+                "description": "IOT Device for Model Implementation.",
+                "src": "/images/portofolio/ml/segmentation/sklv/IOT Device MotoRescue.png"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Tomato Leaf Disease Detection",
+        "role": "Machine Learning Engineer",
+        "timeline": "1 month",
+        "status": "Done",
+        "github_link": "https://github.com/aldyardnsyh/Tomato-Leaf-Deasease-Detection",
+        "demo_link": "https://tomato-leaf-deasease-detection.streamlit.app/",
+        "card_image_src": "/images/portofolio/ml/segmentation/klh/Cover-Tomato Leaf Disease Detection.png",
+        "category": "ML",
+        "overview": "Developed a lightweight deep learning model using TensorFlow Lite to detect diseases in tomato leaves from images. The model, based on transfer learning with MobileNetV2, achieves high accuracy with a compact size, suitable for deployment on resource-constrained devices.",
+        "challenge": "Optimizing a high-accuracy model to maintain performance within a compact 5MB size, handling a large dataset with 11 classes, and ensuring robust detection across varied image conditions such as lighting and angles.",
+        "result": "The model achieved 99.4% accuracy in detecting 11 classes of tomato leaf diseases using a dataset of over 17,000 images. Deployed on Streamlit, the application allows users to upload images and receive real-time disease predictions, demonstrating potential for agricultural diagnostic tools.",
+        "statistics": {
+            "Model Accuracy": "99.4%",
+            "Dataset Size": "17,000+ images",
+            "Model Size": "5MB",
+            "Number of Classes": "11"
+        },
+        "technologies_grouped": {
+            "Machine Learning": [
+                "Python",
+                "TensorFlow",
+                "Keras"
+            ],
+            "Data Processing": [
+                "NumPy",
+                "Pandas"
+            ],
+            "Visualization": [
+                "Seaborn"
+            ],
+            "Deployment": [
+                "Streamlit",
+                "TensorFlow Lite"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Disease Detection Output",
+                "description": "Visualization of detected tomato leaf disease with confidence scores.",
+                "src": "/images/portofolio/ml/segmentation/klh/Result Prediction.png"
+            },
+            {
+                "id": 2,
+                "title": "Streamlit Interface",
+                "description": "Interactive Streamlit app showing real-time disease prediction results.",
+                "src": "/images/portofolio/ml/segmentation/klh/Tomato Streamlit Dashboard.png"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "name": "SleepSense IoT Device for Sleep Apnea Monitoring",
+        "role": "IoT Engineer",
+        "timeline": "3 months",
+        "status": "Done",
+        "github_link": "https://github.com/aldyardnsyh/Microbacterium_Sleepsense_Hardware",
+        "demo_link": "https://github.com/sleepsense-project",
+        "card_image_src": "/images/portofolio/iot/Cover-IoT Device Sleep Apnea.png",
+        "category": "IoT",
+        "overview": "Developed SleepSense, an end-to-end IoT solution for affordable, at-home early detection and rehabilitation of Obstructive Sleep Apnea (OSA). The system integrates an ergonomic belt-thorax sensor for real-time ECG and respiratory pattern monitoring, and a wireless pulse oximeter for continuous tracking of blood oxygen levels and heart rate. Data is processed on a web-based platform with AI-driven analysis, clinical reporting, and direct access for doctors.",
+        "challenge": "Designing an ergonomic and cost-effective sensor system, ensuring reliable real-time data transmission via MQTT, and integrating diverse data streams (ECG, respiratory patterns, oxygen saturation, heart rate) into a unified web dashboard for clinical use.",
+        "result": "Successfully developed and deployed SleepSense, enabling real-time monitoring of sleep apnea indicators with a production cost of approximately Rp2 million per unit. The system supports early diagnosis and long-term rehabilitation through a user-friendly dashboard, facilitating continuous patient-doctor communication and scalable healthcare solutions.",
+        "statistics": {
+            "Data Streams Belt": "ECG, respiratory patterns",
+            "Data Streams Finger": "Oxygen saturation, heart rate",
+            "Real-time Monitoring": "Enabled via MQTT"
+        },
+        "technologies_grouped": {
+            "Hardware": [
+                "Arduino"
+            ],
+            "Programming": [
+                "C++"
+            ],
+            "Messaging": [
+                "MQTT"
+            ],
+            "Database": [
+                "PostgreSQL",
+                "Azure SQL DB"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "SleepSense Device",
+                "description": "Ergonomic belt-thorax sensor and pulse oximeter for sleep apnea monitoring.",
+                "src": "/images/portofolio/iot/IoT Device Sleepsense.png"
+            },
+            {
+                "id": 2,
+                "title": "Web Dashboard",
+                "description": "Real-time dashboard AI Analytics.",
+                "src": "/images/portofolio/iot/Web Dashboard SleepSense.png"
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "name": "IoT Football Movement Tracker",
+        "role": "IoT Engineer",
+        "timeline": "2 weeks",
+        "status": "Done",
+        "github_link": "https://github.com/ItsmeAldy17/DashboardFootballGPSTracker",
+        "demo_link": "https://fortunafootball.vercel.app/",
+        "card_image_src": "/images/portofolio/iot/Cover-IoT Device Gps Tracker.png",
+        "category": "IoT",
+        "overview": "Developed an IoT device to track football players' movement patterns during matches. The device, attached to the back of players' jerseys, records real-time movement data and stores it locally on an SD card in Excel format for subsequent analysis on a dedicated web platform.",
+        "challenge": "Designing a compact and durable IoT device suitable for attachment to players' jerseys, ensuring reliable local storage of movement data on an SD card, and formatting data for seamless integration with a web-based analysis platform.",
+        "result": "Successfully developed a wearable IoT device that accurately tracks and stores players' movement data locally in Excel format. The data integrates with a web platform for detailed analysis, supporting performance evaluation and tactical planning in football.",
+        "statistics": {
+            "Data Storage": "Local SD card",
+            "Output Format": "Excel",
+            "Tracking Capability": "Real-time movement patterns",
+            "Device Placement": "Back of player's jersey"
+        },
+        "technologies_grouped": {
+            "Software": [
+                "Arduino"
+            ],
+            "Programming": [
+                "C++"
+            ],
+            "Data Output": [
+                "Excel"
+            ],
+            "Data Store": [
+                "SD Card"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Wearable Tracker Device",
+                "description": "IoT device attached to player's jersey for movement tracking.",
+                "src": "/images/portofolio/iot/Implementasi Device Fortuna.jpg"
+            },
+            {
+                "id": 2,
+                "title": "Iot Device",
+                "description": "Design of IoT Device.",
+                "src": "/images/portofolio/iot/Iot Device Fortuna.png"
+            },
+            {
+                "id": 3,
+                "title": "Data Analytics Dashboard",
+                "description": "Analytical data processing results obtained from IoT devices.",
+                "src": "/images/portofolio/iot/Dashboard Web Fortuna.jpg"
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "name": "BIN-GO! Waste Management App",
+        "role": "Android Developer",
+        "timeline": "3 months",
+        "status": "Done",
+        "github_link": "https://github.com/ergegananputra/bin_go_android_apps_gdsc",
+        "demo_link": "https://github.com/ergegananputra/bin_go_android_apps_gdsc/tree/main/apk",
+        "card_image_src": "/images/portofolio/mobile/Cover-Bingo Mobile App.png",
+        "category": "Mobile",
+        "overview": "Developed BIN-GO!, a mobile application to address the waste crisis in Yogyakarta. The app integrates Google Maps to locate nearby recycling centers, provides a community forum for waste management discussions, includes a reporting feature for environmental issues, and incorporates gamification to promote sustainable behaviors.",
+        "challenge": "Integrating Google Maps for accurate recycling center location tracking, designing an intuitive forum and reporting system, and implementing gamification elements to enhance user engagement while ensuring seamless performance on Android devices.",
+        "result": "Successfully launched BIN-GO! in Yogyakarta, enabling users to locate recycling centers, report waste issues, and engage in community discussions. The gamification features encouraged sustainable practices, fostering a sense of shared responsibility for a cleaner environment.",
+        "statistics": {
+            "Main Features": "Bin-Community",
+            "Second Features": "Bin-Locator",
+            "Third Features": "Bin-Report",
+            "Another Features Gamifications": "Bin-Point"
+        },
+        "technologies_grouped": {
+            "Mobile Development": [
+                "Android Studio",
+                "Kotlin"
+            ],
+            "Backend": [
+                "Firebase"
+            ],
+            "Cloud Services": [
+                "Google Cloud Console"
+            ],
+            "Mapping": [
+                "Google Maps"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Bin-Locator Interface",
+                "description": "Map view showing nearby recycling centers using Google Maps.",
+                "src": "/images/portofolio/mobile/Bin Locator.png"
+            },
+            {
+                "id": 2,
+                "title": "Bin-Community Forum",
+                "description": "Community discussion interface for waste management topics.",
+                "src": "/images/portofolio/mobile/Bin Community.png"
+            },
+            {
+                "id": 3,
+                "title": "Bin-Report Feature",
+                "description": "Interface for reporting waste-related issues.",
+                "src": "/images/portofolio/mobile/Bin Report.png"
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "name": "Broiler Monitoring v.1",
+        "role": "Project Manager",
+        "timeline": "6 months",
+        "status": "Done",
+        "github_link": "https://github.com/senaajibayumurti/BroMo.git",
+        "demo_link": "https://github.com/Whyaziz/Backend-BroMo.git",
+        "card_image_src": "/images/portofolio/pm/Broiler Monitoring v.1.png",
+        "category": "PM",
+        "overview": "Led the development of Broiler Monitoring (BroMo) v.1, a web-based information system designed to monitor poultry farms effectively. The application enables real-time monitoring of farm conditions for owners and workers, enhancing operational efficiency.",
+        "challenge": "Coordinating a multidisciplinary team to design an intuitive interface and ensure real-time data integration, while managing project timelines and stakeholder expectations using Agile methodologies.",
+        "result": "Successfully delivered BroMo v.1, enabling real-time poultry farm monitoring, improving operational oversight for owners and workers, and receiving positive feedback for its usability and reliability.",
+        "statistics": {
+            "Team Developers": "2 developers",
+            "Team Design": "1 UI/UX Design",
+            "Development Phases": "12 sprints",
+            "Deployment Status": "On-time schedule"
+        },
+        "technologies_grouped": {
+            "Design": [
+                "Figma"
+            ],
+            "Frontend": [
+                "Laravel",
+                "Bootstrap"
+            ],
+            "Project Management": [
+                "Trello"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Farm Monitoring Dashboard",
+                "description": "Main interface for real-time poultry farm monitoring.",
+                "src": "/images/portofolio/pm/Landing Page Bromo v.1.png"
+            },
+            {
+                "id": 2,
+                "title": "Landing Page Interface",
+                "description": "Interface of welcoming page bromo website v.1.",
+                "src": "/images/portofolio/pm/Dashboard Web Bromo v.1.png"
+            },
+            {
+                "id": 3,
+                "title": "Trello Management",
+                "description": "Timeline schecule of project development",
+                "src": "/images/portofolio/pm/Trello Management.jpg"
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "name": "Broiler Monitoring v.2",
+        "role": "Project Manager",
+        "timeline": "6 months",
+        "status": "Done",
+        "github_link": "https://github.com/senaajibayumurti/bromo-frontend.git",
+        "demo_link": "https://github.com/Whyaziz/Backend-BroMo.git",
+        "card_image_src": "/images/portofolio/pm/Broiler Monitoring v.2.png",
+        "category": "PM",
+        "overview": "Managed the development of Broiler Monitoring v.2, focusing on enhancing the user interface with a cleaner design and improved functionality. The project involved migrating the frontend framework from Laravel to Next.js while maintaining Laravel for the database API, ensuring a modern and efficient application.",
+        "challenge": "Overseeing the migration from Laravel to Next.js, ensuring seamless integration with the existing Laravel API, and implementing rigorous testing to maintain reliability and performance.",
+        "result": "Successfully delivered BroMo v.2 with a modernized interface and enhanced functionality, improving user experience and maintaining system reliability through thorough testing and stakeholder alignment.",
+        "statistics": {
+            "Team Size": "2 developers",
+            "Migration Completion": "100%",
+            "Testing Coverage": "95%",
+            "User Satisfaction": "90% positive"
+        },
+        "technologies_grouped": {
+            "Design": [
+                "Figma"
+            ],
+            "Frontend": [
+                "Next.js",
+                "Tailwind CSS"
+            ],
+            "Backend": [
+                "Laravel"
+            ],
+            "Testing": [
+                "Selenium",
+                "Cucumber",
+                "Maven"
+            ],
+            "Project Management": [
+                "Trello"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Modernized Dashboard",
+                "description": "Updated interface with cleaner design for farm monitoring.",
+                "src": "/images/portofolio/pm/Dashboard Web Bromo v.2.png"
+            },
+            {
+                "id": 2,
+                "title": "Enhanced UI",
+                "description": "Improved user interface with Next.js and Tailwind CSS.",
+                "src": "/images/portofolio/pm/Landing Page Bromo v.2.png"
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "name": "BWA Web Testing",
+        "role": "Quality Assurance",
+        "timeline": "1 week",
+        "status": "Done",
+        "github_link": "https://docs.google.com/spreadsheets/d/1wfBOFI9UvMoSIlDyyAE7JYEu2PKQV3JEx5ZEXO7CxpU/edit?gid=0#gid=0",
+        "demo_link": "https://www.buildwithangga.com/showcase/aldyardiansyah628/document-report-of-software-quality-testing-website-buildwithangga",
+        "card_image_src": "/images/portofolio/qa/BWA Platform.png",
+        "category": "QA",
+        "overview": "Conducted quality assurance testing for a web application as part of a course, focusing on creating and executing test cases for two case studies to ensure functionality and reliability of the BuildWithAngga platform.",
+        "challenge": "Developing comprehensive test cases to cover critical functionalities within a short timeframe, and documenting results clearly using Excel for effective reporting and analysis.",
+        "result": "Successfully created and executed test cases for two case studies, identifying key issues and ensuring the functionality of the BuildWithAngga platform, with all findings documented in Excel for stakeholder review.",
+        "statistics": {
+            "Test Cases Created": "2 case studies",
+            "Issues Identified": "Multiple functional issues",
+            "Documentation Format": "Excel",
+            "Completion Time": "1 week"
+        },
+        "technologies_grouped": {
+            "Testing": [
+                "Excel"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Test Case Spreadsheet",
+                "description": "Excel document outlining test cases for the BuildWithAngga platform.",
+                "src": "/images/portofolio/qa/Spreadsheets BWA Platform.png"
+            }
+        ]
+    },
+    {
+        "id": "11",
+        "name": "Tokopedia Web Testing",
+        "role": "Quality Assurance",
+        "timeline": "1 week",
+        "status": "Done",
+        "github_link": "#",
+        "demo_link": "#",
+        "card_image_src": "/images/portofolio/qa/Tokped Web.png",
+        "category": "QA",
+        "overview": "Conducted quality assurance testing for the Tokopedia e-commerce platform, focusing on creating and executing three test cases (positive and negative scenarios) to validate the functionality of adding items to the wishlist, adding items to the cart, and performing checkout.",
+        "challenge": "Designing comprehensive positive and negative test cases to ensure robust functionality across critical user flows, and documenting results in Excel for clear reporting within a limited timeframe.",
+        "result": "Successfully developed and executed three test cases for Tokopedia's wishlist, cart, and checkout features, identifying potential issues and ensuring reliable performance, with all findings documented in Excel for stakeholder review.",
+        "statistics": {
+            "Test Cases Created": "3 (positive and negative)",
+            "Features Tested": "Wishlist, Cart, Checkout",
+            "Documentation Format": "Excel",
+            "Completion Time": "1 week"
+        },
+        "technologies_grouped": {
+            "Testing": [
+                "Excel"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Test Case Spreadsheet",
+                "description": "Excel document detailing test cases for Tokopedia's wishlist, cart, and checkout features.",
+                "src": "/images/portofolio/qa/Spreadsheets Tokped Web.png"
+            }
+        ]
+    }
+]

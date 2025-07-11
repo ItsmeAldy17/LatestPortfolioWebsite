@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "src": "/images/gallery/Dokumentasi Juara Hackaton.jpg",
+        "title": "Hackaton elevAIte Indonesia 2025",
+        "description": "Juara 2 Chapter UGM",
+        "category": "Competition",
+        "date": "2025"
+    },
+    {
+        "id": 2,
+        "src": "/images/gallery/Dokumentasi Juara SIC.jpg",
+        "title": "Samsung Innovation Campus Batch 5",
+        "description": "Juara 2 & People Choice Awards",
+        "category": "Innovation",
+        "date": "2024"
+    },
+    {
+        "id": 3,
+        "src": "/images/gallery/Dokumentasi Top 100 GDSC.jpg",
+        "title": "Google Solution Challenge",
+        "description": "Global Top 100 GDSC solution challenge 2024",
+        "category": "Team",
+        "date": "2024"
+    }
+]

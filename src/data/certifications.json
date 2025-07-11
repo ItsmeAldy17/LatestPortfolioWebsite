@@ -1,0 +1,148 @@
+[
+    {
+        "id": 1,
+        "type": "certification",
+        "name": "Belajar Machine Learning Untuk Pemula",
+        "organization": "Dicoding Indonesia",
+        "year": "2023",
+        "date": "31 December 2023",
+        "expiryDate": "31 December 2026",
+        "description": "Completed a beginner-level certification course designed to build foundational skills in machine learning, focusing on classification, regression, and clustering for tabular data, aligned with current industry standards.",
+        "details": "This course covered the fundamentals of machine learning, including its workflow, supervised learning (classification and regression), unsupervised learning (clustering), feature engineering, overfitting/underfitting, and hyperparameter tuning. The final evaluation involved building supervised and unsupervised learning models on real-world tabular data, with a total duration of 75 hours.",
+        "image": "images/certification/dcd-ml-pemula.png",
+        "credentialId": "1OP8NN92QXQK",
+        "verificationUrl": "dicoding.com/certificates/1OP8NN92QXQK",
+        "skills": [
+            "Machine Learning Fundamentals",
+            "Supervised Learning",
+            "Unsupervised Learning",
+            "Feature Engineering",
+            "Hyperparameter Tuning"
+        ]
+    },
+    {
+        "id": 2,
+        "type": "certification",
+        "name": "Belajar Dasar Visualisasi Data",
+        "organization": "Dicoding Indonesia",
+        "year": "2023",
+        "date": "31 December 2023",
+        "expiryDate": "31 December 2026",
+        "description": "Completed a beginner-level certification course designed to develop skills in creating effective data visualizations using Google Sheets, aligned with industry-standard best practices.",
+        "details": "This course covered the fundamentals of data visualization, including definitions, tools, and data context; data preparation using Google Sheets; transforming data into effective charts with best practices like Gestalt principles and Preattentive Attributes; and the role of visualization in programming. Total duration was approximately 15 hours.",
+        "image": "images/certification/dcd-visualisasi-data.png",
+        "credentialId": "07Z6WWYY2ZQR",
+        "verificationUrl": "https://www.dicoding.com/certificates/07Z6WWYY2ZQR",
+        "skills": [
+            "Data Visualization",
+            "Google Sheets",
+            "Data Transformation",
+            "Storytelling with Data",
+            "Design Principles"
+        ]
+    },
+    {
+        "id": 3,
+        "type": "certification",
+        "name": "Preparation Course for Azure AI Fundamentals (AI-900)",
+        "organization": "Mereka Academy",
+        "year": "2025",
+        "date": "5 May 2025",
+        "expiryDate": "Lifetime",
+        "description": "Completed a beginner-level certification course designed to introduce the fundamentals of AI solutions and Microsoft Azure services for building AI applications, suitable for individuals with basic computer and internet skills.",
+        "details": "This course provided an overview of AI concepts and the Microsoft Azure services used to implement AI solutions. It covered various types of AI applications and Azure tools, requiring no prior experience with Microsoft Azure, preparing participants for the Azure AI Fundamentals (AI-900) certification exam.",
+        "image": "images/certification/azure-fundamental.png",
+        "credentialId": "O7ao9b85",
+        "verificationUrl": "",
+        "skills": [
+            "AI Fundamentals",
+            "Microsoft Azure",
+            "AI Solution Development",
+            "Cloud-Based AI Services"
+        ]
+    },
+    {
+        "id": 4,
+        "type": "certification",
+        "name": "Belajar Dasar Structured Query Language (SQL)",
+        "organization": "Dicoding Indonesia",
+        "year": "2022",
+        "date": "15 November 2022",
+        "expiryDate": "15 November 2025",
+        "description": "Completed a beginner-level certification course focused on mastering fundamental SQL queries for data management, designed for aspiring data analysts and data scientists.",
+        "details": "This course covered the essentials of data and databases, including types of data, relational databases, and Database Management Systems (DBMS). It introduced Structured Query Language (SQL), covering Data Definition Language (DDL), Data Manipulation Language (DML) operations (SELECT, INSERT, UPDATE, DELETE), constraints (unique, index, primary key), and basic queries for practical data handling. Total duration was approximately 10 hours.",
+        "image": "images/certification/dcd-dasar-sql.png",
+        "credentialId": "GRX5266L3X0M",
+        "verificationUrl": "https://www.dicoding.com/certificates/GRX5266L3X0M",
+        "skills": [
+            "SQL",
+            "Database Management",
+            "Data Querying",
+            "Relational Databases",
+            "Data Manipulation"
+        ]
+    },
+    {
+        "id": 5,
+        "type": "certification",
+        "name": "Belajar Dasar Manajemen Proyek",
+        "organization": "Dicoding Indonesia",
+        "year": "2023",
+        "date": "06 October 2023",
+        "expiryDate": "06 October 2026",
+        "description": "Completed a beginner-level certification course focused on mastering the fundamentals of project management, providing a strong foundation for aspiring project managers.",
+        "details": "This course covered the essentials of project management, including definitions, roles, and responsibilities of a project manager, project lifecycle phases (initiation, planning, execution, closure), methodologies (Waterfall, Agile, Lean, Six Sigma), organizational structures, and career pathways. It included practical exercises like resume creation and a final exam to ensure competency. Total duration was approximately 9 hours and 45 minutes.",
+        "image": "images/certification/dcd-manajemen-proyek.png",
+        "credentialId": "0LZ0QR7R0Z65",
+        "verificationUrl": "https://www.dicoding.com/certificates/0LZ0QR7R0Z65",
+        "skills": [
+            "Project Management",
+            "Project Lifecycle",
+            "Agile Methodology",
+            "Waterfall Methodology",
+            "Team Collaboration"
+        ]
+    },
+    {
+        "id": 6,
+        "type": "certification",
+        "name": "Belajar Dasar Cloud dan Gen AI di AWS",
+        "organization": "Dicoding Indonesia",
+        "year": "2022",
+        "date": "23 December 2022",
+        "expiryDate": "23 December 2024",
+        "description": "Completed a beginner-level certification course focused on understanding AWS Cloud services, global infrastructure, and pricing models, aligned with international AWS competency standards.",
+        "details": "This course covered foundational AWS concepts, including computing (Amazon EC2, Elastic Load Balancing), global infrastructure (Availability Zones, Amazon CloudFront), networking (VPC, AWS Direct Connect), storage and databases (Amazon S3, DynamoDB), security (IAM, shared responsibility model), monitoring (CloudWatch, CloudTrail), pricing (AWS Free Tier, Cost Explorer), migration strategies (AWS CAF), and the AWS Well-Architected Framework. The course also prepared students for the AWS Certified Cloud Practitioner exam, with a total duration of approximately 11 hours.",
+        "image": "images/certification/dcd-aws-pemula.png",
+        "credentialId": "07Z65MRKWXQR",
+        "verificationUrl": "https://www.dicoding.com/certificates/07Z65MRKWXQR",
+        "skills": [
+            "AWS Cloud Fundamentals",
+            "Cloud Computing",
+            "AWS Infrastructure",
+            "Cloud Security",
+            "AWS Pricing and Support"
+        ]
+    },
+    {
+        "id": 7,
+        "type": "certification",
+        "name": "Belajar Dasar Git dengan GitHub",
+        "organization": "Dicoding Indonesia",
+        "year": "2021",
+        "date": "07 October 2021",
+        "expiryDate": "07 October 2024",
+        "description": "Completed a beginner-level certification course focused on mastering Git and GitHub for code and data management, enabling collaboration with other developers in line with industry standards.",
+        "details": "This course covered the fundamentals of Git and GitHub, including repository creation, basic Git operations (commit, checkout), branching, merging, conflict resolution, and team collaboration techniques like forking, squashing changes, and pull requests. It also included creating a GitHub portfolio with an effective README. Total duration was approximately 12 hours.",
+        "image": "images/certification/dcd-dasar-git.png",
+        "credentialId": "72ZDE544LPYW",
+        "verificationUrl": "https://www.dicoding.com/certificates/72ZDE544LPYW",
+        "skills": [
+            "Git",
+            "GitHub",
+            "Version Control",
+            "Branching and Merging",
+            "Team Collaboration"
+        ]
+    }
+]
