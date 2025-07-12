@@ -80,7 +80,7 @@ const Terminal = ({ onComplete }) => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="relative w-full flex justify-center items-center mt-20 sm:px-4"
+          className="relative w-full flex justify-center items-center sm:-my-100 mx-4"
           style={{ minHeight: 'min(30vh, 360px)', maxHeight: 'min(50vh, 360px)' }}
         >
           <div
