@@ -122,14 +122,14 @@ const Gallery = () => {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 {/* Overlay transparan di atas gambar untuk teks */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-black flex items-end">
                   <div className="p-8 w-full">
                     <div className="max-w-2xl">
                       <div className="mb-4">
                         <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getCategoryColor(galleryImages[currentSlide].category)}`}>
                           {galleryImages[currentSlide].category}
                         </span>
-                        <span className="ml-3 text-gray-400 text-sm">{galleryImages[currentSlide].date}</span>
+                        <span className="ml-3 text-white text-sm">{galleryImages[currentSlide].date}</span>
                       </div>
                       <h3 className="text-3xl font-bold text-white mb-4">
                         {galleryImages[currentSlide].title}
