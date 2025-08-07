@@ -83,6 +83,7 @@ const AllProjectsPage = () => {
       'NLTK': '/icons/NLTK.png',
       'AWS Lambda': '/icons/AWSLambda.png',
       'AWS SageMaker': '/icons/AWSSageMaker.png',
+      'Detectron2' : '/icons/Detectron2.png',
       'Other': '/icons/default.png',
     };
     for (const key in techIconPaths) {

@@ -122,6 +122,7 @@ const ProjectDetail = () => {
             'AWS ECS': '/icons/AWS.png',
             'AWS Lambda': '/icons/AWSLambda.png',
             'AWS SageMaker': '/icons/AWSSageMaker.png',
+            'Detectron2' : '/icons/Detectron2.png',
             'Other': '/icons/default.png',
         };
         for (const key in techIconPaths) {
@@ -150,7 +151,7 @@ const ProjectDetail = () => {
     // Filter related projects based on the same category
     const relatedProjects = projectsData
         .filter(p => p.id !== project.id && p.category === project.category)
-        .slice(0, 3);
+        .slice(0, 5);
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">

@@ -196,6 +196,56 @@
     },
     {
         "id": "5",
+        "name": "Prototype Chicken Detection Model",
+        "role": "Computer Vision Engineer",
+        "timeline": "2 weeks",
+        "status": "In Development",
+        "github_link": "https://www.kaggle.com/code/aldyardiansyah17/chicken-poultry-detectron2-retinanet-resnet-50-fpn",
+        "demo_link": null,
+        "card_image_src": "/images/portofolio/ml/comvis/Cover-Chicken Cage-Comvis.png",
+        "category": "ML",
+        "overview": "Computer vision system to detect and count chickens in real-time for poultry monitoring. Built using Python, Detectron2, and PyTorch, this prototype employs a RetinaNet model with a ResNet-50 FPN backbone, optimized through dynamic quantization and structured pruning.",
+        "challenge": "Developing a high-sensitivity deep learning model for accurate real-time chicken detection in poultry farm environments.",
+        "result": "Developed a prototype capable of reliable chicken detection and counting in images and videos, designed for future integration into a real-time monitoring application.",
+        "statistics": {
+            "Model Size": "~150 MB",
+            "Detection Accuracy": "70%",
+            "Target Application": "Poultry Farm Monitoring"
+        },
+        "technologies_grouped": {
+            "Frameworks": [
+                "Detectron2",
+                "PyTorch"
+            ],
+            "Programming": [
+                "Python"
+            ],
+            "Libraries": [
+                "OpenCV",
+                "NumPy",
+                "Matplotlib"
+            ],
+            "Model Architecture": [
+                "RetinaNet with ResNet-50 FPN"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Chicken Detection Output",
+                "description": "Image with detected chickens and bounding boxes.",
+                "src": "/images/portofolio/ml/comvis/Chicken Cage 1.png"
+            },
+            {
+                "id": 2,
+                "title": "Video Detection Frame",
+                "description": "Frame from video showing result for chicken detection.",
+                "src": "/images/portofolio/ml/comvis/Output Chicken Detection.gif"
+            }
+        ]
+    },
+    {
+        "id": "6",
         "name": "SleepSense IoT Device for Sleep Apnea Monitoring",
         "role": "IoT Engineer",
         "timeline": "3 months",
@@ -243,7 +293,7 @@
         ]
     },
     {
-        "id": "6",
+        "id": "7",
         "name": "IoT Football Movement Tracker",
         "role": "IoT Engineer",
         "timeline": "2 weeks",
@@ -297,7 +347,7 @@
         ]
     },
     {
-        "id": "7",
+        "id": "8",
         "name": "BIN-GO! Waste Management App",
         "role": "Android Developer",
         "timeline": "3 months",
@@ -352,7 +402,7 @@
         ]
     },
     {
-        "id": "8",
+        "id": "9",
         "name": "Broiler Monitoring v.1",
         "role": "Project Manager",
         "timeline": "6 months",
@@ -404,7 +454,7 @@
         ]
     },
     {
-        "id": "9",
+        "id": "10",
         "name": "Broiler Monitoring v.2",
         "role": "Project Manager",
         "timeline": "6 months",
@@ -458,7 +508,7 @@
         ]
     },
     {
-        "id": "10",
+        "id": "11",
         "name": "BWA Web Testing",
         "role": "Quality Assurance",
         "timeline": "1 week",
@@ -491,7 +541,7 @@
         ]
     },
     {
-        "id": "11",
+        "id": "12",
         "name": "Tokopedia Web Testing",
         "role": "Quality Assurance",
         "timeline": "1 week",
