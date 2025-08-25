@@ -84,6 +84,8 @@ const AllProjectsPage = () => {
       'AWS Lambda': '/icons/AWSLambda.png',
       'AWS SageMaker': '/icons/AWSSageMaker.png',
       'Detectron2' : '/icons/Detectron2.png',
+      'Grafana' : '/icons/Grafana.png',
+      'Telegram' : '/icons/Telegram.png',
       'Other': '/icons/default.png',
     };
     for (const key in techIconPaths) {

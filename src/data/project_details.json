@@ -199,7 +199,7 @@
         "name": "Prototype Chicken Detection Model",
         "role": "Computer Vision Engineer",
         "timeline": "2 weeks",
-        "status": "In Development",
+        "status": "Done",
         "github_link": "https://www.kaggle.com/code/aldyardiansyah17/chicken-poultry-detectron2-retinanet-resnet-50-fpn",
         "demo_link": null,
         "card_image_src": "/images/portofolio/ml/comvis/Cover-Chicken Cage-Comvis.png",
@@ -246,6 +246,62 @@
     },
     {
         "id": "6",
+        "name": "Forex Data Monitoring Dashboard",
+        "role": "Data Engineer",
+        "timeline": "2 weeks",
+        "status": "Done",
+        "github_link": null,
+        "demo_link": null,
+        "card_image_src": "/images/portofolio/de/Forex-Dashboard-Cover.png",
+        "category": "DE",
+        "overview": "A real-time dashboard for monitoring forex price fluctuations with automated Telegram bot notifications for price updates. Built using Python for data processing, Grafana for visualization, Docker for containerization, and PostgreSQL for data storage.",
+        "challenge": "Creating a scalable system to process real-time forex data and deliver timely notifications while ensuring seamless integration between dashboard, database, and Telegram bot.",
+        "result": "Developed a fully functional dashboard that tracks forex price changes in real-time and sends automated Telegram notifications, with a robust and scalable architecture using Docker and PostgreSQL.",
+        "statistics": {
+            "Data Update Frequency": "Real-time",
+            "Notification Latency": "< 10 seconds",
+            "Target Application": "Forex Trading Monitoring"
+        },
+        "technologies_grouped": {
+            "Programming": [
+                "Python"
+            ],
+            "Visualization": [
+                "Grafana"
+            ],
+            "Containerization": [
+                "Docker"
+            ],
+            "Database": [
+                "PostgreSQL"
+            ],
+            "Messaging": [
+                "Telegram API"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Forex Dashboard",
+                "description": "Screenshot of the Grafana dashboard displaying real-time forex price trends.",
+                "src": "/images/portofolio/de/Dashboard Grafana.png"
+            },
+            {
+                "id": 2,
+                "title": "Telegram Notification",
+                "description": "Example of a price update notification sent via Telegram bot.",
+                "src": "/images/portofolio/de/Bot Telegram Update Forex.png"
+            },
+            {
+                "id": 3,
+                "title": "Docker Containerization",
+                "description": "Docker container setup for the forex monitoring system.",
+                "src": "/images/portofolio/de/Docker Container Forex.png"
+            }
+        ]
+    },
+    {
+        "id": "7",
         "name": "SleepSense IoT Device for Sleep Apnea Monitoring",
         "role": "IoT Engineer",
         "timeline": "3 months",
@@ -293,7 +349,7 @@
         ]
     },
     {
-        "id": "7",
+        "id": "8",
         "name": "IoT Football Movement Tracker",
         "role": "IoT Engineer",
         "timeline": "2 weeks",
@@ -347,7 +403,7 @@
         ]
     },
     {
-        "id": "8",
+        "id": "9",
         "name": "BIN-GO! Waste Management App",
         "role": "Android Developer",
         "timeline": "3 months",
@@ -402,7 +458,7 @@
         ]
     },
     {
-        "id": "9",
+        "id": "10",
         "name": "Broiler Monitoring v.1",
         "role": "Project Manager",
         "timeline": "6 months",
@@ -454,7 +510,7 @@
         ]
     },
     {
-        "id": "10",
+        "id": "11",
         "name": "Broiler Monitoring v.2",
         "role": "Project Manager",
         "timeline": "6 months",
@@ -508,7 +564,7 @@
         ]
     },
     {
-        "id": "11",
+        "id": "12",
         "name": "BWA Web Testing",
         "role": "Quality Assurance",
         "timeline": "1 week",
@@ -541,7 +597,7 @@
         ]
     },
     {
-        "id": "12",
+        "id": "13",
         "name": "Tokopedia Web Testing",
         "role": "Quality Assurance",
         "timeline": "1 week",
