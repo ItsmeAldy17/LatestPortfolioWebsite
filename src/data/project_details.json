@@ -94,56 +94,6 @@
     },
     {
         "id": "3",
-        "name": "Road Line Detection",
-        "role": "Machine Learning Engineer",
-        "timeline": "3 months",
-        "status": "Done",
-        "github_link": "https://github.com/aldyardnsyh/road_line_detection",
-        "demo_link": "https://motorescue-roadlinedetection.streamlit.app/",
-        "card_image_src": "/images/portofolio/ml/segmentation/sklv/Cover-SKLV-Road Line Detection.png",
-        "category": "ML",
-        "overview": "This project developed a model to detect road lane markings from image and video inputs at the Samsung Innovation Campus Batch 5 competition. The system was deployed using Streamlit, providing an interactive web interface for users to upload inputs and visualize detected lane lines in image and video processing, with potential applications in navigation and autonomous driving systems.",
-        "challenge": "Key challenges included handling varying conditions of image/video quality, developing a robust algorithm to detect different types of lane markings, and ensuring the Streamlit application was responsive and efficient for processing.",
-        "result": "The system successfully detected road lane markings from images and videos, with results visualized through an interactive Streamlit interface. Users could upload inputs and view detected lane lines with clear overlays, demonstrating potential for navigation systems or autonomous vehicle support.",
-        "statistics": {
-            "Supported Input Types": "Images (JPEG, PNG), Videos (MP4)",
-            "Frame Analysis": "Image analysis",
-            "Video Detection Analysis": "Generate results for videos",
-            "Deployment Status": "Successful on Streamlit"
-        },
-        "technologies_grouped": {
-            "Computer Vision": [
-                "Python",
-                "OpenCV",
-                "NumPy"
-            ],
-            "Data Processing": [
-                "Pandas"
-            ],
-            "Visualization": [
-                "Matplotlib"
-            ],
-            "Deployment": [
-                "Streamlit"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Road Line Detection Output",
-                "description": "Visualization of detected lane lines on an input image.",
-                "src": "/images/portofolio/ml/segmentation/sklv/Result Image Road Line Detection.jpg"
-            },
-            {
-                "id": 2,
-                "title": "IOT Devive",
-                "description": "IOT Device for Model Implementation.",
-                "src": "/images/portofolio/ml/segmentation/sklv/IOT Device MotoRescue.png"
-            }
-        ]
-    },
-    {
-        "id": "4",
         "name": "Tomato Leaf Disease Detection",
         "role": "Machine Learning Engineer",
         "timeline": "1 month",
@@ -195,7 +145,7 @@
         ]
     },
     {
-        "id": "5",
+        "id": "4",
         "name": "Prototype Chicken Detection Model",
         "role": "Computer Vision Engineer",
         "timeline": "2 weeks",
@@ -245,7 +195,7 @@
         ]
     },
     {
-        "id": "6",
+        "id": "5",
         "name": "Forex Data Monitoring Dashboard",
         "role": "Data Engineer",
         "timeline": "2 weeks",
@@ -301,7 +251,126 @@
         ]
     },
     {
+        "id": "6",
+        "name": "AI - Sentiment Hub",
+        "role": "Data Engineer",
+        "timeline": "1 week",
+        "status": "Done",
+        "github_link": "https://github.com/aldyardnsyh/ai-sentiment-pipeline",
+        "demo_link": "https://ai-sentiment-pipeline.vercel.app/",
+        "card_image_src": "/images/portofolio/de/AI Sentimen Pipeline-Cover.png",
+        "category": "DE",
+        "overview": "Real-time sentiment analysis dashboard with ETL pipeline for scraping raw news data from News API, focusing on AI, blockchain, finance, Forex, and investment topics. Utilizes BERT and VADER models for sentiment analysis, Python for data processing, React JS for the frontend, FastAPI for the backend, Swagger for API documentation, PostgreSQL and Supabase for data storage, and Render for API deployment.",
+        "challenge": "Building an efficient ETL pipeline to scrape and process raw news data from News API, integrating BERT and VADER models for accurate sentiment analysis, and creating a responsive dashboard with seamless API and database integration.",
+        "result": "Developed a robust web application with an ETL pipeline for real-time news scraping and sentiment analysis, featuring interactive dashboards, detailed analytics, and comprehensive API documentation for actionable insights.",
+        "statistics": {
+            "Data Source": "News API",
+            "Topics Analyzed": "AI, Blockchain, Finance, Forex, Investment",
+            "Sentiment Models": "BERT, VADER",
+            "Deployment Platform": "Render"
+        },
+        "technologies_grouped": {
+            "Programming": [
+                "Python"
+            ],
+            "Frontend": [
+                "React JS"
+            ],
+            "Backend": [
+                "FastAPI",
+                "Swagger"
+            ],
+            "Database": [
+                "PostgreSQL",
+                "Supabase"
+            ],
+            "Deployment": [
+                "Render"
+            ],
+            "Machine Learning": [
+                "BERT",
+                "VADER"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Sentiment Dashboard",
+                "description": "Screenshot of the main dashboard displaying real-time sentiment trends for selected topics.",
+                "src": "/images/portofolio/de/Home Page Sentimen Hub Dasboard.png"
+            },
+            {
+                "id": 2,
+                "title": "Project Overview",
+                "description": "Overview section highlighting the ETL pipeline and sentiment analysis workflow.",
+                "src": "/images/portofolio/de/Overview Data Stream Sentimen Hub.png"
+            },
+            {
+                "id": 3,
+                "title": "Analytics View",
+                "description": "Analytics page showing detailed sentiment breakdowns using BERT and VADER models.",
+                "src": "/images/portofolio/de/Comparisoin Data Stream Sentimen Hub.png"
+            },
+            {
+                "id": 4,
+                "title": "API Documentation",
+                "description": "Swagger interface for the FastAPI backend, documenting endpoints for sentiment data retrieval.",
+                "src": "/images/portofolio/de/Swagger API Sentimen Hub.png"
+            }
+        ]
+    },
+    {
         "id": "7",
+        "name": "Road Line Detection",
+        "role": "Machine Learning Engineer",
+        "timeline": "3 months",
+        "status": "Done",
+        "github_link": "https://github.com/aldyardnsyh/road_line_detection",
+        "demo_link": "https://motorescue-roadlinedetection.streamlit.app/",
+        "card_image_src": "/images/portofolio/ml/segmentation/sklv/Cover-SKLV-Road Line Detection.png",
+        "category": "ML",
+        "overview": "This project developed a model to detect road lane markings from image and video inputs at the Samsung Innovation Campus Batch 5 competition. The system was deployed using Streamlit, providing an interactive web interface for users to upload inputs and visualize detected lane lines in image and video processing, with potential applications in navigation and autonomous driving systems.",
+        "challenge": "Key challenges included handling varying conditions of image/video quality, developing a robust algorithm to detect different types of lane markings, and ensuring the Streamlit application was responsive and efficient for processing.",
+        "result": "The system successfully detected road lane markings from images and videos, with results visualized through an interactive Streamlit interface. Users could upload inputs and view detected lane lines with clear overlays, demonstrating potential for navigation systems or autonomous vehicle support.",
+        "statistics": {
+            "Supported Input Types": "Images (JPEG, PNG), Videos (MP4)",
+            "Frame Analysis": "Image analysis",
+            "Video Detection Analysis": "Generate results for videos",
+            "Deployment Status": "Successful on Streamlit"
+        },
+        "technologies_grouped": {
+            "Computer Vision": [
+                "Python",
+                "OpenCV",
+                "NumPy"
+            ],
+            "Data Processing": [
+                "Pandas"
+            ],
+            "Visualization": [
+                "Matplotlib"
+            ],
+            "Deployment": [
+                "Streamlit"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Road Line Detection Output",
+                "description": "Visualization of detected lane lines on an input image.",
+                "src": "/images/portofolio/ml/segmentation/sklv/Result Image Road Line Detection.jpg"
+            },
+            {
+                "id": 2,
+                "title": "IOT Devive",
+                "description": "IOT Device for Model Implementation.",
+                "src": "/images/portofolio/ml/segmentation/sklv/IOT Device MotoRescue.png"
+            }
+        ]
+    },
+    {
+        "id": "8",
         "name": "SleepSense IoT Device for Sleep Apnea Monitoring",
         "role": "IoT Engineer",
         "timeline": "3 months",
@@ -349,7 +418,7 @@
         ]
     },
     {
-        "id": "8",
+        "id": "9",
         "name": "IoT Football Movement Tracker",
         "role": "IoT Engineer",
         "timeline": "2 weeks",
@@ -403,7 +472,7 @@
         ]
     },
     {
-        "id": "9",
+        "id": "10",
         "name": "BIN-GO! Waste Management App",
         "role": "Android Developer",
         "timeline": "3 months",
@@ -458,7 +527,7 @@
         ]
     },
     {
-        "id": "10",
+        "id": "11",
         "name": "Broiler Monitoring v.1",
         "role": "Project Manager",
         "timeline": "6 months",
@@ -510,7 +579,7 @@
         ]
     },
     {
-        "id": "11",
+        "id": "12",
         "name": "Broiler Monitoring v.2",
         "role": "Project Manager",
         "timeline": "6 months",
@@ -564,7 +633,7 @@
         ]
     },
     {
-        "id": "12",
+        "id": "13",
         "name": "BWA Web Testing",
         "role": "Quality Assurance",
         "timeline": "1 week",
@@ -597,7 +666,7 @@
         ]
     },
     {
-        "id": "13",
+        "id": "14",
         "name": "Tokopedia Web Testing",
         "role": "Quality Assurance",
         "timeline": "1 week",

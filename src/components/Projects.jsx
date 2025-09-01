@@ -80,9 +80,13 @@ const Projects = () => {
       'NLTK': '/icons/NLTK.png',
       'AWS Lambda': '/icons/AWSLambda.png',
       'AWS SageMaker': '/icons/AWSSageMaker.png',
-      'Detectron2' : '/icons/Detectron2.png',
-      'Grafana' : '/icons/Grafana.png',
-      'Telegram' : '/icons/Telegram.png',
+      'Detectron2': '/icons/Detectron2.png',
+      'Grafana': '/icons/Grafana.png',
+      'Telegram': '/icons/Telegram.png',
+      'React JS': '/icons/React.png',
+      'Render': '/icons/Render.png',
+      'Supabase': '/icons/Supabase.png',
+      'Swagger': '/icons/Swagger.png',
       'Other': '/icons/default.png',
     };
     for (const key in techIconPaths) {

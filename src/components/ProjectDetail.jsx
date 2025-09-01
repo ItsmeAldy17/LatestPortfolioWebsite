@@ -79,7 +79,6 @@ const ProjectDetail = () => {
             'Prometheus': '/icons/Prometheus.png',
             'Apache Spark': '/icons/ApacheSpark.png',
             'InfluxDB': '/icons/InfluxDB.png',
-            'Grafana': '/icons/Grafana.png',
             'XGBoost': '/icons/XGBoost.png',
             'LightGBM': '/icons/LightGBM.png',
             'Apache Kafka': '/icons/ApacheKafka.png',
@@ -125,6 +124,10 @@ const ProjectDetail = () => {
             'Detectron2' : '/icons/Detectron2.png',
             'Grafana' : '/icons/Grafana.png',
             'Telegram' : '/icons/Telegram.png',
+            'React JS' : '/icons/React.png',
+            'Render' : '/icons/Render.png',
+            'Supabase' : '/icons/Supabase.png',
+            'Swagger' : '/icons/Swagger.png',
             'Other': '/icons/default.png',
         };
         for (const key in techIconPaths) {
