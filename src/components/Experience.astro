@@ -1,0 +1,30 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import experiences from '../data/experience.json';
+---
+
+<section id="experience" class="container-lux py-24">
+  <SectionHeader index="03" eyebrow="Experience" title="Career timeline" />
+
+  <ol class="relative ml-3 border-l border-blue-400/20 sm:ml-4">
+    {experiences.map((e) => (
+      <li class="reveal relative pb-12 pl-8 last:pb-0 sm:pl-12">
+        <!-- node -->
+        <span class="absolute -left-[7px] top-1.5 flex h-3.5 w-3.5 items-center justify-center">
+          <span class="absolute h-3.5 w-3.5 animate-ping rounded-full bg-blue-400/40"></span>
+          <span class="relative h-3 w-3 rounded-full bg-blue-400 shadow-[0_0_14px_3px_rgba(79,227,255,0.7)]"></span>
+        </span>
+
+        <p class="font-display text-sm font-semibold text-neon">{e.period}</p>
+        <h3 class="mt-1 font-display text-xl font-semibold text-white sm:text-2xl">{e.role}</h3>
+        <p class="mt-0.5 text-gray-300">{e.company} · <span class="text-gray-500">{e.type} · {e.location}</span></p>
+        <p class="mt-3 max-w-2xl leading-relaxed text-gray-400">{e.description}</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {e.technologies.map((t) => (
+            <span class="rounded-full border border-blue-400/15 bg-blue-500/5 px-3 py-1 text-xs text-gray-300">{t}</span>
+          ))}
+        </div>
+      </li>
+    ))}
+  </ol>
+</section>

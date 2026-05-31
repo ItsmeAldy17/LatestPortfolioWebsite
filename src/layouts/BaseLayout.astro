@@ -1,0 +1,234 @@
+---
+import { site, SITE_URL, absoluteUrl } from '../config/site';
+import { buildGraph } from '../lib/schema';
+import { ClientRouter } from 'astro:transitions';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** path gambar OG (relatif ke root public) */
+  image?: string;
+  /** og:type, default "website" */
+  type?: string;
+  /** schema JSON-LD tambahan untuk halaman ini */
+  schema?: object[];
+  /** waktu publish/update untuk artikel (ISO) */
+  publishedTime?: string;
+  modifiedTime?: string;
+}
+
+const {
+  title,
+  description = site.description,
+  image = site.ogImage,
+  type = 'website',
+  schema = [],
+  publishedTime,
+  modifiedTime,
+} = Astro.props;
+
+const pageTitle = title ? `${title} | ${site.name}` : `${site.name} — ${site.jobTitle}`;
+const canonical = new URL(Astro.url.pathname, SITE_URL).href;
+const ogImage = absoluteUrl(image);
+const jsonLd = buildGraph(schema);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={site.name} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={`${site.name} — Portfolio`} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={`${site.name} — ${site.jobTitle}`} />
+    <meta property="og:locale" content="en_US" />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Geo -->
+    <meta name="geo.region" content={`${site.location.countryCode}-YO`} />
+    <meta name="geo.placename" content={site.location.city} />
+
+    <!-- Preconnect & font (1 family, ringan) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap"
+    />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <ClientRouter />
+
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+  </head>
+  <body>
+    <div id="scroll-progress"></div>
+    <div id="cursor-glow" transition:persist></div>
+    <slot />
+
+    <!-- Centralized interactions: re-init on every navigation (View Transitions) -->
+    <script>
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let bound = false;
+      let glow;
+
+      function updateScroll() {
+        const h = document.documentElement;
+        const max = h.scrollHeight - h.clientHeight;
+        const bar = document.getElementById('scroll-progress');
+        if (bar) bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+        const nav = document.getElementById('navbar');
+        const hairline = document.getElementById('nav-hairline');
+        const s = h.scrollTop > 40;
+        if (nav) {
+          nav.classList.toggle('bg-gray-950/70', s);
+          nav.classList.toggle('backdrop-blur-xl', s);
+        }
+        if (hairline) hairline.style.opacity = s ? '1' : '0';
+      }
+
+      function onMove(e) {
+        if (glow) glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+      }
+
+      function initReveal() {
+        const els = document.querySelectorAll('.reveal:not(.is-visible)');
+        if (!('IntersectionObserver' in window) || !els.length) {
+          els.forEach((e) => e.classList.add('is-visible'));
+          return;
+        }
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const sibs = Array.from(entry.target.parentElement.children).filter((c) =>
+                  c.classList.contains('reveal')
+                );
+                const i = Math.max(0, sibs.indexOf(entry.target));
+                entry.target.style.setProperty('--reveal-delay', Math.min(i, 6) * 80 + 'ms');
+                entry.target.classList.add('is-visible');
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { rootMargin: '0px 0px -10% 0px' }
+        );
+        els.forEach((e) => io.observe(e));
+      }
+
+      function bindMenu() {
+        const btn = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        if (!btn || !menu) return;
+        const inner = menu.firstElementChild;
+        let open = false;
+        btn.addEventListener('click', () => {
+          open = !open;
+          menu.style.maxHeight = open ? inner.scrollHeight + 'px' : '0';
+          btn.setAttribute('aria-expanded', String(open));
+        });
+        menu.querySelectorAll('a').forEach((a) =>
+          a.addEventListener('click', () => {
+            open = false;
+            menu.style.maxHeight = '0';
+            btn.setAttribute('aria-expanded', 'false');
+          })
+        );
+      }
+
+      function bindMagnetTilt() {
+        if (reduce) return;
+        document.querySelectorAll('.magnetic').forEach((el) => {
+          el.addEventListener('pointermove', (e) => {
+            const r = el.getBoundingClientRect();
+            const x = e.clientX - (r.left + r.width / 2);
+            const y = e.clientY - (r.top + r.height / 2);
+            el.style.transform = `translate(${x * 0.25}px, ${y * 0.35}px)`;
+          });
+          el.addEventListener('pointerleave', () => (el.style.transform = ''));
+        });
+        document.querySelectorAll('.tilt').forEach((el) => {
+          el.addEventListener('pointermove', (e) => {
+            const r = el.getBoundingClientRect();
+            const px = (e.clientX - r.left) / r.width - 0.5;
+            const py = (e.clientY - r.top) / r.height - 0.5;
+            el.style.transform = `perspective(900px) rotateX(${-py * 7}deg) rotateY(${px * 7}deg)`;
+          });
+          el.addEventListener('pointerleave', () => (el.style.transform = ''));
+        });
+      }
+
+      function initCarousel() {
+        document.querySelectorAll('[data-carousel]').forEach((root) => {
+          const track = root.querySelector('[data-carousel-track]');
+          const dots = Array.from(root.querySelectorAll('[data-carousel-dot]'));
+          const n = track ? track.children.length : 0;
+          if (!track || n < 2) return;
+          let i = 0;
+          const go = (k) => {
+            i = (k + n) % n;
+            track.style.transform = `translateX(-${i * 100}%)`;
+            dots.forEach((d, j) => (j === i ? d.setAttribute('data-active', '') : d.removeAttribute('data-active')));
+          };
+          dots.forEach((d, j) => d.addEventListener('click', () => { go(j); restart(); }));
+          let timer;
+          const restart = () => {
+            clearInterval(timer);
+            if (!reduce) timer = setInterval(() => go(i + 1), 500);
+          };
+          go(0);
+          restart();
+        });
+      }
+
+      function init() {
+        glow = document.getElementById('cursor-glow');
+        initReveal();
+        bindMenu();
+        bindMagnetTilt();
+        initCarousel();
+        updateScroll();
+        if (!bound) {
+          window.addEventListener('scroll', updateScroll, { passive: true });
+          if (!reduce) window.addEventListener('pointermove', onMove, { passive: true });
+          bound = true;
+        }
+      }
+
+      if (!window.__luxInit) {
+        window.__luxInit = true;
+        document.addEventListener('astro:page-load', init);
+        // Fallback: fire on first load too (astro:page-load fires on SPA nav, not initial load in some configs)
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', init);
+        } else {
+          init();
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const { title, description, image, type, schema, publishedTime, modifiedTime } = Astro.props;
+---
+
+<BaseLayout {title} {description} {image} {type} {schema} {publishedTime} {modifiedTime}>
+  <Navbar />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+</BaseLayout>

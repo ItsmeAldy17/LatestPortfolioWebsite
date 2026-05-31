@@ -1,0 +1,34 @@
+---
+interface Crumb { name: string; href?: string; }
+interface Props {
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+  crumbs?: Crumb[];
+}
+const { eyebrow, title, subtitle, crumbs = [] } = Astro.props;
+---
+
+<header class="container-lux pt-36 pb-12">
+  {crumbs.length > 0 && (
+    <nav class="reveal mb-8 flex flex-wrap items-center gap-2 text-sm text-gray-500" aria-label="Breadcrumb">
+      {crumbs.map((c, i) => (
+        <>
+          {c.href ? (
+            <a href={c.href} class="transition-colors hover:text-emerald-400">{c.name}</a>
+          ) : (
+            <span class="text-gray-300">{c.name}</span>
+          )}
+          {i < crumbs.length - 1 && <span class="text-gray-700">/</span>}
+        </>
+      ))}
+    </nav>
+  )}
+
+  <p class="reveal eyebrow">{eyebrow}</p>
+  <h1 class="reveal display-md mt-3 max-w-4xl text-gray-100">{title}</h1>
+  {subtitle && <p class="reveal mt-5 max-w-2xl text-lg leading-relaxed text-gray-400">{subtitle}</p>}
+
+  <slot name="meta" />
+  <div class="hairline mt-12"></div>
+</header>

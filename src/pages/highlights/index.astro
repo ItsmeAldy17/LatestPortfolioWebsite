@@ -1,0 +1,52 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { highlights } from '../../data/highlights';
+import { breadcrumbSchema } from '../../lib/schema';
+import { SITE_URL, site } from '../../config/site';
+
+const items = [...highlights].sort((a, b) => +new Date(b.date) - +new Date(a.date));
+const schema = [
+  breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Highlights', url: '/highlights' }]),
+  {
+    '@type': 'CollectionPage',
+    '@id': `${SITE_URL}/highlights#collection`,
+    name: `Highlights & Press — ${site.name}`,
+    about: { '@id': `${SITE_URL}/#person` },
+    hasPart: items.map((h) => ({ '@type': 'BlogPosting', headline: h.title, url: `${SITE_URL}/highlights/${h.slug}`, datePublished: h.date })),
+  },
+];
+---
+
+<PageLayout title="Highlights & Press" description="Featured media coverage of Aldy Ardiansyah's achievements and projects, published by Universitas Gadjah Mada — awards, research, and competitions." schema={schema}>
+  <PageHeader
+    eyebrow="Highlights & Press"
+    title="In the spotlight"
+    subtitle="Featured coverage of my work, achievements, and research, as published by Universitas Gadjah Mada."
+    crumbs={[{ name: 'Home', href: '/' }, { name: 'Highlights' }]}
+  />
+
+  <div class="container-lux pb-28">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {items.map((h) => (
+        <a href={`/highlights/${h.slug}`} class="tilt border-grad group flex flex-col overflow-hidden rounded-2xl">
+          <div class="relative aspect-video overflow-hidden">
+            {h.coverImage ? (
+              <img src={h.coverImage} alt={h.title} loading="lazy" class="h-full w-full object-cover opacity-75 transition-all duration-500 group-hover:opacity-100 group-hover:scale-105" style={`view-transition-name: hl-${h.slug}`} />
+            ) : (
+              <div class="h-full w-full bg-gradient-to-br from-emerald-700/40 to-purple-800/40" style={`view-transition-name: hl-${h.slug}`}></div>
+            )}
+            <span class="absolute left-3 top-3 rounded-full border border-emerald-500/40 bg-gray-950/60 px-2.5 py-1 text-xs text-emerald-400 backdrop-blur-sm">{h.category}</span>
+          </div>
+          <div class="flex flex-1 flex-col p-6">
+            <time datetime={h.date} class="text-xs text-gray-500">{h.dateDisplay}</time>
+            <h2 class="mt-2 font-display text-lg font-semibold leading-snug text-gray-100 transition-colors group-hover:text-neon">{h.title}</h2>
+            <p class="mt-2 line-clamp-3 flex-1 text-sm leading-relaxed text-gray-400">{h.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <a href="/" class="group mt-16 inline-flex items-center gap-2 font-display text-gray-200 hover:text-emerald-400"><span class="transition-transform group-hover:-translate-x-1">←</span> Back to home</a>
+  </div>
+</PageLayout>
