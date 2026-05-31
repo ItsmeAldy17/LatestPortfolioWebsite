@@ -1,0 +1,19 @@
+# Allow all crawlers, including AI search bots (GEO)
+User-agent: *
+Allow: /
+
+# Explicitly welcome major AI/search crawlers
+User-agent: Googlebot
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://aldyardnsyh.my.id/sitemap-index.xml
