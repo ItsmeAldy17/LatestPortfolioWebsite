@@ -1,0 +1,31 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import { site } from '../config/site';
+
+const facts = [
+  { k: 'Education', v: 'D4 Software Engineering Tech', sub: site.university.name },
+  { k: 'Based in', v: site.location.city, sub: site.location.country },
+  { k: 'Focus', v: 'Computer Vision · MLOps', sub: 'Deep learning & scalable AI' },
+  { k: 'Languages', v: site.languages.join(' · '), sub: 'Cross-cultural teams' },
+];
+---
+
+<section id="about" class="container-lux py-24">
+  <SectionHeader index="01" eyebrow="About" title="Turning research into products" />
+
+  <div class="grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
+    <p class="reveal text-lg leading-relaxed text-gray-300 sm:text-xl">
+      {site.longBio}
+    </p>
+
+    <div class="reveal grid grid-cols-2 gap-4">
+      {facts.map((f) => (
+        <div class="glow-card p-5">
+          <p class="eyebrow mb-2 text-[0.65rem]">{f.k}</p>
+          <p class="font-display text-sm font-semibold text-white">{f.v}</p>
+          <p class="mt-1 text-xs text-gray-500">{f.sub}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

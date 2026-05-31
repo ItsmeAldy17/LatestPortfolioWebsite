@@ -1,0 +1,36 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import organizations from '../data/organizations.json';
+const norm = (p: string) => (p?.startsWith('/') ? p : `/${p}`);
+---
+
+<section id="organizations" class="container-lux py-24">
+  <SectionHeader index="05" eyebrow="Community" title="Teams & organizations" />
+
+  <div class="grid gap-6 md:grid-cols-3">
+    {organizations.map((o) => (
+      <article class="glow-card group reveal flex flex-col">
+        <div class="relative h-40 overflow-hidden">
+          {o.photos && o.photos[0] && (
+            <img src={norm(o.photos[0])} alt={o.name} loading="lazy" class="absolute inset-0 h-full w-full object-cover opacity-90 transition-all duration-700 group-hover:scale-110 group-hover:opacity-100" />
+          )}
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
+          <span class="absolute bottom-3 right-4 rounded-full border border-blue-400/30 bg-gray-950/50 px-3 py-1 text-xs text-neon backdrop-blur-md">{o.period}</span>
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="font-display text-lg font-semibold leading-tight text-white">{o.name}</h3>
+          <p class="mt-1 text-sm font-medium text-blue-300">{o.role} · <span class="text-gray-500">{o.type}</span></p>
+          <p class="mt-3 flex-1 text-sm leading-relaxed text-gray-400">{o.description}</p>
+          <ul class="mt-5 space-y-2 border-t border-white/8 pt-4">
+            {o.achievements.slice(0, 2).map((a) => (
+              <li class="flex gap-2 text-xs text-gray-400">
+                <span class="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(79,227,255,0.8)]"></span>
+                <span>{a}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

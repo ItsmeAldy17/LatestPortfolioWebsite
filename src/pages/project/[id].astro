@@ -1,0 +1,131 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import projects from '../../data/project_details.json';
+import { breadcrumbSchema } from '../../lib/schema';
+import { absoluteUrl, SITE_URL } from '../../config/site';
+
+export function getStaticPaths() {
+  return projects.map((p) => ({ params: { id: p.id }, props: { project: p } }));
+}
+
+const { project: p } = Astro.props;
+const isLink = (v: string) => typeof v === 'string' && v.startsWith('http');
+const stats = Object.entries(p.statistics ?? {});
+const techGroups = Object.entries(p.technologies_grouped ?? {});
+
+const schema = [
+  {
+    '@type': 'CreativeWork',
+    '@id': `${SITE_URL}/project/${p.id}#project`,
+    name: p.name,
+    description: p.overview,
+    image: absoluteUrl(p.card_image_src),
+    creator: { '@id': `${SITE_URL}/#person` },
+    keywords: techGroups.flatMap(([, v]) => v as string[]).join(', '),
+  },
+  breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Projects', url: '/all-projects' },
+    { name: p.name, url: `/project/${p.id}` },
+  ]),
+];
+
+const sections = [
+  { label: 'Overview', body: p.overview },
+  { label: 'Challenge', body: p.challenge },
+  { label: 'Result', body: p.result },
+].filter((s) => s.body);
+---
+
+<PageLayout title={p.name} description={p.overview} image={p.card_image_src} schema={schema}>
+  <PageHeader
+    eyebrow={`${p.category} · ${p.status}`}
+    title={p.name}
+    crumbs={[{ name: 'Home', href: '/' }, { name: 'Projects', href: '/all-projects' }, { name: p.name }]}
+  >
+    <div slot="meta" class="reveal mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm">
+      <span class="text-gray-400"><span class="text-gray-600">Role</span> · {p.role}</span>
+      <span class="text-gray-400"><span class="text-gray-600">Timeline</span> · {p.timeline}</span>
+      <div class="flex gap-3">
+        {isLink(p.github_link) && (
+          <a href={p.github_link} target="_blank" rel="noopener noreferrer" class="magnetic rounded-full border border-white/15 px-4 py-1.5 font-medium text-gray-200 transition-colors hover:border-emerald-500/60 hover:text-emerald-400">Repository</a>
+        )}
+        {isLink(p.demo_link) && (
+          <a href={p.demo_link} target="_blank" rel="noopener noreferrer" class="magnetic rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 px-4 py-1.5 font-semibold text-gray-900">Live Demo</a>
+        )}
+      </div>
+    </div>
+  </PageHeader>
+
+  <div class="container-lux pb-28">
+    <!-- Hero image (morphs from listing) -->
+    <div class="border-grad reveal overflow-hidden rounded-2xl" style={`view-transition-name: project-${p.id}`}>
+      <img src={p.card_image_src} alt={p.name} class="aspect-[16/9] w-full object-cover" loading="eager" />
+    </div>
+
+    <!-- Editorial sections -->
+    <div class="mt-20 space-y-16">
+      {sections.map((s) => (
+        <section class="reveal grid gap-6 md:grid-cols-12">
+          <h2 class="eyebrow md:col-span-3 md:pt-2">{s.label}</h2>
+          <p class="text-xl font-light leading-relaxed text-gray-200 md:col-span-9">{s.body}</p>
+        </section>
+      ))}
+    </div>
+
+    {stats.length > 0 && (
+      <section class="reveal mt-20">
+        <h2 class="eyebrow mb-6">Key Statistics</h2>
+        <div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          {stats.map(([k, v]) => (
+            <div class="border-grad rounded-2xl p-6">
+              <p class="font-display text-lg font-bold leading-tight text-neon break-words sm:text-xl">{v}</p>
+              <p class="mt-2 text-sm text-gray-400">{k}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {techGroups.length > 0 && (
+      <section class="reveal mt-20 grid gap-6 md:grid-cols-12">
+        <h2 class="eyebrow md:col-span-3 md:pt-2">Technologies</h2>
+        <div class="space-y-5 md:col-span-9">
+          {techGroups.map(([group, techs]) => (
+            <div>
+              <p class="mb-2 text-sm font-semibold text-gray-300">{group}</p>
+              <div class="flex flex-wrap gap-2">
+                {(techs as string[]).map((t) => (
+                  <span class="rounded-full border border-white/10 px-3 py-1.5 text-sm text-gray-300">{t}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {p.gallery && p.gallery.length > 0 && (
+      <section class="reveal mt-20">
+        <h2 class="eyebrow mb-6">Gallery</h2>
+        <div class="grid gap-5 md:grid-cols-2">
+          {p.gallery.map((g) => (
+            <figure class="bento-tile group">
+              <img src={g.src} alt={g.title} loading="lazy" class="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <figcaption class="p-5">
+                <p class="font-display font-semibold text-gray-100">{g.title}</p>
+                <p class="mt-1 text-sm text-gray-400">{g.description}</p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <div class="hairline mt-20"></div>
+    <a href="/all-projects" class="group mt-8 inline-flex items-center gap-2 font-display text-gray-200 hover:text-emerald-400">
+      <span class="transition-transform group-hover:-translate-x-1">←</span> Back to all projects
+    </a>
+  </div>
+</PageLayout>

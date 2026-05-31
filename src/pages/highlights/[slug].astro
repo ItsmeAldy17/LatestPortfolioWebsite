@@ -1,0 +1,85 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { highlights } from '../../data/highlights';
+import { breadcrumbSchema } from '../../lib/schema';
+import { SITE_URL, absoluteUrl, site } from '../../config/site';
+
+export function getStaticPaths() {
+  return highlights.map((h) => ({ params: { slug: h.slug }, props: { h } }));
+}
+
+const { h } = Astro.props;
+const url = `${SITE_URL}/highlights/${h.slug}`;
+const ogImage = h.coverImage ?? site.ogImage;
+
+const schema = [
+  {
+    '@type': 'BlogPosting',
+    '@id': `${url}#article`,
+    headline: h.title,
+    description: h.description,
+    image: absoluteUrl(ogImage),
+    datePublished: h.date,
+    dateModified: h.date,
+    inLanguage: 'en',
+    author: { '@id': `${SITE_URL}/#person` },
+    publisher: { '@id': `${SITE_URL}/#person` },
+    mainEntityOfPage: url,
+    keywords: h.tags.join(', '),
+    isBasedOn: h.sourceUrl,
+    about: { '@id': `${SITE_URL}/#person` },
+  },
+  breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Highlights', url: '/highlights' },
+    { name: h.title, url: `/highlights/${h.slug}` },
+  ]),
+];
+---
+
+<PageLayout title={h.title} description={h.description} image={ogImage} type="article" publishedTime={h.date} modifiedTime={h.date} schema={schema}>
+  <PageHeader
+    eyebrow={`${h.category} · ${h.dateDisplay}`}
+    title={h.title}
+    crumbs={[{ name: 'Home', href: '/' }, { name: 'Highlights', href: '/highlights' }, { name: h.category }]}
+  >
+    <p slot="meta" class="reveal mt-5 text-sm text-gray-400"><span class="text-gray-600">Role</span> · {h.role}</p>
+  </PageHeader>
+
+  <article class="container-lux pb-28">
+    {h.coverImage && (
+      <div class="border-grad reveal mb-16 overflow-hidden rounded-2xl" style={`view-transition-name: hl-${h.slug}`}>
+        <img src={h.coverImage} alt={h.title} class="aspect-[16/9] w-full object-cover" loading="eager" />
+      </div>
+    )}
+
+    <div class="mx-auto max-w-3xl">
+      <div class="prose-lux reveal">
+        {h.content.map((b) =>
+          b.type === 'h2' ? <h2>{b.text}</h2> : b.type === 'ul' ? <ul>{b.items.map((it) => <li>{it}</li>)}</ul> : <p>{b.text}</p>
+        )}
+      </div>
+
+      {h.team && h.team.length > 0 && (
+        <section class="border-grad reveal mt-14 rounded-2xl p-7">
+          <p class="eyebrow mb-4">Team</p>
+          <ul class="flex flex-wrap gap-2">
+            {h.team.map((m) => <li class="rounded-full border border-white/10 px-3 py-1.5 text-sm text-gray-200">{m}</li>)}
+          </ul>
+        </section>
+      )}
+
+      <div class="reveal mt-8 flex flex-wrap gap-2">
+        {h.tags.map((t) => <span class="rounded-full bg-emerald-500/10 px-3 py-1 text-xs text-emerald-400">#{t}</span>)}
+      </div>
+
+      <div class="reveal mt-10 flex items-center justify-between gap-4 rounded-2xl border border-white/8 bg-white/[0.03] p-6 text-sm text-gray-400">
+        <span>Originally published by</span>
+        <a href={h.sourceUrl} target="_blank" rel="noopener noreferrer" class="font-display font-semibold text-emerald-400 hover:underline">{h.sourceName} ↗</a>
+      </div>
+
+      <a href="/highlights" class="group mt-12 inline-flex items-center gap-2 font-display text-gray-200 hover:text-emerald-400"><span class="transition-transform group-hover:-translate-x-1">←</span> Back to highlights</a>
+    </div>
+  </article>
+</PageLayout>

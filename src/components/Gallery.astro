@@ -1,0 +1,31 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import gallery from '../data/gallery.json';
+---
+
+<section id="gallery" class="container-lux py-24">
+  <SectionHeader index="06" eyebrow="Moments" title="From the field" />
+
+  <div class="border-grad reveal relative overflow-hidden rounded-3xl" data-carousel>
+    <div class="carousel-track" data-carousel-track>
+      {gallery.map((g) => (
+        <div class="carousel-slide relative">
+          <img src={g.src} alt={g.title} loading="lazy" class="h-[clamp(18rem,46vw,34rem)] w-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/20 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-6 sm:p-10">
+            <span class="eyebrow">{g.category} · {g.date}</span>
+            <h3 class="mt-2 font-display text-2xl font-bold text-white sm:text-4xl">{g.title}</h3>
+            <p class="mt-1 max-w-xl text-gray-300">{g.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Dots -->
+    <div class="absolute bottom-5 right-6 flex gap-2" data-carousel-dots>
+      {gallery.map((_, i) => (
+        <button class="h-2 w-2 rounded-full bg-white/30 transition-all data-[active]:w-6 data-[active]:bg-blue-400" aria-label={`Go to slide ${i + 1}`} data-carousel-dot={i}></button>
+      ))}
+    </div>
+  </div>
+</section>
