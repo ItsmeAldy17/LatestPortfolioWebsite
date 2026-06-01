@@ -198,7 +198,7 @@ const jsonLd = buildGraph(schema);
           let timer;
           const restart = () => {
             clearInterval(timer);
-            if (!reduce) timer = setInterval(() => go(i + 1), 500);
+            if (!reduce) timer = setInterval(() => go(i + 1), 1500);
           };
           go(0);
           restart();
