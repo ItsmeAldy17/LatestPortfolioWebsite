@@ -15,7 +15,7 @@ export const site = {
   description:
     'Aldy Ardiansyah is a Machine Learning Engineer from Universitas Gadjah Mada (UGM) specializing in computer vision, deep learning, and MLOps. Award-winning developer of AI and IoT solutions.',
   longBio:
-    'Aldy Ardiansyah is a Machine Learning Engineer and final-year Software Engineering Technology (TRPL) student at the Vocational School of Universitas Gadjah Mada (UGM), Yogyakarta, Indonesia. He builds impactful, AI-powered solutions with a focus on computer vision, deep learning, and scalable MLOps systems. His work spans real-time computer vision for the oil & gas industry, IoT health-monitoring devices, and UAV ground control systems. He is a multiple-time national competition winner, including 2nd place at Samsung Innovation Campus 2023/2024 and the Hackathon elevAIte Indonesia 2025.',
+    'Aldy Ardiansyah is a full-stack Machine Learning Engineer with a Software Engineering Technology (TRPL) background from Universitas Gadjah Mada (UGM), based in Yogyakarta, Indonesia. He builds practical machine learning solutions that work in production, focused on computer vision, deep learning, and scalable MLOps systems. His work spans real-time computer vision for the oil and gas industry, IoT health-monitoring devices, and UAV ground control systems. A multiple-time national competition winner, he took 2nd place at Samsung Innovation Campus 2023/2024 and Hackathon elevAIte Indonesia 2025, and joined the UGM team crowned overall champion at Kontes Robot Terbang Indonesia (KRTI) 2025.',
   email: 'aldyardiansyah628@gmail.com',
   location: {
     city: 'Yogyakarta',
@@ -77,7 +77,7 @@ export const faqs = [
   },
   {
     q: 'What does Aldy Ardiansyah specialize in?',
-    a: 'He specializes in computer vision, deep learning, and MLOps, building AI-powered solutions such as real-time object detection systems, IoT health-monitoring devices, and UAV ground control stations using Python, PyTorch, and TensorFlow.',
+    a: 'He specializes in computer vision, deep learning, and MLOps, building systems such as real-time object detection, IoT health-monitoring devices, and UAV ground control stations using Python, PyTorch, and TensorFlow.',
   },
   {
     q: 'What are Aldy Ardiansyah\u2019s notable achievements?',
@@ -85,7 +85,7 @@ export const faqs = [
   },
   {
     q: 'How can I contact Aldy Ardiansyah?',
-    a: 'You can reach Aldy Ardiansyah via email at aldyardiansyah628@gmail.com or connect through his GitHub and LinkedIn profiles linked on this portfolio.',
+    a: 'The fastest way is the contact form at https://aldyardnsyh.my.id/signal, which opens your mail app addressed to him. You can also connect through his GitHub and LinkedIn profiles linked on this portfolio.',
   },
 ];
 
