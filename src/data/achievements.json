@@ -1,5 +1,18 @@
 [
   {
+      "id": 7,
+      "type": "achievement",
+      "name": "Juara Umum",
+      "organization": "Kontes Robot Terbang Indonesia (KRTI) 2025",
+      "year": "2025",
+      "date": "23 Oktober 2025",
+      "description": "Member of the Gamaforce UGM Technology Development team crowned overall champion (Juara Umum) at KRTI 2025, hosted by Universitas Andalas (UNAND) in Padang.",
+      "details": "Represented UGM through the Gadjah Mada Flying Object Research Center community. The contingent's combined results across contested divisions secured the overall championship at the national Indonesian flying robot contest.",
+      "image": "images/achievement/KRTI-2025-Juara-Umum.png",
+      "category": "Competition",
+      "impact": "Developed the GCS software for UAV aerial mapping that supported UGM's overall championship at KRTI 2025"
+  },
+  {
       "id": 1,
       "type": "achievement",
       "name": "Juara 2",
@@ -19,7 +32,7 @@
       "organization": "Samsung Innovation Campus Batch 5",
       "year": "2024",
       "date": "7 September 2024",
-      "description": "Recognized for developing MotoRescue, an IoT and AI-powered road line detection system to enhance road safety and navigation.",
+      "description": "Recognized for developing MotoRescue, an IoT-based road line detection system to enhance road safety and navigation.",
       "details": "Awarded for creating MotoRescue, an IoT device integrated with a computer vision system using OpenCV and deployed on Streamlit, capable of detecting road lane markings in real-time from images and videos, demonstrating innovation in road safety applications.",
       "image": "images/achievement/Sertifikat Juara 2 Kategori Mahasiswa - Samsung Innovation Campus Batch 5 (2023-2024).jpg",
       "category": "Competition",
@@ -32,7 +45,7 @@
       "organization": "Samsung Innovation Campus Batch 5",
       "year": "2024",
       "date": "7 September 2024",
-      "description": "Received for developing MotoRescue, an IoT and AI-powered road line detection system, recognized for its user-friendly deployment and practical impact.",
+      "description": "Received for developing MotoRescue, an IoT-based road line detection system, recognized for its user-friendly deployment and practical impact.",
       "details": "MotoRescue was celebrated for its innovative integration of IoT and computer vision using OpenCV and Streamlit, providing an accessible and effective solution for real-time road lane detection, earning high praise from peers and judges.",
       "image": "images/achievement/Sertifikat Juara PCA Kategori Mahasiswa - Samsung Innovation Campus Batch 5 (2023-2024).jpg",
       "category": "Competition",
