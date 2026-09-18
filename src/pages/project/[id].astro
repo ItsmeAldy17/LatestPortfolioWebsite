@@ -2,6 +2,7 @@
 import PageLayout from '../../layouts/PageLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import projects from '../../data/project_details.json';
+import { orderedProjects } from '../../lib/projects';
 import { breadcrumbSchema } from '../../lib/schema';
 import { absoluteUrl, SITE_URL } from '../../config/site';
 
@@ -10,6 +11,10 @@ export function getStaticPaths() {
 }
 
 const { project: p } = Astro.props;
+const related = [
+  ...orderedProjects().filter((x) => x.id !== p.id && x.category === p.category),
+  ...orderedProjects().filter((x) => x.id !== p.id && x.category !== p.category),
+].slice(0, 2);
 const isLink = (v: string) => typeof v === 'string' && v.startsWith('http');
 const stats = Object.entries(p.statistics ?? {});
 const techGroups = Object.entries(p.technologies_grouped ?? {});
@@ -124,6 +129,24 @@ const sections = [
     )}
 
     <div class="hairline mt-20"></div>
+
+    {related.length > 0 && (
+      <section class="reveal mt-10">
+        <h2 class="eyebrow mb-5">More projects</h2>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {related.map((r) => (
+            <a href={`/project/${r.id}`} class="glow-card group flex items-center gap-4 p-4">
+              <img src={r.card_image_src} alt={r.name} loading="lazy" class="h-16 w-24 flex-shrink-0 rounded-lg object-cover" />
+              <span>
+                <span class="block font-display text-sm font-bold leading-snug text-white group-hover:text-blue-300">{r.name}</span>
+                <span class="mt-0.5 block text-xs text-gray-500">{r.role}</span>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
     <a href="/all-projects" class="group mt-8 inline-flex items-center gap-2 font-display text-gray-200 hover:text-emerald-400">
       <span class="transition-transform group-hover:-translate-x-1">←</span> Back to all projects
     </a>
