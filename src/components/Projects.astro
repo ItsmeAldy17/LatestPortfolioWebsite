@@ -1,6 +1,7 @@
 ---
 import SectionHeader from './SectionHeader.astro';
-import projects from '../data/project_details.json';
+import { orderedProjects } from '../lib/projects';
+const projects = orderedProjects();
 const featured = projects.slice(0, 6);
 const clip = (s: string, n = 120) => (s.length > n ? s.slice(0, n).trimEnd() + '…' : s);
 ---
@@ -9,8 +10,8 @@ const clip = (s: string, n = 120) => (s.length > n ? s.slice(0, n).trimEnd() + '
   <SectionHeader
     index="02"
     eyebrow="Projects"
-    title="Things I've built"
-    subtitle="Machine learning, computer vision, and full-stack projects — from research to shipped products."
+    title="Selected work"
+    subtitle="Machine learning, computer vision, and full-stack projects, from research to shipped products."
   />
 
   <div class="reveal">

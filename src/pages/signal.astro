@@ -1,0 +1,198 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<PageLayout title="Drop a signal" description="A short contact form that opens Gmail addressed to Aldy Ardiansyah. Nothing is stored anywhere.">
+  <PageHeader
+    eyebrow="Contact"
+    title="Drop a signal"
+    subtitle="Fill this in and Gmail opens with everything addressed. Nothing is sent or stored by this site."
+    crumbs={[{ name: 'Home', href: '/' }, { name: 'Signal' }]}
+  />
+
+  <div class="container-lux pb-28">
+    <form id="signal-form" data-u="aldyardiansyah628" data-d="gmail.com" class="mx-auto max-w-2xl border border-white/10 bg-white/[0.03] p-6 sm:rounded-2xl sm:p-10" novalidate>
+      <div>
+        <label for="signal-subject" class="mb-2 block text-sm font-medium text-gray-300">Subject</label>
+        <input
+          id="signal-subject"
+          name="subject"
+          type="text"
+          required
+          maxlength="120"
+          autocomplete="off"
+          placeholder="e.g. ML Engineer role at Company X"
+          class="w-full rounded-xl border border-white/10 bg-gray-950/60 px-4 py-3 text-gray-100 placeholder:text-gray-600 focus:border-blue-400/60 focus:outline-none"
+        />
+        <p id="signal-subject-error" class="mt-1.5 hidden text-sm text-red-400">Give it a short subject.</p>
+      </div>
+
+      <div class="mt-6">
+        <label for="signal-email" class="mb-2 block text-sm font-medium text-gray-300">Your email</label>
+        <input
+          id="signal-email"
+          name="email"
+          type="email"
+          required
+          autocomplete="email"
+          placeholder="you@company.com"
+          class="w-full rounded-xl border border-white/10 bg-gray-950/60 px-4 py-3 text-gray-100 placeholder:text-gray-600 focus:border-blue-400/60 focus:outline-none"
+        />
+        <p id="signal-email-error" class="mt-1.5 hidden text-sm text-red-400">That email does not look right.</p>
+      </div>
+
+      <div class="mt-6">
+        <label for="signal-message" class="mb-2 block text-sm font-medium text-gray-300">Message</label>
+        <textarea
+          id="signal-message"
+          name="message"
+          required
+          rows="6"
+          placeholder="What are you working on, and where do I fit in?"
+          class="w-full resize-y rounded-xl border border-white/10 bg-gray-950/60 px-4 py-3 leading-relaxed text-gray-100 placeholder:text-gray-600 focus:border-blue-400/60 focus:outline-none"
+        ></textarea>
+        <p id="signal-message-error" class="mt-1.5 hidden text-sm text-red-400">Write at least a couple of sentences.</p>
+      </div>
+
+      <!-- Honeypot: invisible to humans, bots fill it and get silently dropped -->
+      <div class="absolute -left-[9999px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+        <label>Leave this empty<input id="signal-company" name="company" type="text" tabindex="-1" autocomplete="off" /></label>
+      </div>
+
+      <button type="submit" class="magnetic glow mt-8 w-full rounded-2xl bg-emerald-500 px-7 py-3.5 font-semibold text-white shadow-[0_10px_36px_-10px_rgba(30,128,255,0.8)] transition-colors hover:bg-emerald-600 sm:w-auto">
+        Compose email
+      </button>
+      <p id="signal-status" role="status" aria-live="polite" class="mt-4 hidden text-sm text-gray-400"></p>
+      <button type="button" id="signal-alt" class="mt-3 hidden text-sm text-gray-500 underline-offset-4 hover:text-gray-200 hover:underline">
+        Prefer another mail app?
+      </button>
+      <div id="signal-actions" class="mt-4 hidden flex-wrap gap-3">
+        <button type="button" id="signal-done" class="rounded-xl bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-emerald-600">
+          I sent it
+        </button>
+        <button type="button" id="signal-reset" class="rounded-xl border border-white/15 px-5 py-2.5 text-sm font-medium text-gray-200 transition-colors hover:border-blue-400/60 hover:text-blue-300">
+          Start over
+        </button>
+      </div>
+    </form>
+
+    <div class="mx-auto mt-10 max-w-2xl">
+      <a href="/#contact" class="group inline-flex items-center gap-2 font-display text-gray-200 hover:text-blue-300">
+        <span class="transition-transform group-hover:-translate-x-1">←</span> Back
+      </a>
+    </div>
+  </div>
+</PageLayout>
+
+<script>
+  const form = document.getElementById('signal-form');
+  if (form) {
+    // Address is assembled only at submit time, never rendered as one string.
+    const to = `${form.getAttribute('data-u')}@${form.getAttribute('data-d')}`;
+    const subject = document.getElementById('signal-subject');
+    const email = document.getElementById('signal-email');
+    const message = document.getElementById('signal-message');
+    const trap = document.getElementById('signal-company');
+    const status = document.getElementById('signal-status');
+    const alt = document.getElementById('signal-alt');
+    const actions = document.getElementById('signal-actions');
+    const done = document.getElementById('signal-done');
+    const reset = document.getElementById('signal-reset');
+    const sentAt = [];
+    let firstTouch = 0;
+
+    const show = (id, on) => {
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle('hidden', !on);
+    };
+    const note = (text) => {
+      status.textContent = text;
+      status.classList.remove('hidden');
+    };
+
+    ['focus', 'input'].forEach((evt) =>
+      form.addEventListener(evt, () => {
+        if (!firstTouch) firstTouch = Date.now();
+      }, { once: evt === 'focus' })
+    );
+
+    const collect = () => {
+      const okSubject = subject.value.trim().length >= 3;
+      const okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+      const okMessage = message.value.trim().length >= 20;
+      show('signal-subject-error', !okSubject);
+      show('signal-email-error', !okEmail);
+      show('signal-message-error', !okMessage);
+      if (!okSubject || !okEmail || !okMessage) return null;
+      return {
+        subject: subject.value.trim(),
+        body: `From: ${email.value.trim()}\n\n${message.value.trim()}`,
+      };
+    };
+
+    const gmailHref = (data) =>
+      `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(data.body)}`;
+
+    const mailtoHref = (data) =>
+      `mailto:${to}?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(data.body)}`;
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // Layer 1, honeypot: bots fill it, humans never see it.
+      if (trap && trap.value) {
+        note('Opening Gmail…');
+        return;
+      }
+      // Layer 2, time-trap: instant submits are not human.
+      if (!firstTouch || Date.now() - firstTouch < 4000) {
+        note('Take a moment to write, then try again.');
+        return;
+      }
+      // Layer 3, throttle: max 3 composes per minute.
+      const now = Date.now();
+      while (sentAt.length && now - sentAt[0] > 60000) sentAt.shift();
+      if (sentAt.length >= 3) {
+        note('Too many tries. Wait a minute and try again.');
+        return;
+      }
+      // Layer 4, validation: raises the cost of junk.
+      const data = collect();
+      if (!data) return;
+      sentAt.push(now);
+      // The form keeps its values: closing Gmail without sending loses nothing.
+      actions.classList.remove('hidden');
+      actions.classList.add('flex');
+      alt.classList.remove('hidden');
+      const win = window.open(gmailHref(data), '_blank', 'noopener');
+      if (!win) {
+        note('Popup blocked. Allow popups for this site, or use another mail app below.');
+      } else {
+        note('Gmail opened in a new tab. If nothing opened, allow popups and try again.');
+      }
+    });
+
+    // Explicit close-out: we cannot detect a real send, so the visitor tells us.
+    done.addEventListener('click', () => {
+      form.reset();
+      actions.classList.add('hidden');
+      actions.classList.remove('flex');
+      alt.classList.add('hidden');
+      note('Marked as sent. Thanks for reaching out.');
+    });
+
+    reset.addEventListener('click', () => {
+      form.reset();
+      actions.classList.add('hidden');
+      actions.classList.remove('flex');
+      alt.classList.add('hidden');
+      status.classList.add('hidden');
+    });
+
+    alt.addEventListener('click', () => {
+      const data = collect();
+      if (!data) return;
+      window.location.href = mailtoHref(data);
+    });
+  }
+</script>

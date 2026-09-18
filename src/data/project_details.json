@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "name": "Shale Shaker Cutting Estimations",
+        "name": "Shale Shaker Cutting Estimations (Desktop)",
         "role": "Internship Machine Learning Engineer",
         "timeline": "6 months",
         "status": "Done",
@@ -9,9 +9,9 @@
         "demo_link": "restricted-area",
         "card_image_src": "/images/portofolio/ml/comvis/Cover-PDU-Comvis.png",
         "category": "ML",
-        "overview": "This project involved developing a computer vision system to monitor and analyze rock cuttings from shale shakers in real-time using CCTV footage. The system was designed to improve the efficiency and accuracy of drilling process monitoring by providing real-time data on rock coverage and composition, thereby supporting operational decision-making in the oil and gas industry.",
-        "challenge": "The primary challenges included processing video streams in real-time with minimal latency, accurately detecting and analyzing rock cuttings amidst varying lighting conditions and potential noise, and ensuring the system's reliability and scalability for integration with existing monitoring systems like the Early Monitoring System (EMS).",
-        "result": "The developed system successfully provided real-time monitoring of shale shaker cuttings, enabling more informed decision-making during drilling operations. It achieved high accuracy in detecting rock coverage and composition, with visualizations helping to identify trends in rock composition over time. The system was seamlessly integrated with the Early Monitoring System, enhancing overall operational efficiency and reducing manual monitoring efforts.",
+        "overview": "Desktop-based (v1) computer vision system to monitor and analyze rock cuttings from shale shakers in real-time using CCTV footage, integrated with the WITSML realtime drilling data standard. Built with classical OpenCV image processing, without deep learning. The system was designed to improve the efficiency and accuracy of drilling process monitoring by providing real-time data on rock coverage and composition, thereby supporting operational decision-making in the oil and gas industry.",
+        "challenge": "The primary challenges included processing video streams in real-time with minimal latency, accurately detecting and analyzing rock cuttings amidst varying lighting conditions and potential noise, and keeping the system reliable and scalable enough to plug into monitoring systems like the Early Monitoring System (EMS).",
+        "result": "The deployed system provided real-time monitoring of shale shaker cuttings, enabling more informed decision-making during drilling operations. It achieved high accuracy in detecting rock coverage and composition, with visualizations helping to identify trends in rock composition over time. The system was integrated with the Early Monitoring System, enhancing overall operational efficiency and reducing manual monitoring efforts.",
         "statistics": {
             "Detection Accuracy": "90%",
             "Processing Latency": "<300ms",
@@ -31,7 +31,8 @@
                 "PostgreSQL"
             ],
             "Real-time": [
-                "Socket.IO"
+                "Socket.IO",
+                "WITSML"
             ]
         },
         "gallery": [
@@ -59,7 +60,7 @@
         "demo_link": "https://universe.roboflow.com/multipurpose/segmentation-aerial-image",
         "card_image_src": "/images/portofolio/ml/segmentation/gmf/Cover-Aerial Image Segmentation.png",
         "category": "ML",
-        "overview": "This research project explores aerial image segmentation techniques using computer vision and deep learning to map geographic features from satellite or drone imagery for my UAV Team's research at the University. The focus was on developing segmentation models to detect and classify objects such as buildings, roads, and vegetation, providing insights for geospatial analysis.",
+        "overview": "Research prototype for my university UAV team: deep-learning segmentation of aerial imagery, satellite and drone, into buildings, roads, and vegetation for geospatial mapping. Built with PyTorch on 500+ annotated images.",
         "challenge": "Key challenges included handling variations in image resolution and lighting conditions, developing accurate segmentation models with limited annotated datasets, and optimizing model performance on resource-constrained hardware.",
         "result": "The research produced a prototype segmentation model based on deep learning, demonstrating promising accuracy on a limited test dataset. It provided valuable insights into the challenges of aerial image segmentation and recommendations for future development, such as data augmentation and model fine-tuning.",
         "statistics": {
@@ -103,7 +104,7 @@
         "card_image_src": "/images/portofolio/ml/segmentation/klh/Cover-Tomato Leaf Disease Detection.png",
         "category": "ML",
         "overview": "Developed a lightweight deep learning model using TensorFlow Lite to detect diseases in tomato leaves from images. The model, based on transfer learning with MobileNetV2, achieves high accuracy with a compact size, suitable for deployment on resource-constrained devices.",
-        "challenge": "Optimizing a high-accuracy model to maintain performance within a compact 5MB size, handling a large dataset with 11 classes, and ensuring robust detection across varied image conditions such as lighting and angles.",
+        "challenge": "Optimizing a high-accuracy model to maintain performance within a compact 5MB size, handling a large dataset with 11 classes, and keeping detection steady across varied image conditions such as lighting and angles.",
         "result": "The model achieved 99.4% accuracy in detecting 11 classes of tomato leaf diseases using a dataset of over 17,000 images. Deployed on Streamlit, the application allows users to upload images and receive real-time disease predictions, demonstrating potential for agricultural diagnostic tools.",
         "statistics": {
             "Model Accuracy": "99.4%",
@@ -154,7 +155,7 @@
         "demo_link": null,
         "card_image_src": "/images/portofolio/ml/comvis/Cover-Chicken Cage-Comvis.png",
         "category": "ML",
-        "overview": "Computer vision system to detect and count chickens in real-time for poultry monitoring. Built using Python, Detectron2, and PyTorch, this prototype employs a RetinaNet model with a ResNet-50 FPN backbone, optimized through dynamic quantization and structured pruning.",
+        "overview": "Prototype poultry-monitoring system that detects and counts chickens in images and video. Built with Python, Detectron2, and PyTorch around a RetinaNet model with a ResNet-50 FPN backbone, compressed with dynamic quantization and structured pruning.",
         "challenge": "Developing a high-sensitivity deep learning model for accurate real-time chicken detection in poultry farm environments.",
         "result": "Developed a prototype capable of reliable chicken detection and counting in images and videos, designed for future integration into a real-time monitoring application.",
         "statistics": {
@@ -204,9 +205,9 @@
         "demo_link": null,
         "card_image_src": "/images/portofolio/de/Forex-Dashboard-Cover.png",
         "category": "DE",
-        "overview": "A real-time dashboard for monitoring forex price fluctuations with automated Telegram bot notifications for price updates. Built using Python for data processing, Grafana for visualization, Docker for containerization, and PostgreSQL for data storage.",
-        "challenge": "Creating a scalable system to process real-time forex data and deliver timely notifications while ensuring seamless integration between dashboard, database, and Telegram bot.",
-        "result": "Developed a fully functional dashboard that tracks forex price changes in real-time and sends automated Telegram notifications, with a robust and scalable architecture using Docker and PostgreSQL.",
+        "overview": "Dashboard that tracks forex prices as they move and pushes updates through a Telegram bot. Python processes the feed, Grafana visualizes it, and Docker with PostgreSQL holds the pipeline together.",
+        "challenge": "Creating a scalable system to process real-time forex data and deliver timely notifications while ensuring the dashboard, database, and Telegram bot work as one pipeline.",
+        "result": "Delivered a working dashboard tracking live forex prices with automated Telegram alerts, containerized with Docker on PostgreSQL.",
         "statistics": {
             "Data Update Frequency": "Real-time",
             "Notification Latency": "< 10 seconds",
@@ -260,9 +261,9 @@
         "demo_link": "https://ai-sentiment-pipeline.vercel.app/",
         "card_image_src": "/images/portofolio/de/AI Sentimen Pipeline-Cover.png",
         "category": "DE",
-        "overview": "Real-time sentiment analysis dashboard with ETL pipeline for scraping raw news data from News API, focusing on AI, blockchain, finance, Forex, and investment topics. Utilizes BERT and VADER models for sentiment analysis, Python for data processing, React JS for the frontend, FastAPI for the backend, Swagger for API documentation, PostgreSQL and Supabase for data storage, and Render for API deployment.",
-        "challenge": "Building an efficient ETL pipeline to scrape and process raw news data from News API, integrating BERT and VADER models for accurate sentiment analysis, and creating a responsive dashboard with seamless API and database integration.",
-        "result": "Developed a robust web application with an ETL pipeline for real-time news scraping and sentiment analysis, featuring interactive dashboards, detailed analytics, and comprehensive API documentation for actionable insights.",
+        "overview": "Live sentiment dashboard over scraped news on AI, blockchain, finance, forex, and investing. BERT and VADER score each article, React shows the trends, FastAPI serves them, and PostgreSQL with Supabase stores everything, deployed on Render.",
+        "challenge": "Building an efficient ETL pipeline to scrape and process raw news data from News API, integrating BERT and VADER models for accurate sentiment analysis, and creating a responsive dashboard backed by a Swagger-documented API and PostgreSQL/Supabase storage.",
+        "result": "Delivered a working app where an ETL pipeline scrapes news, scores sentiment, and serves it through interactive dashboards and Swagger-documented endpoints.",
         "statistics": {
             "Data Source": "News API",
             "Topics Analyzed": "AI, Blockchain, Finance, Forex, Investment",
@@ -330,8 +331,8 @@
         "card_image_src": "/images/portofolio/ml/segmentation/sklv/Cover-SKLV-Road Line Detection.png",
         "category": "ML",
         "overview": "This project developed a model to detect road lane markings from image and video inputs at the Samsung Innovation Campus Batch 5 competition. The system was deployed using Streamlit, providing an interactive web interface for users to upload inputs and visualize detected lane lines in image and video processing, with potential applications in navigation and autonomous driving systems.",
-        "challenge": "Key challenges included handling varying conditions of image/video quality, developing a robust algorithm to detect different types of lane markings, and ensuring the Streamlit application was responsive and efficient for processing.",
-        "result": "The system successfully detected road lane markings from images and videos, with results visualized through an interactive Streamlit interface. Users could upload inputs and view detected lane lines with clear overlays, demonstrating potential for navigation systems or autonomous vehicle support.",
+        "challenge": "Key challenges included handling varying conditions of image/video quality, developing an algorithm tolerant to different lane marking types, and ensuring the Streamlit application was responsive and efficient for processing.",
+        "result": "The system detected road lane markings from images and videos, with results visualized through an interactive Streamlit interface. Users could upload inputs and view detected lane lines with clear overlays, demonstrating potential for navigation systems or autonomous vehicle support.",
         "statistics": {
             "Supported Input Types": "Images (JPEG, PNG), Videos (MP4)",
             "Frame Analysis": "Image analysis",
@@ -379,9 +380,9 @@
         "demo_link": "https://github.com/sleepsense-project",
         "card_image_src": "/images/portofolio/iot/Cover-IoT Device Sleep Apnea.png",
         "category": "IoT",
-        "overview": "Developed SleepSense, an end-to-end IoT solution for affordable, at-home early detection and rehabilitation of Obstructive Sleep Apnea (OSA). The system integrates an ergonomic belt-thorax sensor for real-time ECG and respiratory pattern monitoring, and a wireless pulse oximeter for continuous tracking of blood oxygen levels and heart rate. Data is processed on a web-based platform with AI-driven analysis, clinical reporting, and direct access for doctors.",
+        "overview": "SleepSense is an affordable at-home system for early detection and rehabilitation of Obstructive Sleep Apnea (OSA): an ergonomic belt-thorax sensor records ECG and breathing patterns, a wireless pulse oximeter tracks blood oxygen and heart rate, and a web platform turns both streams into assisted analysis, clinical reports, and a direct line to doctors.",
         "challenge": "Designing an ergonomic and cost-effective sensor system, ensuring reliable real-time data transmission via MQTT, and integrating diverse data streams (ECG, respiratory patterns, oxygen saturation, heart rate) into a unified web dashboard for clinical use.",
-        "result": "Successfully developed and deployed SleepSense, enabling real-time monitoring of sleep apnea indicators with a production cost of approximately Rp2 million per unit. The system supports early diagnosis and long-term rehabilitation through a user-friendly dashboard, facilitating continuous patient-doctor communication and scalable healthcare solutions.",
+        "result": "Developed and deployed SleepSense, enabling real-time monitoring of sleep apnea indicators with a production cost of approximately Rp2 million per unit. The system supports early diagnosis and long-term rehabilitation through a user-friendly dashboard, facilitating continuous patient-doctor communication and scalable healthcare solutions.",
         "statistics": {
             "Data Streams Belt": "ECG, respiratory patterns",
             "Data Streams Finger": "Oxygen saturation, heart rate",
@@ -428,8 +429,8 @@
         "card_image_src": "/images/portofolio/iot/Cover-IoT Device Gps Tracker.png",
         "category": "IoT",
         "overview": "Developed an IoT device to track football players' movement patterns during matches. The device, attached to the back of players' jerseys, records real-time movement data and stores it locally on an SD card in Excel format for subsequent analysis on a dedicated web platform.",
-        "challenge": "Designing a compact and durable IoT device suitable for attachment to players' jerseys, ensuring reliable local storage of movement data on an SD card, and formatting data for seamless integration with a web-based analysis platform.",
-        "result": "Successfully developed a wearable IoT device that accurately tracks and stores players' movement data locally in Excel format. The data integrates with a web platform for detailed analysis, supporting performance evaluation and tactical planning in football.",
+        "challenge": "Designing a compact and durable IoT device suitable for attachment to players' jerseys, ensuring reliable local storage of movement data on an SD card, and formatting data for direct import into the web-based analysis platform.",
+        "result": "Developed a wearable IoT device that accurately tracks and stores players' movement data locally in Excel format. The data integrates with a web platform for detailed analysis, supporting performance evaluation and tactical planning in football.",
         "statistics": {
             "Data Storage": "Local SD card",
             "Output Format": "Excel",
@@ -482,8 +483,8 @@
         "card_image_src": "/images/portofolio/mobile/Cover-Bingo Mobile App.png",
         "category": "Mobile",
         "overview": "Developed BIN-GO!, a mobile application to address the waste crisis in Yogyakarta. The app integrates Google Maps to locate nearby recycling centers, provides a community forum for waste management discussions, includes a reporting feature for environmental issues, and incorporates gamification to promote sustainable behaviors.",
-        "challenge": "Integrating Google Maps for accurate recycling center location tracking, designing an intuitive forum and reporting system, and implementing gamification elements to enhance user engagement while ensuring seamless performance on Android devices.",
-        "result": "Successfully launched BIN-GO! in Yogyakarta, enabling users to locate recycling centers, report waste issues, and engage in community discussions. The gamification features encouraged sustainable practices, fostering a sense of shared responsibility for a cleaner environment.",
+        "challenge": "Integrating Google Maps for accurate recycling center location tracking, designing an intuitive forum and reporting system, and implementing gamification elements to enhance user engagement while ensuring stable performance on Android devices.",
+        "result": "Launched BIN-GO! in Yogyakarta, enabling users to locate recycling centers, report waste issues, and engage in community discussions. The gamification features encouraged sustainable practices, fostering a sense of shared responsibility for a cleaner environment.",
         "statistics": {
             "Main Features": "Bin-Community",
             "Second Features": "Bin-Locator",
@@ -538,7 +539,7 @@
         "category": "PM",
         "overview": "Led the development of Broiler Monitoring (BroMo) v.1, a web-based information system designed to monitor poultry farms effectively. The application enables real-time monitoring of farm conditions for owners and workers, enhancing operational efficiency.",
         "challenge": "Coordinating a multidisciplinary team to design an intuitive interface and ensure real-time data integration, while managing project timelines and stakeholder expectations using Agile methodologies.",
-        "result": "Successfully delivered BroMo v.1, enabling real-time poultry farm monitoring, improving operational oversight for owners and workers, and receiving positive feedback for its usability and reliability.",
+        "result": "Delivered BroMo v.1, enabling real-time poultry farm monitoring, improving operational oversight for owners and workers, and receiving positive feedback for its usability and reliability.",
         "statistics": {
             "Team Developers": "2 developers",
             "Team Design": "1 UI/UX Design",
@@ -589,8 +590,8 @@
         "card_image_src": "/images/portofolio/pm/Broiler Monitoring v.2.png",
         "category": "PM",
         "overview": "Managed the development of Broiler Monitoring v.2, focusing on enhancing the user interface with a cleaner design and improved functionality. The project involved migrating the frontend framework from Laravel to Next.js while maintaining Laravel for the database API, ensuring a modern and efficient application.",
-        "challenge": "Overseeing the migration from Laravel to Next.js, ensuring seamless integration with the existing Laravel API, and implementing rigorous testing to maintain reliability and performance.",
-        "result": "Successfully delivered BroMo v.2 with a modernized interface and enhanced functionality, improving user experience and maintaining system reliability through thorough testing and stakeholder alignment.",
+        "challenge": "Overseeing the migration from Laravel to Next.js, ensuring the Next.js frontend works with the existing Laravel API, and implementing rigorous testing to maintain reliability and performance.",
+        "result": "Delivered BroMo v.2 with a modernized interface and enhanced functionality, improving user experience and maintaining system reliability through thorough testing and stakeholder alignment.",
         "statistics": {
             "Team Size": "2 developers",
             "Migration Completion": "100%",
@@ -642,9 +643,9 @@
         "demo_link": "https://www.buildwithangga.com/showcase/aldyardiansyah628/document-report-of-software-quality-testing-website-buildwithangga",
         "card_image_src": "/images/portofolio/qa/BWA Platform.png",
         "category": "QA",
-        "overview": "Conducted quality assurance testing for a web application as part of a course, focusing on creating and executing test cases for two case studies to ensure functionality and reliability of the BuildWithAngga platform.",
+        "overview": "Conducted quality assurance testing for a web application as part of a course, focusing on creating and executing test cases for two case studies to verify the functionality and reliability of the BuildWithAngga platform.",
         "challenge": "Developing comprehensive test cases to cover critical functionalities within a short timeframe, and documenting results clearly using Excel for effective reporting and analysis.",
-        "result": "Successfully created and executed test cases for two case studies, identifying key issues and ensuring the functionality of the BuildWithAngga platform, with all findings documented in Excel for stakeholder review.",
+        "result": "Created and executed test cases for two case studies, identifying key issues and ensuring the functionality of the BuildWithAngga platform, with all findings documented in Excel for stakeholder review.",
         "statistics": {
             "Test Cases Created": "2 case studies",
             "Issues Identified": "Multiple functional issues",
@@ -676,8 +677,8 @@
         "card_image_src": "/images/portofolio/qa/Tokped Web.png",
         "category": "QA",
         "overview": "Conducted quality assurance testing for the Tokopedia e-commerce platform, focusing on creating and executing three test cases (positive and negative scenarios) to validate the functionality of adding items to the wishlist, adding items to the cart, and performing checkout.",
-        "challenge": "Designing comprehensive positive and negative test cases to ensure robust functionality across critical user flows, and documenting results in Excel for clear reporting within a limited timeframe.",
-        "result": "Successfully developed and executed three test cases for Tokopedia's wishlist, cart, and checkout features, identifying potential issues and ensuring reliable performance, with all findings documented in Excel for stakeholder review.",
+        "challenge": "Designing comprehensive positive and negative test cases across critical user flows, and documenting results in Excel for clear reporting within a limited timeframe.",
+        "result": "Developed and executed three test cases for Tokopedia's wishlist, cart, and checkout features, identifying potential issues, with all findings documented in Excel for stakeholder review.",
         "statistics": {
             "Test Cases Created": "3 (positive and negative)",
             "Features Tested": "Wishlist, Cart, Checkout",
@@ -695,6 +696,154 @@
                 "title": "Test Case Spreadsheet",
                 "description": "Excel document detailing test cases for Tokopedia's wishlist, cart, and checkout features.",
                 "src": "/images/portofolio/qa/Spreadsheets Tokped Web.png"
+            }
+        ]
+    },
+    {
+        "id": "15",
+        "name": "Visit Bantaragung Tourism Platform",
+        "role": "Frontend Developer",
+        "timeline": "December 2025 - February 2026",
+        "status": "Done",
+        "github_link": null,
+        "demo_link": "https://visitbantaragung.com/",
+        "card_image_src": "/images/portofolio/web/Cover-Visit-Bantaragung.png",
+        "category": "Web",
+        "overview": "Developed the frontend of Visit Bantaragung, the official smart tourism platform for Desa Wisata Bantaragung in Majalengka, built with the KKN-PPM UGM Simfoni Sindangwangi team. The platform presents village destinations, the herbal village catalog, news, and an interactive digital map in one site.",
+        "challenge": "Structuring diverse village content, destinations, herbal catalog, news, and a digital map, into a single site that stays fast and usable for both villagers and tourists.",
+        "result": "Delivered a live official platform at visitbantaragung.com covering flagship destinations, the herbal village, village news, and a digital map for visitors.",
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Platform Cover",
+                "description": "Landing view of the Visit Bantaragung smart tourism platform.",
+                "src": "/images/portofolio/web/Cover-Visit-Bantaragung.png"
+            }
+        ]
+    },
+    {
+        "id": "16",
+        "name": "Building Automation System Dashboard",
+        "role": "IoT Dashboard Engineer",
+        "timeline": "2025",
+        "status": "Done",
+        "github_link": null,
+        "demo_link": "https://building-automation-system.vercel.app/",
+        "card_image_src": "/images/portofolio/web/Cover-Building-Automation-System.png",
+        "category": "IoT",
+        "overview": "Built the data visualization and integration layer of a Building Automation System monitoring dashboard for the Lab Perancangan Polban. The dashboard unifies WWTP, clean water, and fire protection monitoring over OPC UA, MQTT, and Modbus TCP/IP, with threshold alarms and a simulation mode for testing.",
+        "challenge": "Unifying three subsystems and three industrial protocols into one readable dashboard, while keeping live values, alarm states, and a simulation mode for testing without production data.",
+        "result": "Delivered a live dashboard with a system summary, per-unit monitoring for WWTP, clean water, and fire protection, configurable alarm thresholds, and a simulation mode for safe testing.",
+        "technologies_grouped": {
+            "Visualization": [
+                "React"
+            ],
+            "Integration": [
+                "Python"
+            ],
+            "Protocols": [
+                "OPC UA",
+                "MQTT",
+                "Modbus TCP/IP"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Monitoring Dashboard",
+                "description": "Main BAS dashboard with system summary and per-unit monitoring.",
+                "src": "/images/portofolio/web/Cover-Building-Automation-System.png"
+            }
+        ]
+    },
+    {
+        "id": "17",
+        "name": "Shale Shaker Cutting Monitoring Web",
+        "role": "Full-Stack ML Engineer",
+        "timeline": "2026",
+        "status": "Done",
+        "github_link": null,
+        "demo_link": "https://shaleshakercuttingmonitor.web.id/",
+        "card_image_src": "/images/portofolio/web/Cover-Shale-Shaker-Web.png",
+        "category": "ML",
+        "overview": "Built as my undergraduate thesis (Tugas Akhir): a full migration of the desktop shale-shaker monitoring system to the web. Where v1 used classical OpenCV without deep learning, this version runs deep learning (MobileViT + BiSeNet v2) behind a web tool where users upload a video, mark a 4-point ROI, tune the model, and run live detection with trend visualization.",
+        "challenge": "Turning an offline detection model into a usable web tool: video upload, 4-point ROI selection, tunable inference settings, and live trend charts in one session flow.",
+        "result": "Delivered a live internal tool (v0.2) running a MobileViT model over ONNX with FastAPI, WebSocket updates, and SQLite session history.",
+        "statistics": {
+            "Version": "v0.2 (web migration)",
+            "Model": "MobileViT",
+            "Runtime": "ONNX",
+            "Backend": "FastAPI",
+            "Updates": "WebSocket"
+        },
+        "technologies_grouped": {
+            "Computer Vision": [
+                "Python",
+                "OpenCV",
+                "MobileViT",
+                "BiSeNet v2",
+                "ONNX"
+            ],
+            "Backend": [
+                "FastAPI",
+                "WebSocket",
+                "SQLite"
+            ],
+            "Deployment": [
+                "Docker"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Detection Dashboard",
+                "description": "Live detection view with ROI overlay and coverage trend chart.",
+                "src": "/images/portofolio/web/Cover-Shale-Shaker-Web.png"
+            }
+        ]
+    },
+    {
+        "id": "18",
+        "name": "Wind Turbine Defect Dataset (100K VLM)",
+        "role": "Project Lead & QC Specialist",
+        "timeline": "September 2025 - January 2026",
+        "status": "Done",
+        "github_link": null,
+        "demo_link": null,
+        "card_image_src": "/images/portofolio/ml/dataset/Cover-Wind-Turbine-Defect-Dataset.png",
+        "category": "ML",
+        "overview": "Co-led dataset construction for a vision-language model that spots defects on wind turbine blades: 100,000 real drone-inspection photos across 14 defect classes, from LEP erosion to laminate cracks. With one fellow lead, I ran 5 mentors and 35 annotators across Indonesia: writing inspection guidelines, recording tutorials, holding daily QC syncs, and bridging the company team with the workers on the ground.",
+        "challenge": "Keeping 40 annotators consistent across 14 visually similar defect classes, training mentors faster than the labeling queue grew, and holding daily throughput without letting bad labels through.",
+        "result": "Delivered the full 100,000-photo batch at 98.8% QC validity: a 14-class defect taxonomy verified by domain experts, plus an annotation pipeline the team could keep running.",
+        "statistics": {
+            "Photos": "100,000 real drone inspections",
+            "Annotators": "40 across Indonesia",
+            "Defect Classes": "14",
+            "QC Validity": "98.8%"
+        },
+        "technologies_grouped": {
+            "Annotation": [
+                "CVAT"
+            ],
+            "Data": [
+                "Drone Imagery"
+            ],
+            "Model Target": [
+                "Vision Language Models"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Weekly Sync With Company Team",
+                "description": "Weekly alignment between the Korean company team and the Indonesian annotation crew.",
+                "src": "/images/portofolio/ml/dataset/Weekly-Meeting-01.png"
+            },
+            {
+                "id": 2,
+                "title": "QC Review Session",
+                "description": "Reviewing edge-case labels and throughput with mentors and the company team.",
+                "src": "/images/portofolio/ml/dataset/Weekly-Meeting-02.png"
             }
         ]
     }

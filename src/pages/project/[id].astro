@@ -49,10 +49,10 @@ const sections = [
       <span class="text-gray-400"><span class="text-gray-600">Timeline</span> · {p.timeline}</span>
       <div class="flex gap-3">
         {isLink(p.github_link) && (
-          <a href={p.github_link} target="_blank" rel="noopener noreferrer" class="magnetic rounded-full border border-white/15 px-4 py-1.5 font-medium text-gray-200 transition-colors hover:border-emerald-500/60 hover:text-emerald-400">Repository</a>
+          <a href={p.github_link} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-white/15 px-4 py-1.5 font-medium text-gray-200 transition-colors hover:border-emerald-500/60 hover:text-emerald-400">Repository</a>
         )}
         {isLink(p.demo_link) && (
-          <a href={p.demo_link} target="_blank" rel="noopener noreferrer" class="magnetic rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 px-4 py-1.5 font-semibold text-gray-900">Live Demo</a>
+          <a href={p.demo_link} target="_blank" rel="noopener noreferrer" class="rounded-xl bg-emerald-500 px-4 py-1.5 font-semibold text-white transition-colors hover:bg-emerald-600">Live Demo</a>
         )}
       </div>
     </div>

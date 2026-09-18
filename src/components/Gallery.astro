@@ -27,5 +27,9 @@ import gallery from '../data/gallery.json';
         <button class="h-2 w-2 rounded-full bg-white/30 transition-all data-[active]:w-6 data-[active]:bg-blue-400" aria-label={`Go to slide ${i + 1}`} data-carousel-dot={i}></button>
       ))}
     </div>
+
+    <!-- Arrows -->
+    <button data-carousel-prev aria-label="Previous moment" class="absolute left-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-gray-950/60 text-xl text-white backdrop-blur-md transition-colors hover:border-blue-400/60 hover:text-blue-300">‹</button>
+    <button data-carousel-next aria-label="Next moment" class="absolute right-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-gray-950/60 text-xl text-white backdrop-blur-md transition-colors hover:border-blue-400/60 hover:text-blue-300">›</button>
   </div>
 </section>
