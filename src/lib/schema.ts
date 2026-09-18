@@ -7,6 +7,7 @@ export const personSchema = {
   '@type': 'Person',
   '@id': personId,
   name: site.name,
+  alternateName: ['ItsmeAldy17', 'Aldy Ardiansyah ML'],
   jobTitle: site.jobTitle,
   description: site.description,
   url: SITE_URL,
@@ -25,7 +26,7 @@ export const personSchema = {
     addressRegion: site.location.region,
     addressCountry: site.location.countryCode,
   },
-  sameAs: [site.social.github, site.social.linkedin],
+  sameAs: [site.social.github, site.social.linkedin, site.social.talent],
 };
 
 // Graph utama dipasang di setiap halaman via BaseLayout.
