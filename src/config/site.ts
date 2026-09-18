@@ -36,6 +36,7 @@ export const site = {
   social: {
     github: 'https://github.com/ItsmeAldy17',
     linkedin: 'https://www.linkedin.com/in/aldyardiansyah17',
+    talent: 'https://buildwithangga.com/talent/aldyardiansyah628',
     email: 'mailto:aldyardiansyah628@gmail.com',
   },
   cvUrl:
@@ -52,6 +53,7 @@ export const site = {
     'TensorFlow',
     'Object Detection',
     'Image Segmentation',
+    'Vision Language Models',
     'Internet of Things (IoT)',
     'Data Science',
   ],
@@ -82,6 +84,18 @@ export const faqs = [
   {
     q: 'What are Aldy Ardiansyah\u2019s notable achievements?',
     a: 'He won 2nd place and the People\u2019s Choice Award at Samsung Innovation Campus 2023/2024, 2nd place at Hackathon elevAIte Indonesia 2025, and was part of the UGM team that became overall champion at the Indonesian Flying Robot Contest (KRTI) 2025.',
+  },
+  {
+    q: 'Is Aldy Ardiansyah a full-stack machine learning engineer?',
+    a: 'Yes. He works across the full stack: computer vision models, deep learning training, MLOps deployment, and the web dashboards and APIs around them, using Python, PyTorch, TensorFlow, FastAPI, and Docker.',
+  },
+  {
+    q: 'Which Aldy Ardiansyah is this portfolio about?',
+    a: 'This portfolio belongs to Aldy Ardiansyah, the Machine Learning Engineer from Yogyakarta, Indonesia, with a Software Engineering Technology (TRPL) background from Universitas Gadjah Mada (UGM). His work includes computer vision for the oil and gas industry with PT Parama Data Unit, IoT health devices, UAV systems with Gamaforce UGM, and dataset work with Advisor Lauren Co., Ltd.',
+  },
+  {
+    q: 'What is aldyardnsyh.my.id?',
+    a: 'The personal portfolio domain of Aldy Ardiansyah, Machine Learning Engineer from Yogyakarta, Indonesia. The shortened domain drops the vowels of Ardiansyah but belongs to the same person.',
   },
   {
     q: 'How can I contact Aldy Ardiansyah?',

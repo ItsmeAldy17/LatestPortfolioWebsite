@@ -16,6 +16,8 @@ interface Props {
   /** waktu publish/update untuk artikel (ISO) */
   publishedTime?: string;
   modifiedTime?: string;
+  /** robots meta override, mis. "noindex, nofollow" untuk halaman tipis */
+  robots?: string;
 }
 
 const {
@@ -26,6 +28,7 @@ const {
   schema = [],
   publishedTime,
   modifiedTime,
+  robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
 } = Astro.props;
 
 const pageTitle = title ? `${title} | ${site.name}` : `${site.name} | ${site.jobTitle}`;
@@ -41,12 +44,13 @@ const jsonLd = buildGraph(schema);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#04060e" />
 
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <meta name="author" content={site.name} />
     <link rel="canonical" href={canonical} />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="robots" content={robots} />
 
     <!-- Open Graph -->
     <meta property="og:type" content={type} />

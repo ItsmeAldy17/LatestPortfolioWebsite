@@ -4,10 +4,23 @@ import PageHeader from '../components/PageHeader.astro';
 import projectsRaw from '../data/project_details.json';
 import { orderedProjects } from '../lib/projects';
 import { breadcrumbSchema } from '../lib/schema';
+import { SITE_URL } from '../config/site';
 
 const projects = orderedProjects(projectsRaw);
-
-const schema = [breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Projects', url: '/all-projects' }])];
+const schema = [
+  breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Projects', url: '/all-projects' }]),
+  {
+    '@type': 'ItemList',
+    '@id': `${SITE_URL}/all-projects#list`,
+    name: 'All projects by Aldy Ardiansyah',
+    itemListElement: projects.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: p.name,
+      url: `${SITE_URL}/project/${p.id}`,
+    })),
+  },
+];
 ---
 
 <PageLayout title="All Projects" description="A complete portfolio of machine learning, computer vision, and software engineering projects by Aldy Ardiansyah." schema={schema}>

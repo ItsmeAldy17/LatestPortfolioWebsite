@@ -753,6 +753,12 @@
                 "title": "Monitoring Dashboard",
                 "description": "Main BAS dashboard with system summary and per-unit monitoring.",
                 "src": "/images/portofolio/web/Cover-Building-Automation-System.png"
+            },
+            {
+                "id": 2,
+                "title": "Unit Monitoring in Action",
+                "description": "Live WWTP, clean water, and fire protection values with threshold alarms.",
+                "src": "/images/portofolio/web/BAS-Unit-Monitoring.gif"
             }
         ]
     },
@@ -799,6 +805,12 @@
                 "title": "Detection Dashboard",
                 "description": "Live detection view with ROI overlay and coverage trend chart.",
                 "src": "/images/portofolio/web/Cover-Shale-Shaker-Web.png"
+            },
+            {
+                "id": 2,
+                "title": "Live Detection Session",
+                "description": "Real session with ROI overlay, coverage trend, and last coverage value.",
+                "src": "/images/portofolio/web/Shale-Live-Session.gif"
             }
         ]
     },

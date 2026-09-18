@@ -10,7 +10,8 @@ export default defineConfig({
   trailingSlash: 'ignore',
   integrations: [
     tailwind({ applyBaseStyles: false }),
-    sitemap(),
+    // Halaman tipis (form) tidak masuk sitemap agar tidak mengencerkan crawl.
+    sitemap({ filter: (page) => !page.includes('/signal') }),
   ],
   build: {
     inlineStylesheets: 'auto',
