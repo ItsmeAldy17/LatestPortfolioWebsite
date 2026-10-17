@@ -2,6 +2,7 @@
 // Marquee two rows. Kept in sync with the stacks of the shipped projects.
 // Row 1 = ML / CV / OCR core. Row 2 = LLM, data, and full-stack delivery.
 // Icons: brand logos ship as SVG (crisp at any size), custom OCR/RAG marks as PNG.
+// Filenames are space-free so every CDN serves them verbatim.
 const row1 = [
   'Python',
   'PyTorch',
@@ -16,7 +17,7 @@ const row1 = [
   'PaddleOCR',
   'Tesseract',
   'RAG',
-  'LLM Integration',
+  'LLM',
 ];
 const row2 = [
   'FastAPI',
@@ -31,7 +32,7 @@ const row2 = [
   'Next.js',
   'React',
   'TypeScript',
-  'Tailwind CSS',
+  'TailwindCSS',
   'Node.js',
   'Git',
   'Linux',
@@ -39,6 +40,17 @@ const row2 = [
   'Railway',
 ];
 
+// Nama tampilan -> nama file, saat berbeda.
+const iconFix: Record<string, string> = {
+  TensorFlow: 'Tensorflow',
+  PyTorch: 'Pytorch',
+  LLM: 'LLM-Integration',
+};
+// Label yang tampil di kartu (kalau beda dari nama file).
+const labelFix: Record<string, string> = {
+  LLM: 'LLM Integration',
+  TailwindCSS: 'Tailwind CSS',
+};
 // Nama file ikon yang punya SVG resmi (brand). Sisanya PNG.
 const SVG_ICONS = new Set([
   'Python',
@@ -61,22 +73,18 @@ const SVG_ICONS = new Set([
   'Next.js',
   'React',
   'TypeScript',
-  'Tailwind CSS',
+  'TailwindCSS',
   'Node.js',
   'Git',
   'Linux',
   'Vercel',
   'Railway',
 ]);
-// Nama tampilan -> nama file, saat berbeda.
-const iconFix: Record<string, string> = {
-  TensorFlow: 'Tensorflow',
-  PyTorch: 'Pytorch',
-};
 const iconOf = (n: string) => {
   const file = iconFix[n] ?? n;
   return `/icons/${file}.${SVG_ICONS.has(file) ? 'svg' : 'png'}`;
 };
+const labelOf = (n: string) => labelFix[n] ?? n;
 const all1 = [...row1, ...row1];
 const all2 = [...row2, ...row2];
 ---
@@ -88,8 +96,8 @@ const all2 = [...row2, ...row2];
     <div class="marquee-track marquee-l">
       {all1.map((n) => (
           <div class="flex flex-shrink-0 items-center gap-3 rounded-xl border border-blue-400/15 bg-blue-500/5 px-5 py-3 transition-colors hover:border-blue-400/50">
-          <img src={iconOf(n)} alt={n} width="26" height="26" loading="lazy" class="h-6 w-6 object-contain" />
-          <span class="whitespace-nowrap font-display font-medium text-gray-200">{n}</span>
+          <img src={iconOf(n)} alt={labelOf(n)} width="26" height="26" loading="lazy" class="h-6 w-6 object-contain" />
+          <span class="whitespace-nowrap font-display font-medium text-gray-200">{labelOf(n)}</span>
         </div>
       ))}
     </div>
@@ -99,8 +107,8 @@ const all2 = [...row2, ...row2];
     <div class="marquee-track marquee-r">
       {all2.map((n) => (
           <div class="flex flex-shrink-0 items-center gap-3 rounded-xl border border-blue-400/15 bg-blue-500/5 px-5 py-3 transition-colors hover:border-blue-400/50">
-          <img src={iconOf(n)} alt={n} width="26" height="26" loading="lazy" class="h-6 w-6 object-contain" />
-          <span class="whitespace-nowrap font-display font-medium text-gray-200">{n}</span>
+          <img src={iconOf(n)} alt={labelOf(n)} width="26" height="26" loading="lazy" class="h-6 w-6 object-contain" />
+          <span class="whitespace-nowrap font-display font-medium text-gray-200">{labelOf(n)}</span>
         </div>
       ))}
     </div>
