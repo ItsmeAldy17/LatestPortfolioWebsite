@@ -1,8 +1,82 @@
 ---
-const row1 = ['Python', 'TensorFlow', 'PyTorch', 'ONNX', 'Scikit-learn', 'OpenCV', 'NumPy', 'Pandas', 'Keras'];
-const row2 = ['Docker', 'Git', 'Linux', 'Node.js', 'Flask', 'FastAPI', 'MySQL', 'MongoDB', 'PostgresSQL', 'Socket.io'];
-const iconFix: Record<string, string> = { TensorFlow: 'Tensorflow', PyTorch: 'Pytorch' };
-const iconOf = (n: string) => `/icons/${iconFix[n] ?? n}.png`;
+// Marquee two rows. Kept in sync with the stacks of the shipped projects.
+// Row 1 = ML / CV / OCR core. Row 2 = LLM, data, and full-stack delivery.
+// Icons: brand logos ship as SVG (crisp at any size), custom OCR/RAG marks as PNG.
+const row1 = [
+  'Python',
+  'PyTorch',
+  'TensorFlow',
+  'ONNX',
+  'OpenCV',
+  'Scikit-learn',
+  'NumPy',
+  'Pandas',
+  'Keras',
+  'RapidOCR',
+  'PaddleOCR',
+  'Tesseract',
+  'RAG',
+  'LLM Integration',
+];
+const row2 = [
+  'FastAPI',
+  'Docker',
+  'PostgresSQL',
+  'MySQL',
+  'MongoDB',
+  'SQLite',
+  'ChromaDB',
+  'Groq',
+  'Ollama',
+  'Next.js',
+  'React',
+  'TypeScript',
+  'Tailwind CSS',
+  'Node.js',
+  'Git',
+  'Linux',
+  'Vercel',
+  'Railway',
+];
+
+// Nama file ikon yang punya SVG resmi (brand). Sisanya PNG.
+const SVG_ICONS = new Set([
+  'Python',
+  'Pytorch',
+  'Tensorflow',
+  'ONNX',
+  'OpenCV',
+  'Scikit-learn',
+  'NumPy',
+  'Pandas',
+  'Keras',
+  'PaddleOCR',
+  'FastAPI',
+  'Docker',
+  'PostgresSQL',
+  'MySQL',
+  'MongoDB',
+  'SQLite',
+  'Ollama',
+  'Next.js',
+  'React',
+  'TypeScript',
+  'Tailwind CSS',
+  'Node.js',
+  'Git',
+  'Linux',
+  'Vercel',
+  'Railway',
+]);
+// Nama tampilan -> nama file, saat berbeda.
+const iconFix: Record<string, string> = {
+  TensorFlow: 'Tensorflow',
+  PyTorch: 'Pytorch',
+};
+const iconOf = (n: string) => {
+  const file = iconFix[n] ?? n;
+  return `/icons/${file}.${SVG_ICONS.has(file) ? 'svg' : 'png'}`;
+};
 const all1 = [...row1, ...row1];
 const all2 = [...row2, ...row2];
 ---

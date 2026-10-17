@@ -19,6 +19,8 @@ const isLink = (v: string) => typeof v === 'string' && v.startsWith('http');
 const stats = Object.entries(p.statistics ?? {});
 const techGroups = Object.entries(p.technologies_grouped ?? {});
 
+const buildDate = new Date().toISOString();
+
 const schema = [
   {
     '@type': 'CreativeWork',
@@ -27,7 +29,22 @@ const schema = [
     description: p.overview,
     image: absoluteUrl(p.card_image_src),
     creator: { '@id': `${SITE_URL}/#person` },
+    author: { '@id': `${SITE_URL}/#person` },
     keywords: techGroups.flatMap(([, v]) => v as string[]).join(', '),
+    dateModified: buildDate,
+    ...(isLink(p.demo_link) ? { url: p.demo_link } : {}),
+    ...(isLink(p.github_link) ? { codeRepository: p.github_link } : {}),
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${SITE_URL}/project/${p.id}#webpage`,
+    url: `${SITE_URL}/project/${p.id}`,
+    name: `${p.name} | Aldy Ardiansyah`,
+    description: p.overview,
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    about: { '@id': `${SITE_URL}/project/${p.id}#project` },
+    inLanguage: 'en',
+    dateModified: buildDate,
   },
   breadcrumbSchema([
     { name: 'Home', url: '/' },
