@@ -6,3 +6,5 @@ dist
 .env.production
 .DS_Store
 npm-debug.log*
+# Temporary working file — delete after Stitch covers are generated.
+STITCH-COVER-PROMPTS.md

@@ -705,7 +705,7 @@
         "role": "Frontend Developer",
         "timeline": "December 2025 - February 2026",
         "status": "Done",
-        "github_link": null,
+        "github_link": "https://github.com/aldyardnsyh/VisitBantaragung",
         "demo_link": "https://visitbantaragung.com/",
         "card_image_src": "/images/portofolio/web/Cover-Visit-Bantaragung.png",
         "category": "Web",
@@ -727,7 +727,7 @@
         "role": "IoT Dashboard Engineer",
         "timeline": "2025",
         "status": "Done",
-        "github_link": null,
+        "github_link": "https://github.com/aldyardnsyh/Building-Automation-System",
         "demo_link": "https://building-automation-system.vercel.app/",
         "card_image_src": "/images/portofolio/web/Cover-Building-Automation-System.png",
         "category": "IoT",
@@ -768,7 +768,7 @@
         "role": "Full-Stack ML Engineer",
         "timeline": "2026",
         "status": "Done",
-        "github_link": null,
+        "github_link": "https://github.com/aldyardnsyh/ShaleShakerCuttingMonitor",
         "demo_link": "https://shaleshakercuttingmonitor.web.id/",
         "card_image_src": "/images/portofolio/web/Cover-Shale-Shaker-Web.png",
         "category": "ML",
@@ -856,6 +856,225 @@
                 "title": "QC Review Session",
                 "description": "Reviewing edge-case labels and throughput with mentors and the company team.",
                 "src": "/images/portofolio/ml/dataset/Weekly-Meeting-02.png"
+            }
+        ]
+    },
+    {
+        "id": "19",
+        "name": "LolosCV ATS Resume Builder",
+        "role": "Full-Stack Developer",
+        "timeline": "September 2026",
+        "status": "Done",
+        "github_link": "https://github.com/aldyardnsyh/Lolos-CV",
+        "demo_link": "https://loloscvats.web.id",
+        "card_image_src": "/images/portofolio/web/Cover-Lolos-CV.png",
+        "category": "Web",
+        "overview": "Free resume builder that works backwards from the job posting: paste a LinkedIn, JobStreet, or Glints job URL (or the raw text), let AI break down the requirements, generate a draft, refine it in a drag-and-drop template builder, check the ATS score, then export a pixel-accurate PDF. Runs client-side with a bring-your-own-key AI setup, so resumes, imported PDFs, and API keys never leave the browser.",
+        "challenge": "Making ATS optimization approachable without a backend: every job site structures its HTML differently, the score has to reflect the actual extracted requirements, and privacy had to be real rather than a promise, with resumes, imported PDFs, and AI keys all kept in the browser.",
+        "result": "Delivered a live platform at loloscvats.web.id with four ATS-aware templates (classic, photo, creative, modern minimal), full Indonesian and English output, PDF import, reorderable sections, and one-click export that auto-fits one page or two.",
+        "statistics": {
+            "Templates": "4 ATS-ready layouts",
+            "Languages": "Indonesian & English",
+            "AI Setup": "Bring your own key",
+            "Export": "Pixel-accurate PDF, 1-2 pages"
+        },
+        "technologies_grouped": {
+            "Frontend": [
+                "Next.js",
+                "React",
+                "Tailwind CSS"
+            ],
+            "AI Features": [
+                "Job posting analyzer",
+                "ATS score",
+                "BYOK providers"
+            ],
+            "Document": [
+                "PDF import",
+                "PDF export"
+            ],
+            "Deployment": [
+                "Docker",
+                "Self-hosted"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Platform Cover",
+                "description": "LolosCV: build a CV that answers the job posting.",
+                "src": "/images/portofolio/web/Cover-Lolos-CV.png"
+            }
+        ]
+    },
+    {
+        "id": "20",
+        "name": "Smart Document Scanner & OCR Service",
+        "role": "Computer Vision Engineer",
+        "timeline": "September - October 2026",
+        "status": "Done",
+        "github_link": "https://github.com/aldyardnsyh/smart-document-scanner",
+        "demo_link": "https://smart-document-scanner-production.up.railway.app/",
+        "card_image_src": "/images/portofolio/ml/ocr/Cover-Smart-Document-Scanner.png",
+        "category": "ML",
+        "overview": "Production-ready scanning pipeline: detects a card or document in a photograph, corrects its perspective, enhances legibility, reads it with a neural OCR engine (RapidOCR / PP-OCRv6 on ONNX Runtime), and emits structured JSON where every field carries a confidence and the rule that produced it. The same Dockerfile runs locally, in Compose, and on Railway.",
+        "challenge": "Hard captures (cluttered desks, low light, blur, rotation, low contrast) pull in background text and drop characters, so the pipeline scores crops by recovered text coverage instead of confidence, keeps a full-frame fallback, and reports failures such as NO_DOCUMENT or NO_CONTENT rather than empty successes.",
+        "result": "Deployed from a three-stage Docker build with a C++17 accelerator, a batch CLI, and an anti-hardcoding CI gate. On the benchmark it scores 72.3% mean per-key with 67.2% exact matches and detection recall of 11 of 11 images, with every result traceable back to the pixels that produced it.",
+        "statistics": {
+            "Mean per-key score": "72.3%",
+            "Exact-match rate": "67.2% (43 of 64 keys)",
+            "Detection recall": "11 / 11 images",
+            "Recognition time": "~45 s per card on CPU"
+        },
+        "technologies_grouped": {
+            "Computer Vision": [
+                "Python",
+                "OpenCV",
+                "C++17"
+            ],
+            "OCR": [
+                "RapidOCR (PP-OCRv6)",
+                "ONNX Runtime"
+            ],
+            "Backend": [
+                "FastAPI",
+                "Uvicorn"
+            ],
+            "Frontend": [
+                "Next.js",
+                "React"
+            ],
+            "Testing": [
+                "pytest",
+                "Playwright"
+            ],
+            "Deployment": [
+                "Docker",
+                "Railway"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Scanning Pipeline",
+                "description": "Detect, correct, enhance, read, parse: one photo to structured JSON.",
+                "src": "/images/portofolio/ml/ocr/Cover-Smart-Document-Scanner.png"
+            }
+        ]
+    },
+    {
+        "id": "21",
+        "name": "PasFotoIn Browser Photo Editor",
+        "role": "Frontend Developer",
+        "timeline": "October 2026",
+        "status": "Done",
+        "github_link": "https://github.com/aldyardnsyh/PasFotoIn",
+        "demo_link": "https://pasfotoin.vercel.app",
+        "card_image_src": "/images/portofolio/web/Cover-PasFotoIn.png",
+        "category": "Web",
+        "overview": "Browser-based editor for Indonesian ID photos and social crops. Every process runs on the user's device: no uploads, no server, no account. Presets in centimeters (2x3, 3x4, 4x6, 6x9), ICAO-compliant international sizes, automatic subject cutout via an in-browser segmentation model, and an A4 print sheet ready to cut.",
+        "challenge": "Running a segmentation model in the browser without freezing the page: inference moved into a Web Worker with multithreaded WASM (65 s down to 30 s), previews capped at 2048 px to keep drag latency low, and a non-destructive edit model so every adjustment can be undone and exported at full resolution.",
+        "result": "Live at pasfotoin.vercel.app with 26 presets across ratios, Indonesian document sizes, ICAO sizes, and social media; an 8-stage matte post-processing pipeline; batch ZIP export; and a 300 DPI A4 print sheet, all on-device and covered by Vitest and Playwright suites.",
+        "statistics": {
+            "Presets": "26 (ratios, documents, ICAO, social)",
+            "Processing": "100% on-device",
+            "Matte pipeline": "8-stage post-processing",
+            "Export": "PNG, JPEG, WebP + A4 sheet"
+        },
+        "technologies_grouped": {
+            "Frontend": [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "State & Storage": [
+                "Zustand",
+                "IndexedDB",
+                "localStorage"
+            ],
+            "In-Browser ML": [
+                "ONNX Runtime Web",
+                "Web Worker",
+                "WebAssembly"
+            ],
+            "Export": [
+                "PNG",
+                "JPEG",
+                "WebP",
+                "A4 print sheet"
+            ],
+            "Testing": [
+                "Vitest",
+                "Playwright"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Editor Cover",
+                "description": "PasFotoIn editor with Indonesian document presets and on-device cutout.",
+                "src": "/images/portofolio/web/Cover-PasFotoIn.png"
+            }
+        ]
+    },
+    {
+        "id": "22",
+        "name": "Intelligent Document Assistant (RAG)",
+        "role": "AI / Backend Engineer",
+        "timeline": "October 2026",
+        "status": "Done",
+        "github_link": "https://github.com/aldyardnsyh/IntelligenceDocumentSystem",
+        "demo_link": null,
+        "card_image_src": "/images/portofolio/ml/rag/Cover-Intelligent-Document-Assistant.png",
+        "category": "ML",
+        "overview": "RAG-based document Q&A assistant: upload PDF, TXT, or Markdown, then ask questions in Indonesian and get answers with clickable citations. The system refuses to answer when the context is not enough, and general-knowledge answers are clearly labelled so they are never confused with document-sourced ones. Includes per-document private conversations, retrieval quality evaluation, and observability.",
+        "challenge": "Keeping the assistant trustworthy: no citation without context, a measured similarity threshold (0.82) instead of a default one because irrelevant text still scores 0.72-0.81, document scope stored in the session so private chats stay private, and a multilingual embedding model because English-only models perform far worse for Indonesian.",
+        "result": "Delivered a full-stack RAG system with FastAPI, ChromaDB, and SQLite behind a Next.js 16 frontend: 434 backend tests at 83% coverage, 46 Playwright scenarios, 21 end-to-end checks, and a RAGAS evaluation dataset where questions that must be refused are scored as strictly as the ones that must be answered.",
+        "statistics": {
+            "Backend tests": "434 tests, 83% coverage",
+            "Browser scenarios": "46 Playwright specs",
+            "Embedding model": "multilingual-e5-small",
+            "Similarity threshold": "0.82, measured not guessed"
+        },
+        "technologies_grouped": {
+            "Backend": [
+                "FastAPI",
+                "Python",
+                "SQLite"
+            ],
+            "RAG": [
+                "ChromaDB",
+                "multilingual-e5-small",
+                "Hybrid retrieval"
+            ],
+            "LLM": [
+                "Groq",
+                "Ollama fallback"
+            ],
+            "Frontend": [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "Quality": [
+                "pytest",
+                "Playwright",
+                "RAGAS"
+            ],
+            "Deployment": [
+                "Docker",
+                "Caddy",
+                "AWS EC2"
+            ]
+        },
+        "gallery": [
+            {
+                "id": 1,
+                "title": "Document Q&A Cover",
+                "description": "Answers with traceable citations, or an honest refusal.",
+                "src": "/images/portofolio/ml/rag/Cover-Intelligent-Document-Assistant.png"
             }
         ]
     }
