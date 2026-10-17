@@ -1,19 +1,50 @@
-# Allow all crawlers, including AI search bots (GEO)
+# robots.txt — Aldy Ardiansyah portfolio
+# Allow all crawlers, including AI search bots (GEO / AEO).
 User-agent: *
 Allow: /
+Disallow: /signal
 
-# Explicitly welcome major AI/search crawlers
+# Explicitly welcome major AI / search crawlers
 User-agent: Googlebot
 Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 User-agent: GPTBot
 Allow: /
+
 User-agent: OAI-SearchBot
 Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
 User-agent: ClaudeBot
 Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
 Allow: /
 
 Sitemap: https://aldyardnsyh.my.id/sitemap-index.xml
