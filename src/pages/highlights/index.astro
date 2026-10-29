@@ -11,7 +11,7 @@ const schema = [
   {
     '@type': 'CollectionPage',
     '@id': `${SITE_URL}/highlights#collection`,
-    name: `Highlights & Press — ${site.name}`,
+    name: `Highlights & Press: ${site.name}`,
     about: { '@id': `${SITE_URL}/#person` },
     hasPart: items.map((h) => ({ '@type': 'BlogPosting', headline: h.title, url: `${SITE_URL}/highlights/${h.slug}`, datePublished: h.date })),
   },

@@ -2,7 +2,7 @@ import { site, faqs, absoluteUrl, SITE_URL } from '../config/site';
 
 const personId = `${SITE_URL}/#person`;
 
-// Person schema — inti identitas untuk Knowledge Panel & AI search.
+// Person schema: inti identitas untuk Knowledge Panel & AI search.
 export const personSchema = {
   '@type': 'Person',
   '@id': personId,
@@ -39,7 +39,7 @@ export function buildGraph(extra: object[] = []) {
         '@type': 'WebSite',
         '@id': `${SITE_URL}/#website`,
         url: SITE_URL,
-        name: `${site.name} — Portfolio`,
+        name: `${site.name}: Portfolio`,
         description: site.description,
         publisher: { '@id': personId },
         inLanguage: 'en',
@@ -64,7 +64,7 @@ export function profilePageSchema(url: string) {
     '@type': 'ProfilePage',
     '@id': `${url}#profilepage`,
     url,
-    name: `${site.name} — ${site.jobTitle}`,
+    name: `${site.name}: ${site.jobTitle}`,
     about: { '@id': personId },
     mainEntity: { '@id': personId },
   };

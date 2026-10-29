@@ -1,5 +1,5 @@
 // ============================================================================
-// PUSAT KONFIGURASI SITE — ubah data di sini saja.
+// PUSAT KONFIGURASI SITE: ubah data di sini saja.
 // PENTING: ganti SITE_URL ke domain produksi final (mis. domain Vercel kamu).
 // ============================================================================
 
@@ -32,7 +32,7 @@ export const site = {
   image: '/profile/Aldy.jpg',
   // Gambar Open Graph default: landscape 1200x630, dibuat khusus untuk share card.
   ogImage: '/og-image.png',
-  // Link sosial — dipakai untuk JSON-LD `sameAs` (penting untuk Knowledge Panel & AI)
+  // Link sosial: dipakai untuk JSON-LD `sameAs` (penting untuk Knowledge Panel & AI)
   social: {
     github: 'https://github.com/ItsmeAldy17',
     linkedin: 'https://www.linkedin.com/in/aldyardiansyah17',
@@ -41,7 +41,7 @@ export const site = {
   },
   cvUrl:
     'https://drive.google.com/drive/folders/19dP6sO9-IhtwrPiUoQQ72UjY4yodQOHY?usp=drive_link',
-  // Keahlian inti — dipakai untuk JSON-LD `knowsAbout` (sinyal kuat untuk AI search/GEO)
+  // Keahlian inti: dipakai untuk JSON-LD `knowsAbout` (sinyal kuat untuk AI search/GEO)
   knowsAbout: [
     'Machine Learning',
     'Computer Vision',
@@ -94,7 +94,7 @@ export const navLinks = [
   { name: 'Contact', href: '/#contact' },
 ] as const;
 
-// FAQ — dirender sebagai konten + FAQPage JSON-LD (sangat membantu AI search menjawab
+// FAQ: dirender sebagai konten + FAQPage JSON-LD (sangat membantu AI search menjawab
 // pertanyaan tentang kamu dan menampilkan website kamu sebagai sumber).
 export const faqs = [
   {

@@ -1,0 +1,10 @@
+# DECISIONS
+
+## Assumptions — SPEC v1.0 Project 15 (P0, v4-analyst, 2026-10-25)
+
+- **ASSUMPTION-001 — New role `Full-Stack AI Engineer` is analyst-proposed.** Rationale in SPEC §8 R-01: scope spans Next.js landing + Git-based CMS backend + end-to-end RAG; `Frontend Developer` is factually false, `Full-Stack Developer` understates AI half, `Full-Stack ML Engineer` implies training that did not occur. Owner holds final veto; architect to confirm.
+- **ASSUMPTION-002 — Brief + task context are sufficient content truth.** README repo VisitBantaragung was referenced via the task brief (stack, 166 commits, CMS and RAG parameters); no live repo fetch performed in P0. If QA finds a SPEC claim the brief does not support, treat as gap and escalate to analyst.
+- **ASSUMPTION-003 — Statistics values are descriptive of the product build, not measured portfolio outcomes.** `166 commits`, `~190 entries`, `9 suites`, `1 commit per save` describe the shipped system per the brief; they are not A/B results. No performance/latency claim is made in the entry.
+- **ASSUMPTION-004 — SUPERSEDED (P3b, 2026-10-25).** Owner meminta galeri 3 screenshot fitur asli dari README repo VisitBantaragung; aset kini tersedia di `public/images/portofolio/web/VisitBantaragung-{Home,Chatbot-Guide,CMS-Collections}.jpeg`. FR-09 naik dari Could menjadi Must (change request owner). Dipilih chatbot-answer (jawaban grounded + sitasi) atas chatbot-open, dan cms-berita (koleksi konten) atas cms-dashboard (badge "Gagal" tak layak tampil). Cover lama dilepas dari JSON tapi file fisik dipertahankan (reversible).
+- **ASSUMPTION-005 — Template renders `statistics` and `technologies_grouped` for any entry that defines them.** Verified by reading `src/pages/project/[id].astro` (lines 99–130); sibling entries (e.g. id 16) already use both fields, so no template change is needed.
+- **ASSUMPTION-006 — English-only content with portfolio tone.** No Indonesian/Javanese terms in content fields; village proper nouns (Bantaragung, Kampung Herbal B2H, BDB, BIC, BMC) kept as-is.

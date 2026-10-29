@@ -702,22 +702,63 @@
     {
         "id": "15",
         "name": "Visit Bantaragung Tourism Platform",
-        "role": "Frontend Developer",
+        "role": "Full-Stack AI Engineer",
         "timeline": "December 2025 - February 2026",
         "status": "Done",
         "github_link": "https://github.com/aldyardnsyh/VisitBantaragung",
         "demo_link": "https://visitbantaragung.com/",
-        "card_image_src": "/images/portofolio/web/Cover-Visit-Bantaragung.png",
+        "card_image_src": "/images/portofolio/web/VisitBantaragung-Home.jpeg",
         "category": "Web",
-        "overview": "Developed the frontend of Visit Bantaragung, the official smart tourism platform for Desa Wisata Bantaragung in Majalengka, built with the KKN-PPM UGM Simfoni Sindangwangi team. The platform presents village destinations, the herbal village catalog, news, and an interactive digital map in one site.",
-        "challenge": "Structuring diverse village content, destinations, herbal catalog, news, and a digital map, into a single site that stays fast and usable for both villagers and tourists.",
-        "result": "Delivered a live official platform at visitbantaragung.com covering flagship destinations, the herbal village, village news, and a digital map for visitors.",
+        "overview": "Built Visit Bantaragung, the official smart-tourism platform for Desa Wisata Bantaragung in Majalengka, as an all-in-one system across 166 commits with the KKN-PPM UGM Simfoni Sindangwangi team. It combines a public Next.js 16 + React 19 landing (destinations, Kampung Herbal B2H catalog, BDB village branding with homestays and MSMEs, BIC information center, Leaflet digital map, gallery), a Git-based content CMS where every save is one commit with zero database, and a RAG chatbot guide with BM25 retrieval, query expansion, reranking, and anti-hallucination guardrails in Indonesian, English, and Javanese.",
+        "challenge": "Unifying destinations, herbal catalog, homestays, MSMEs, news, and a digital map into one fast site. Giving villagers with no database background a CMS they can actually operate. Making a trilingual guide that answers only from village records, says so when it does not know, and resists jailbreaks, all of it testable without spending LLM quota.",
+        "result": "Shipped the live official platform at visitbantaragung.com with a 1-commit-per-save CMS (schema validation, browser-compressed media library, AI-assisted news sync with stage gate) and a deterministic RAG guide (~190 knowledge entries, chunking with overlap, per-article dedup reranker, LLM fallback chain with health tracking) covered by 9 regression suites.",
+        "statistics": {
+            "Commits Shipped": "166",
+            "Knowledge Entries": "~190 ID-EN",
+            "Regression Suites": "9",
+            "CMS Saves": "1 commit per save"
+        },
+        "technologies_grouped": {
+            "Platform": [
+                "Next.js 16",
+                "React 19",
+                "TypeScript",
+                "Tailwind CSS 4",
+                "Leaflet"
+            ],
+            "Content & CMS": [
+                "Git-based CMS",
+                "Schema Validation",
+                "Browser Image Compression",
+                "News Crawler + AI Rewrite"
+            ],
+            "AI / RAG": [
+                "BM25 Retrieval",
+                "Fuzzy Entity Matching",
+                "Query Expansion",
+                "Reranking",
+                "LLM Fallback Chain",
+                "Guardrails ID/EN/Jawa"
+            ]
+        },
         "gallery": [
             {
                 "id": 1,
-                "title": "Platform Cover",
-                "description": "Landing view of the Visit Bantaragung smart tourism platform.",
-                "src": "/images/portofolio/web/Cover-Visit-Bantaragung.png"
+                "title": "Homepage",
+                "description": "Public landing of the smart tourism platform: destinations, herbal village, digital map, and visitor stats in one view.",
+                "src": "/images/portofolio/web/VisitBantaragung-Home.jpeg"
+            },
+            {
+                "id": 2,
+                "title": "Bantaragung Guide Chatbot",
+                "description": "RAG assistant answering with grounded prices, citations, and entity cards. It refuses to invent what is not in village records.",
+                "src": "/images/portofolio/web/VisitBantaragung-Chatbot-Guide.jpeg"
+            },
+            {
+                "id": 3,
+                "title": "CMS Content Collections",
+                "description": "Git-based content dashboard: news, destinations, herbal catalog, homestays, and MSMEs managed without a database.",
+                "src": "/images/portofolio/web/VisitBantaragung-CMS-Collections.jpeg"
             }
         ]
     },

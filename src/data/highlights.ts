@@ -1,4 +1,4 @@
-// Blog "Highlights" — liputan media tentang Aldy Ardiansyah dari Program Studi
+// Blog "Highlights": liputan media tentang Aldy Ardiansyah dari Program Studi
 // TRPL Sekolah Vokasi UGM (trpl.sv.ugm.ac.id). Ditulis ulang secara faktual
 // dengan menonjolkan keterlibatan Aldy. Setiap entri menghasilkan satu halaman
 // statis ber-schema BlogPosting untuk SEO + GEO.
@@ -43,7 +43,7 @@ export const highlights: Highlight[] = [
     content: [
       {
         type: 'p',
-        text: 'Team "Utusan Sultan X" — consisting of Aldy Ardiansyah, Yodhimas Geffananda, and Mahendra Yuda Pradana from the Software Engineering Technology (TRPL) program at the Vocational School of Universitas Gadjah Mada — secured 2nd place at Hackathon elevAIte Indonesia 2025, a national-scale competition organized by Microsoft, Kemkominfo Digital, the Biji-Biji Initiative, and elevAIte Hub.',
+        text: 'Team "Utusan Sultan X", consisting of Aldy Ardiansyah, Yodhimas Geffananda, and Mahendra Yuda Pradana from the Software Engineering Technology (TRPL) program at the Vocational School of Universitas Gadjah Mada, secured 2nd place at Hackathon elevAIte Indonesia 2025, a national-scale competition organized by Microsoft, Kemkominfo Digital, the Biji-Biji Initiative, and elevAIte Hub.',
       },
       {
         type: 'p',
@@ -77,7 +77,7 @@ export const highlights: Highlight[] = [
     content: [
       {
         type: 'p',
-        text: 'The Department of Electrical and Information Engineering (TEDI) at the Vocational School of UGM, in collaboration with PT Parama Data Unit (PDU), developed computer vision technology to analyze drilling cuttings in the oil and gas industry. Monitoring cuttings — the rock material produced during drilling — provides critical information about subsurface rock characteristics that was previously done manually, slowly, and with risk of human error.',
+        text: 'The Department of Electrical and Information Engineering (TEDI) at the Vocational School of UGM, in collaboration with PT Parama Data Unit (PDU), developed computer vision technology to analyze drilling cuttings in the oil and gas industry. Monitoring cuttings, the rock material produced during drilling, provides critical information about subsurface rock characteristics that was previously done manually, slowly, and with risk of human error.',
       },
       {
         type: 'p',
@@ -95,13 +95,13 @@ export const highlights: Highlight[] = [
   },
   {
     slug: 'krti-2025-technology-development',
-    title: 'Indonesian Flying Robot Contest (KRTI) 2025 — UGM Overall Champion',
+    title: 'Indonesian Flying Robot Contest (KRTI) 2025: UGM Overall Champion',
     description:
       'Aldy Ardiansyah represented UGM in the Technology Development division at the Indonesian Flying Robot Contest (KRTI) 2025, where UGM became the overall champion.',
     date: '2025-10-23',
     dateDisplay: 'October 23, 2025',
     category: 'Competition',
-    role: 'Technology Development — Software Programmer',
+    role: 'Technology Development: Software Programmer',
     team: [
       'Aldy Ardiansyah',
       'Aditya Lucky Zulkarnaen',
@@ -172,7 +172,7 @@ export const highlights: Highlight[] = [
       },
       {
         type: 'p',
-        text: 'The experience provided comprehensive exposure to AI-based system development and data processing, while strengthening critical thinking, precision, and cross-cultural communication — supporting SDG 4, SDG 8, and SDG 9.',
+        text: 'The experience provided comprehensive exposure to AI-based system development and data processing, while strengthening critical thinking, precision, and cross-cultural communication, supporting SDG 4, SDG 8, and SDG 9.',
       },
     ],
   },
@@ -194,7 +194,7 @@ export const highlights: Highlight[] = [
     content: [
       {
         type: 'p',
-        text: 'A UGM team from the Software Engineering Technology (TRPL) program won 2nd place and the People\u2019s Choice Award in the university category at Samsung Innovation Campus (SIC) Batch 5 2023/2024. The team — Aldy Ardiansyah (class of 2022) and Yogi Pradana Isdiyanto (class of 2023) — developed an innovative project called MotoRescue.',
+        text: 'A UGM team from the Software Engineering Technology (TRPL) program won 2nd place and the People\u2019s Choice Award in the university category at Samsung Innovation Campus (SIC) Batch 5 2023/2024. The team, Aldy Ardiansyah (class of 2022) and Yogi Pradana Isdiyanto (class of 2023), developed an innovative project called MotoRescue.',
       },
       {
         type: 'p',
