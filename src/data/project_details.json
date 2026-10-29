@@ -1066,7 +1066,7 @@
         "timeline": "October 2026",
         "status": "Done",
         "github_link": "https://github.com/aldyardnsyh/IntelligenceDocumentSystem",
-        "demo_link": null,
+        "demo_link": "https://rag-ids.web.id",
         "card_image_src": "/images/portofolio/ml/rag/Cover-Intelligent-Document-Assistant.png",
         "category": "ML",
         "overview": "RAG-based document Q&A assistant: upload PDF, TXT, or Markdown, then ask questions in Indonesian and get answers with clickable citations. The system refuses to answer when the context is not enough, and general-knowledge answers are clearly labelled so they are never confused with document-sourced ones. Includes per-document private conversations, retrieval quality evaluation, and observability.",
@@ -1113,9 +1113,39 @@
         "gallery": [
             {
                 "id": 1,
-                "title": "Document Q&A Cover",
-                "description": "Answers with traceable citations, or an honest refusal.",
-                "src": "/images/portofolio/ml/rag/Cover-Intelligent-Document-Assistant.png"
+                "title": "Dashboard",
+                "description": "System overview with live document, chunk, and provider counts read straight from the backend.",
+                "src": "/images/portofolio/ml/rag/IDS-Menu-Beranda.png"
+            },
+            {
+                "id": 2,
+                "title": "Chat with Citations",
+                "description": "Answers stream in with a source panel that shows the quoted text, chunk number, and similarity score.",
+                "src": "/images/portofolio/ml/rag/IDS-Menu-Chat.png"
+            },
+            {
+                "id": 3,
+                "title": "Documents",
+                "description": "Upload PDF, TXT, or Markdown and follow indexing status until the file is ready to query.",
+                "src": "/images/portofolio/ml/rag/IDS-Menu-Documents.png"
+            },
+            {
+                "id": 4,
+                "title": "Analytics",
+                "description": "Latency, source counts, and question logs, plus retrieval evaluation runs saved so changes can be compared.",
+                "src": "/images/portofolio/ml/rag/IDS-Menu-Analytics.png"
+            },
+            {
+                "id": 5,
+                "title": "Settings",
+                "description": "Top K and similarity threshold stored on the backend, so one retrieval behaviour applies to every session.",
+                "src": "/images/portofolio/ml/rag/IDS-Menu-Settings.png"
+            },
+            {
+                "id": 6,
+                "title": "About and Architecture",
+                "description": "The full path from upload to answer, with the stack and the reason behind each choice.",
+                "src": "/images/portofolio/ml/rag/IDS-Menu-About.png"
             }
         ]
     }

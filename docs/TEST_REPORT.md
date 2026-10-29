@@ -269,3 +269,112 @@ blocking: false
 needs:
   - "Lanjut ke P7 release gate"
 ```
+
+## P5 Verify (Entry 22 gallery)
+
+Tanggal: 2026-10-29. Scope: galeri entry id `22` (Intelligent Document Assistant (RAG)) diganti menjadi 6 screenshot menu inti 16:9, `demo_link` diisi `https://rag-ids.web.id`, `card_image_src` (cover) tidak diubah. Verifikasi struktur dikerjakan orkestrator karena lane architect gagal 2x (output kosong), tercatat di `docs/DECISIONS.md` BLOCKER-001. Build dijalankan sekali lewat `safe_exec.py`, tanpa dev server, tanpa restart.
+
+### Ringkasan hasil
+
+| # | Kriteria | Target | Hasil | Status |
+|---|---|---|---|---|
+| 1 | `npm run build` via safe_exec (timeout 300s) | exit 0 | EXIT=0, 34 page, 15.0s | PASS |
+| 2 | `dist/project/22/index.html` memuat 6 src `IDS-Menu-*.png` | tiap nama minimal 1 | 6/6 nama, masing-masing count=1, total kemunculan 6, 6 nama unik | PASS |
+| 2b | Teks galeri `Chat with Citations` | ada | ada | PASS |
+| 2c | Teks galeri `About and Architecture` | ada | ada | PASS |
+| 2d | Cover tidak hilang dari hero | ada | `Cover-Intelligent-Document-Assistant.png` count=4 (hero + meta image) | PASS |
+| 3 | Gambar ter-copy ke `dist/images/portofolio/ml/rag/` | 6 file, >0 byte | 6/6 file, semua >0 byte, cover tetap ada | PASS |
+| 4 | Em dash U+2014 di `dist/**/*.html` | 0 | 34 file dipindai, 0 char, 0 file terdampak | PASS |
+| 5 | JSON parse + jumlah entri | valid, 22 | valid, 22 entri | PASS |
+| 5b | Entry 15 tidak regresi | gallery 3, role `Full-Stack AI Engineer` | gallery 3, role exact, dist/project/15 juga memuat role + 3 gambar | PASS |
+| 5c | Entry 22 gallery | 6 | 6 item | PASS |
+| 6 | `demo_link` di dist | `https://rag-ids.web.id` | ada, count=2 (link kanonik + tombol) | PASS |
+| 6b | Label tombol `Live Demo` | ada | ada, anchor `href="https://rag-ids.web.id"` | PASS |
+| 7 | Rasio 6 screenshot menu (cek tambahan) | 16:9 | 6/6 benar 16:9 (1243x699 dan 1258x708, rasio 1.777-1.778) | PASS |
+
+Catatan metode: kemunculan nama file dihitung per nama (`count`), bukan total baris, agar tidak ada nama yang tertukar atau hilang. Sanity tambahan: `all-projects/index.html` masih memuat `Intelligent Document Assistant (RAG)`, dan em dash di sana 0.
+
+### Evidence build
+
+- `RUN=npm run build`, `EXIT=0`, `ELAPSED=15.0s`.
+- `[build] 34 page(s) built in 6.37s`, `[build] Complete!`.
+- `LOG=C:\Users\aldya\AppData\Local\Temp\opencode-safe-exec\20261029-085959-npm-run-build.log`.
+- `dist/project/22/index.html` = 27.300 byte, ter-render normal.
+
+### Evidence 6 gambar di dist
+
+| File | Byte di `dist/images/portofolio/ml/rag/` | Kemunculan di `project/22/index.html` | Dimensi |
+|---|---|---|---|
+| `IDS-Menu-Beranda.png` | 24.632 | 1 | 1243x699 (1.778) |
+| `IDS-Menu-Chat.png` | 43.256 | 1 | 1258x708 (1.777) |
+| `IDS-Menu-Documents.png` | 28.389 | 1 | 1243x699 (1.778) |
+| `IDS-Menu-Analytics.png` | 30.685 | 1 | 1243x699 (1.778) |
+| `IDS-Menu-Settings.png` | 29.607 | 1 | 1243x699 (1.778) |
+| `IDS-Menu-About.png` | 30.340 | 1 | 1243x699 (1.778) |
+| `Cover-Intelligent-Document-Assistant.png` (cover, tidak diubah) | 71.108 | 4 | tidak diubah |
+
+Keenam judul galeri juga terverifikasi ada di dist: Dashboard, Chat with Citations, Documents, Analytics, Settings, About and Architecture. Halaman punya 9 `<img>` (6 galeri + cover + kartu terkait) dan 8 memakai `loading="lazy"`.
+
+### Evidence scan em dash (U+2014)
+
+Metode: enumerasi rekursif `dist/**/*.html`, baca penuh dengan Python `open(...).read()`, hitung `str.count("\u2014")`, plus ambil konteks 60 karakter di kiri/kanan bila ditemukan.
+
+| Scope | File dipindai | Total U+2014 | File terdampak |
+|---|---|---|---|
+| `dist/` rekursif, `*.html` | 34 | 0 | 0 |
+
+Tidak ada sisa em dash sama sekali, termasuk JSON-LD global yang pada P6 lalu sempat menyisakan 1 karakter.
+
+### Regression entry lain
+
+| Field | Baseline | Hasil | Status |
+|---|---|---|---|
+| jumlah entri JSON | 22 | 22 | PASS |
+| entry 15 role | `Full-Stack AI Engineer` | exact, juga di `dist/project/15` | PASS |
+| entry 15 gallery | 3 | 3, ketiga nama file ada di dist | PASS |
+| entry 22 gallery | 6 | 6 | PASS |
+| entry 22 `demo_link` | `https://rag-ids.web.id` | exact | PASS |
+| entry 22 `card_image_src` | `/images/portofolio/ml/rag/Cover-Intelligent-Document-Assistant.png` | exact, tidak berubah | PASS |
+| entry 22 tampil di all-projects | ada | ada | PASS |
+
+### Bug ticket
+
+Nol ticket. Tidak ada defect Critical/High/Medium/Low yang reproducible pada scope ini.
+
+### Batasan verifikasi (dinyatakan jujur)
+
+1. Verifikasi dilakukan pada output build statis (HTML + aset), bukan screenshot browser dari halaman ter-render. Untuk perubahan konten/galeri statis, bukti file dist + dimensi gambar dinilai memadai.
+2. Rasio 16:9 diverifikasi dari header PNG (dimensi piksel), bukan dari tampilan CSS crop. Grid galeri membungkus gambar dalam kontainer dengan `object-cover`, jadi rasio visual akhir mengikuti kontainer, bukan rasio intrinsik file.
+3. Kontras, keyboard focus, dan perilaku mobile halaman galeri tidak diuji ulang di browser pada pass ini karena template galeri tidak diubah (hanya isi array `gallery`).
+
+### Verdict
+
+PASS. 7/7 kriteria exit terpenuhi (13/13 baris tabel), build hijau, 6 gambar tersaji dan 16:9, em dash 0, tidak ada regresi. `blocking: false`.
+
+```yaml
+from: qa
+to: agentic-v4
+phase: P5
+type: deliverable
+refs:
+  - docs/TEST_REPORT.md
+  - docs/DECISIONS.md (BLOCKER-001)
+  - src/data/project_details.json (entry id 22)
+  - dist/project/22/index.html
+  - dist/project/15/index.html
+  - dist/all-projects/index.html
+  - public/images/portofolio/ml/rag/
+summary: "Build hijau sekali jalan (EXIT=0, 34 page, 15.0s) dan halaman entry 22 menyajikan keenam screenshot menu: tiap nama file muncul minimal 1 kali, cover hero tetap ada, dan semua file ter-copy ke dist dengan ukuran >0 byte. Tidak ada regresi: JSON valid 22 entri, entry 15 tetap role Full-Stack AI Engineer dengan galeri 3, entry 22 tetap galeri 6 dengan demo_link https://rag-ids.web.id. Scan em dash U+2014 pada 34 file HTML dist menghasilkan 0, dan keenam gambar terbukti 16:9 secara dimensi, jadi blocking false."
+evidence:
+  - "build: EXIT=0, 34 page(s) built, ELAPSED=15.0s, LOG=.../20261029-085959-npm-run-build.log"
+  - "6 gambar di dist: Beranda 1, Chat 1, Documents 1, Analytics 1, Settings 1, About 1 (masing-masing count=1); 6 file ada di dist/images/portofolio/ml/rag dengan 24.632-43.256 byte"
+  - "cover hero: Cover-Intelligent-Document-Assistant.png count=4, file 71.108 byte"
+  - "emdash: HTML_FILES=34, TOTAL_EMDASH=0, AFFECTED_FILES=0"
+  - "demo_link: https://rag-ids.web.id count=2, label Live Demo ada"
+  - "regression: entries=22, entry15 role=Full-Stack AI Engineer / gallery=3, entry22 gallery=6"
+  - "16:9: 6/6 gambar 1243x699 atau 1258x708 (rasio 1.777-1.778)"
+blocking: false
+needs:
+  - "Tidak ada fix owner yang dibutuhkan; lanjut ke P7 release gate"
+  - "Jika klaim 16:9 akan dipakai di copy publik, sebaiknya diverifikasi sekali di browser pada breakpoint mobile dan desktop (opsional, bukan blocker)"
+```

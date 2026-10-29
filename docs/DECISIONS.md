@@ -8,3 +8,28 @@
 - **ASSUMPTION-004 — SUPERSEDED (P3b, 2026-10-25).** Owner meminta galeri 3 screenshot fitur asli dari README repo VisitBantaragung; aset kini tersedia di `public/images/portofolio/web/VisitBantaragung-{Home,Chatbot-Guide,CMS-Collections}.jpeg`. FR-09 naik dari Could menjadi Must (change request owner). Dipilih chatbot-answer (jawaban grounded + sitasi) atas chatbot-open, dan cms-berita (koleksi konten) atas cms-dashboard (badge "Gagal" tak layak tampil). Cover lama dilepas dari JSON tapi file fisik dipertahankan (reversible).
 - **ASSUMPTION-005 — Template renders `statistics` and `technologies_grouped` for any entry that defines them.** Verified by reading `src/pages/project/[id].astro` (lines 99–130); sibling entries (e.g. id 16) already use both fields, so no template change is needed.
 - **ASSUMPTION-006 — English-only content with portfolio tone.** No Indonesian/Javanese terms in content fields; village proper nouns (Bantaragung, Kampung Herbal B2H, BDB, BIC, BMC) kept as-is.
+
+## P6 Extension: Entry 22 Gallery (Core Menus)
+
+### ASSUMPTION-007 — Indonesian menu names mapped to English gallery titles
+- **Tanggal:** 2026-10-29
+- **Oleh:** agentic-v4 (orkestrator)
+- **Asumsi:** Menu aplikasi (Beranda, Chat, Dokumen, Analitik, Pengaturan, Tentang) dipetakan ke judul galeri Inggris (Dashboard, Chat with Citations, Documents, Analytics, Settings, About and Architecture) agar konsisten dengan bahasa konten portfolio lainnya.
+- **Risiko:** low
+- **Perlu konfirmasi manusia:** no
+
+### DECISION-004 — Galeri entry 22 memakai 6 screenshot menu inti, cover tidak diubah
+- **Tanggal:** 2026-10-29
+- **Oleh:** agentic-v4 (orkestrator), atas permintaan owner
+- **Fase:** P3/P6
+- **Konteks:** Screenshot README bukan 16:9 (rasio 0.64 sampai 2.24), sedangkan galeri memakai spect-video object-cover.
+- **Keputusan:** (1) 6 screenshot dipilih mewakili navigasi inti; (2) crop 16:9 deterministik dibuat oleh lane ilustrasi, aturan: sumber lebih lebar dari 16:9 dipotong lebar terpusat, sumber lebih tinggi dipotong tinggi dari ATAS agar header + judul menu + konten pertama tetap terlihat; (3) card_image_src (cover) tidak diubah; (4) demo_link diisi https://rag-ids.web.id dari README.
+- **Alasan:** Menu teridentifikasi dari header dan judulnya, sehingga top-anchored lebih tepat daripada center crop. Cover sudah bagus menurut owner.
+- **Konsekuensi:** Aset galeri 16:9 (1243x699 / 1258x708), 6 file baru di public/images/portofolio/ml/rag/. Halaman Tentang/Analitik kehilangan bagian bawah karena crop, disengaja.
+
+### BLOCKER-001 — Lane architect mengembalikan hasil kosong 2x
+- **Tanggal:** 2026-10-29
+- **Oleh:** agentic-v4 (orkestrator)
+- **Konteks:** Dua pemanggilan identik untuk P4 review entry 22 menghasilkan output kosong dan tidak menulis section ke ARCHITECTURE.md.
+- **Tindakan:** Brief diulang 1x sesuai protokol, tetap kosong. Gate verifikasi struktur (scope, 6 item, aset ada, cover utuh, em dash 0) dijalankan orkestrator dan dicatat di sini, bukan diklaim sebagai verdict arsitek. Verifikasi fungsional tetap diserahkan ke lane QA lewat build.
+- **Dampak:** Tidak ada review arsitek tertulis untuk perubahan ini. Risiko dinilai rendah karena perubahan hanya data konten, tanpa perubahan template atau kode.
