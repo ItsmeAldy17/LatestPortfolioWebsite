@@ -94,14 +94,13 @@ const schema = [
     const apply = () => {
       const visible = [];
       cards.forEach((el) => {
-        const c = el as HTMLElement;
-        const show = activeFilter === 'All' || c.dataset.category === activeFilter;
-        c.classList.toggle('hidden', !show);
-        if (show) visible.push(c);
+        const show = activeFilter === 'All' || el.dataset.category === activeFilter;
+        el.classList.toggle('hidden', !show);
+        if (show) visible.push(el);
       });
       visible.sort((a, b) => {
-        const ka = parseInt((a as HTMLElement).dataset.sortKey || '0');
-        const kb = parseInt((b as HTMLElement).dataset.sortKey || '0');
+        const ka = parseInt(a.dataset.sortKey || '0');
+        const kb = parseInt(b.dataset.sortKey || '0');
         return activeSort === 'newest' ? kb - ka : ka - kb;
       });
       visible.forEach((c) => grid && grid.appendChild(c));
@@ -110,13 +109,13 @@ const schema = [
     pills.forEach((b) => b.addEventListener('click', () => {
       pills.forEach((x) => x.classList.remove('is-active'));
       b.classList.add('is-active');
-      activeFilter = (b as HTMLElement).dataset.filter || 'All';
+      activeFilter = b.dataset.filter || 'All';
       apply();
     }));
     sortBtns.forEach((b) => b.addEventListener('click', () => {
       sortBtns.forEach((x) => x.classList.remove('is-active'));
       b.classList.add('is-active');
-      activeSort = (b as HTMLElement).dataset.sort || 'newest';
+      activeSort = b.dataset.sort || 'newest';
       apply();
     }));
     apply();
