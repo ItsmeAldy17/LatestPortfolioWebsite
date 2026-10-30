@@ -945,6 +945,30 @@
         "title": "Platform Cover",
         "description": "LolosCV: build a CV that answers the job posting.",
         "src": "/images/portofolio/web/Cover-Lolos-CV.png"
+      },
+      {
+        "id": 2,
+        "title": "Job Posting Analyzer",
+        "description": "Paste a LinkedIn, JobStreet, or Glints URL and AI breaks the requirements into critical, important, and nice to have points.",
+        "src": "/images/portofolio/web/LolosCV-JobAnalyzer.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Template Builder",
+        "description": "Four ATS readable templates with reorderable and hideable sections, bilingual output, and live preview.",
+        "src": "/images/portofolio/web/LolosCV-Builder.jpg"
+      },
+      {
+        "id": 4,
+        "title": "ATS Score Check",
+        "description": "Concrete score with keyword matching and actionable fixes mapped to each requirement point.",
+        "src": "/images/portofolio/web/LolosCV-ATSScore.jpg"
+      },
+      {
+        "id": 5,
+        "title": "PDF Export",
+        "description": "Pixel accurate export that auto fits one page or two, identical to the on screen preview.",
+        "src": "/images/portofolio/web/LolosCV-Export.jpg"
       }
     ]
   },

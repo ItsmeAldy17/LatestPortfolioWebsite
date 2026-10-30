@@ -7,6 +7,15 @@ import { breadcrumbSchema } from '../lib/schema';
 import { SITE_URL } from '../config/site';
 
 const projects = orderedProjects(projectsRaw);
+const categories = [...new Set(projects.map((p) => p.category))].sort();
+const monthIdx: Record<string, number> = { january: 1, february: 2, march: 3, april: 4, may: 5, june: 6, july: 7, august: 8, september: 9, october: 10, november: 11, december: 12, jan: 1, feb: 2, mar: 3, apr: 4, jun: 6, jul: 7, aug: 8, sep: 9, sept: 9, oct: 10, nov: 11, dec: 12 };
+const sortKey = (t: string) => {
+  const years = [...t.matchAll(/\d{4}/g)].map((m) => parseInt(m[0]));
+  const year = years.length ? years[years.length - 1] : 0;
+  const months = [...t.toLowerCase().matchAll(/(january|february|march|april|may|june|july|august|september|october|november|december|jan|feb|mar|apr|jun|jul|aug|sep|sept|oct|nov|dec)/g)].map((m) => monthIdx[m[0]] ?? 0);
+  const month = months.length ? months[months.length - 1] : 0;
+  return year * 100 + month;
+};
 const schema = [
   breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Projects', url: '/all-projects' }]),
   {
@@ -32,9 +41,20 @@ const schema = [
   />
 
   <div class="container-lux pb-28">
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mb-8 flex flex-wrap items-center gap-2" id="filter-bar">
+      <button data-filter="All" class="filter-pill is-active">All</button>
+      {categories.map((c) => (
+        <button data-filter={c} class="filter-pill">{c}</button>
+      ))}
+      <span class="ml-2 text-sm text-gray-500" id="filter-count"></span>
+      <span class="ml-auto flex gap-1 rounded-full border border-white/10 p-1">
+        <button data-sort="newest" class="sort-btn is-active">Newest</button>
+        <button data-sort="oldest" class="sort-btn">Oldest</button>
+      </span>
+    </div>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="project-grid">
       {projects.map((p) => (
-        <a href={`/project/${p.id}`} class="tilt border-grad group flex flex-col overflow-hidden rounded-2xl">
+        <a href={`/project/${p.id}`} data-category={p.category} data-sort-key={sortKey(p.timeline)} class="tilt border-grad group flex flex-col overflow-hidden rounded-2xl">
           <div class="relative aspect-video overflow-hidden">
             <img src={p.card_image_src} alt={p.name} loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" style={`view-transition-name: project-${p.id}`} />
             <span class="absolute right-3 top-3 rounded-full border border-emerald-500/40 bg-gray-950/60 px-2.5 py-1 text-xs text-emerald-400 backdrop-blur-sm">{p.category}</span>
@@ -55,4 +75,49 @@ const schema = [
       <span class="transition-transform group-hover:-translate-x-1">←</span> Back to home
     </a>
   </div>
+  <style>
+    .filter-pill { border-radius: 9999px; border: 1px solid rgba(255,255,255,.12); padding: .4rem 1rem; font-size: .85rem; color: #d1d5db; transition: all .2s; }
+    .filter-pill:hover { border-color: rgba(52,211,153,.6); color: #6ee7b7; }
+    .filter-pill.is-active { background: #10b981; border-color: #10b981; color: #fff; font-weight: 600; }
+    .sort-btn { border-radius: 9999px; padding: .35rem .9rem; font-size: .85rem; color: #9ca3af; }
+    .sort-btn.is-active { background: rgba(255,255,255,.1); color: #fff; font-weight: 600; }
+  </style>
+  <script>
+    const grid = document.getElementById('project-grid');
+    const cards = grid ? Array.from(grid.children) : [];
+    const pills = Array.from(document.querySelectorAll('.filter-pill'));
+    const sortBtns = Array.from(document.querySelectorAll('.sort-btn'));
+    const count = document.getElementById('filter-count');
+    let activeFilter = 'All';
+    let activeSort = 'newest';
+    const apply = () => {
+      const visible = [];
+      cards.forEach((el) => {
+        const c = el as HTMLElement;
+        const show = activeFilter === 'All' || c.dataset.category === activeFilter;
+        c.classList.toggle('hidden', !show);
+        if (show) visible.push(c);
+      });
+      visible.sort((a, b) => {
+        const ka = parseInt((a as HTMLElement).dataset.sortKey || '0');
+        const kb = parseInt((b as HTMLElement).dataset.sortKey || '0');
+        return activeSort === 'newest' ? kb - ka : ka - kb;
+      });
+      visible.forEach((c) => grid && grid.appendChild(c));
+      if (count) count.textContent = `Showing ${visible.length} of ${cards.length}`;
+    };
+    pills.forEach((b) => b.addEventListener('click', () => {
+      pills.forEach((x) => x.classList.remove('is-active'));
+      b.classList.add('is-active');
+      activeFilter = (b as HTMLElement).dataset.filter || 'All';
+      apply();
+    }));
+    sortBtns.forEach((b) => b.addEventListener('click', () => {
+      sortBtns.forEach((x) => x.classList.remove('is-active'));
+      b.classList.add('is-active');
+      activeSort = (b as HTMLElement).dataset.sort || 'newest';
+      apply();
+    }));
+    apply();
+  </script>
 </PageLayout>

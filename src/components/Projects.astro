@@ -2,7 +2,9 @@
 import SectionHeader from './SectionHeader.astro';
 import { orderedProjects } from '../lib/projects';
 const projects = orderedProjects();
-const featured = projects.slice(0, 6);
+const FEATURED_IDS = ['22', '20', '17', '26', '24', '25', '15', '19'];
+const byId = new Map(projects.map((p) => [p.id, p]));
+const featured = FEATURED_IDS.map((id) => byId.get(id)).filter((p) => p !== undefined);
 const clip = (s: string, n = 120) => (s.length > n ? s.slice(0, n).trimEnd() + '…' : s);
 ---
 
