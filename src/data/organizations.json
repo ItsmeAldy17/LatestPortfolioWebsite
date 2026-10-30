@@ -2,7 +2,7 @@
   {
     "id": "gamaforce-ugm",
     "name": "GAMAFORCE UGM",
-    "logo": "✈️",
+    "logo": "GU",
     "role": "Software Programmer",
     "type": "Research Organization",
     "period": "Dec 2023 - Nov 2025",
@@ -15,9 +15,16 @@
     ],
     "color": "from-blue-500 to-teal-600",
     "documentation": [
-      { "id": 1, "title": "Kontes Robot Terbang Indonesia 2024", "type": "competition", "url": "#" }
+      {
+        "id": 1,
+        "title": "Kontes Robot Terbang Indonesia 2024",
+        "type": "competition",
+        "url": "#"
+      }
     ],
-    "photos": ["/images/organization/Team Research-Gamaforce.jpg"],
+    "photos": [
+      "/images/organization/Team Research-Gamaforce.jpg"
+    ],
     "companyInfo": {
       "industry": "Team Research",
       "size": "50-100 members",
@@ -27,7 +34,7 @@
   {
     "id": "assets-ugm",
     "name": "Association of Software Engineering Technology Students UGM",
-    "logo": "💻",
+    "logo": "AO",
     "role": "Public Relation and Publication Staff",
     "type": "Student Organization",
     "period": "Mar 2024 - Mar 2025",
@@ -41,11 +48,28 @@
     ],
     "color": "from-purple-500 to-pink-600",
     "documentation": [
-      { "id": 1, "title": "Social Media Campaign", "type": "project", "url": "#" },
-      { "id": 2, "title": "Event Promotion", "type": "event", "url": "#" },
-      { "id": 3, "title": "Content Creation", "type": "project", "url": "#" }
+      {
+        "id": 1,
+        "title": "Social Media Campaign",
+        "type": "project",
+        "url": "#"
+      },
+      {
+        "id": 2,
+        "title": "Event Promotion",
+        "type": "event",
+        "url": "#"
+      },
+      {
+        "id": 3,
+        "title": "Content Creation",
+        "type": "project",
+        "url": "#"
+      }
     ],
-    "photos": ["/images/organization/Organisasi-Assets.jpg"],
+    "photos": [
+      "/images/organization/Organisasi-Assets.jpg"
+    ],
     "companyInfo": {
       "industry": "Student Organization",
       "size": "10-30 members",
@@ -55,7 +79,7 @@
   {
     "id": "gdsc-ugm",
     "name": "Google Developer Student Clubs UGM",
-    "logo": "🔍",
+    "logo": "GD",
     "role": "Hacker",
     "type": "Developer Community",
     "period": "Oct 2023 - Nov 2023",
@@ -69,11 +93,28 @@
     ],
     "color": "from-green-500 to-teal-600",
     "documentation": [
-      { "id": 1, "title": "BIN-GO! App Development", "type": "project", "url": "#" },
-      { "id": 2, "title": "GDSC Solution Challenge 2024", "type": "competition", "url": "#" },
-      { "id": 3, "title": "Map Feature Implementation", "type": "project", "url": "#" }
+      {
+        "id": 1,
+        "title": "BIN-GO! App Development",
+        "type": "project",
+        "url": "#"
+      },
+      {
+        "id": 2,
+        "title": "GDSC Solution Challenge 2024",
+        "type": "competition",
+        "url": "#"
+      },
+      {
+        "id": 3,
+        "title": "Map Feature Implementation",
+        "type": "project",
+        "url": "#"
+      }
     ],
-    "photos": ["/images/organization/Community-GDSC.jpg"],
+    "photos": [
+      "/images/organization/Community-GDSC.jpg"
+    ],
     "companyInfo": {
       "industry": "Developer Community",
       "size": "20-50 members",

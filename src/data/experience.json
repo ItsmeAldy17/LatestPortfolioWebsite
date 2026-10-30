@@ -37,7 +37,7 @@
       "Mask R-CNN"
     ],
     "teamSize": 3,
-    "logo": "📃",
+    "logo": "SV",
     "companyInfo": {
       "industry": "Oil and Gas Technology",
       "size": "100-500 employees",
@@ -64,8 +64,8 @@
     "detailedDescription": "As an intern Machine Learning Engineer working remotely with a South Korean company, I led a team of around 40 Indonesian annotators building a large-scale dataset of 100,000 real photos captured by inspection drones for a vision language (multimodal LLM) model focused on defect detection in wind turbine power plant areas. Labels were verified by domain experts. My work covered annotation guidelines, quality control, and throughput tracking across the full dataset.",
     "mainProjects": [
       {
-          "name": "Wind Turbine Defect VLM Dataset",
-          "description": "Built a large-scale annotation pipeline with around 40 annotators over 100,000 real drone-inspection photos for wind turbine defect detection with a vision language model, verified by domain experts.",
+        "name": "Wind Turbine Defect VLM Dataset",
+        "description": "Built a large-scale annotation pipeline with around 40 annotators over 100,000 real drone-inspection photos for wind turbine defect detection with a vision language model, verified by domain experts.",
         "impact": "Established the labeled data foundation for a production multimodal defect-detection model.",
         "technologies": [
           "Vision Language Models",
@@ -86,7 +86,7 @@
       "Annotation QA"
     ],
     "teamSize": 40,
-    "logo": "🏢",
+    "logo": "AL",
     "companyInfo": {
       "industry": "Artificial Intelligence"
     },
@@ -137,7 +137,7 @@
       "Re-Detr"
     ],
     "teamSize": 3,
-    "logo": "📃",
+    "logo": "SV",
     "companyInfo": {
       "industry": "Oil and Gas Technology",
       "size": "100-500 employees",
@@ -190,7 +190,7 @@
       "NumPy"
     ],
     "teamSize": 10,
-    "logo": "🏢",
+    "logo": "PP",
     "companyInfo": {
       "industry": "Oil and Gas Technology",
       "size": "100-500 employees",
@@ -246,7 +246,7 @@
       "Socket.IO"
     ],
     "teamSize": 9,
-    "logo": "🏢",
+    "logo": "PP",
     "companyInfo": {
       "industry": "Oil and Gas Technology",
       "size": "100-500 employees",
