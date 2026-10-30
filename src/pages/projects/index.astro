@@ -7,7 +7,8 @@ import { breadcrumbSchema } from '../../lib/schema';
 import { SITE_URL } from '../../config/site';
 
 const projects = orderedProjects(projectsRaw);
-const categories = [...new Set(projects.map((p) => p.category))].sort();
+const CATEGORY_ORDER = ['ML', 'Web', 'IoT', 'DE', 'Mobile', 'PM', 'QA'];
+const categories = CATEGORY_ORDER.filter((c) => projects.some((p) => p.category === c));
 const monthIdx: Record<string, number> = { january: 1, february: 2, march: 3, april: 4, may: 5, june: 6, july: 7, august: 8, september: 9, october: 10, november: 11, december: 12, jan: 1, feb: 2, mar: 3, apr: 4, jun: 6, jul: 7, aug: 8, sep: 9, sept: 9, oct: 10, nov: 11, dec: 12 };
 const sortKey = (t: string) => {
   const years = [...t.matchAll(/\d{4}/g)].map((m) => parseInt(m[0]));
