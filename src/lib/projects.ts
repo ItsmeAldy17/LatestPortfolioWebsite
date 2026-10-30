@@ -11,15 +11,17 @@ type Project = (typeof raw)[number];
 // (Sep 2025-Jan 2026), 1 = industry deployment, lalu model-era projects.
 const ML_NEWEST_FIRST = ['22', '20', '17', '18', '1', '3', '2', '4', '7'];
 
-// Web, terbaru dulu: 21 = PasFotoIn (Oct 2026), 19 = LolosCV (Sep 2026),
+// Web, terbaru dulu: 26 = RigDaily (2026), 24 = ShelfOpsRetail (2026),
+// 23 = MyRouter (2026), 21 = PasFotoIn (Oct 2026), 19 = LolosCV (Sep 2026),
 // 15 = Visit Bantaragung (Dec 2025-Feb 2026).
-const WEB_AFTER_ML = ['21', '19', '15'];
+const WEB_AFTER_ML = ['26', '24', '23', '21', '19', '15'];
 
 // IoT, terbaru dulu: 16 = BAS dashboard (2025), 8 = SleepSense, 9 = tracker.
 const IOT_AFTER_WEB = ['16', '8', '9'];
 
-// DE, terbaru dulu: 6 = AI Sentiment Hub, 5 = Forex dashboard.
-const DE_AFTER_IOT = ['6', '5'];
+// DE, terbaru dulu: 25 = DataLoom (Oct 2026), 6 = AI Sentiment Hub,
+// 5 = Forex dashboard.
+const DE_AFTER_IOT = ['25', '6', '5'];
 
 // Mobile: 10 = BIN-GO.
 const MOBILE_AFTER_DE = ['10'];

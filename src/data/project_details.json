@@ -1,1152 +1,1542 @@
 [
-    {
-        "id": "1",
-        "name": "Shale Shaker Cutting Estimations (Desktop)",
-        "role": "Internship Machine Learning Engineer",
-        "timeline": "6 months",
-        "status": "Done",
-        "github_link": "restricted-area",
-        "demo_link": "restricted-area",
-        "card_image_src": "/images/portofolio/ml/comvis/Cover-PDU-Comvis.png",
-        "category": "ML",
-        "overview": "Desktop-based (v1) computer vision system to monitor and analyze rock cuttings from shale shakers in real-time using CCTV footage, integrated with the WITSML realtime drilling data standard. Built with classical OpenCV image processing, without deep learning. The system was designed to improve the efficiency and accuracy of drilling process monitoring by providing real-time data on rock coverage and composition, thereby supporting operational decision-making in the oil and gas industry.",
-        "challenge": "The primary challenges included processing video streams in real-time with minimal latency, accurately detecting and analyzing rock cuttings amidst varying lighting conditions and potential noise, and keeping the system reliable and scalable enough to plug into monitoring systems like the Early Monitoring System (EMS).",
-        "result": "The deployed system provided real-time monitoring of shale shaker cuttings, enabling more informed decision-making during drilling operations. It achieved high accuracy in detecting rock coverage and composition, with visualizations helping to identify trends in rock composition over time. The system was integrated with the Early Monitoring System, enhancing overall operational efficiency and reducing manual monitoring efforts.",
-        "statistics": {
-            "Detection Accuracy": "90%",
-            "Processing Latency": "<300ms",
-            "System Uptime": "85%",
-            "Integration with EMS": "Successful"
-        },
-        "technologies_grouped": {
-            "Frontend": [
-                "Python",
-                "OpenCV",
-                "NumPy"
-            ],
-            "Backend": [
-                "Flask"
-            ],
-            "Database": [
-                "PostgreSQL"
-            ],
-            "Real-time": [
-                "Socket.IO",
-                "WITSML"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Real-time Rock Detection",
-                "description": "Live feed with detected rock contours on the shale shaker.",
-                "src": "/images/portofolio/ml/comvis/Rock Detection.png"
-            },
-            {
-                "id": 2,
-                "title": "Trend Analysis Graph",
-                "description": "Graph showing trends in rock composition over time.",
-                "src": "/images/portofolio/ml/comvis/Analysis Stone Detection.png"
-            }
-        ]
+  {
+    "id": "1",
+    "name": "Shale Shaker Cutting Estimations (Desktop)",
+    "role": "Internship Machine Learning Engineer",
+    "timeline": "6 months",
+    "status": "Done",
+    "github_link": "restricted-area",
+    "demo_link": "restricted-area",
+    "card_image_src": "/images/portofolio/ml/comvis/Cover-PDU-Comvis.png",
+    "category": "ML",
+    "overview": "Desktop-based (v1) computer vision system to monitor and analyze rock cuttings from shale shakers in real-time using CCTV footage, integrated with the WITSML realtime drilling data standard. Built with classical OpenCV image processing, without deep learning. The system was designed to improve the efficiency and accuracy of drilling process monitoring by providing real-time data on rock coverage and composition, thereby supporting operational decision-making in the oil and gas industry.",
+    "challenge": "The primary challenges included processing video streams in real-time with minimal latency, accurately detecting and analyzing rock cuttings amidst varying lighting conditions and potential noise, and keeping the system reliable and scalable enough to plug into monitoring systems like the Early Monitoring System (EMS).",
+    "result": "The deployed system provided real-time monitoring of shale shaker cuttings, enabling more informed decision-making during drilling operations. It achieved high accuracy in detecting rock coverage and composition, with visualizations helping to identify trends in rock composition over time. The system was integrated with the Early Monitoring System, enhancing overall operational efficiency and reducing manual monitoring efforts.",
+    "statistics": {
+      "Detection Accuracy": "90%",
+      "Processing Latency": "<300ms",
+      "System Uptime": "85%",
+      "Integration with EMS": "Successful"
     },
-    {
-        "id": "2",
-        "name": "Aerial Image Segmentation",
-        "role": "Computer Vision Engineer",
-        "timeline": "3 months",
-        "status": "Done",
-        "github_link": "https://colab.research.google.com/drive/1Kbel_A4KvzEqVWZPMts8d52cISi-jCxN?usp=sharing",
-        "demo_link": "https://universe.roboflow.com/multipurpose/segmentation-aerial-image",
-        "card_image_src": "/images/portofolio/ml/segmentation/gmf/Cover-Aerial Image Segmentation.png",
-        "category": "ML",
-        "overview": "Research prototype for my university UAV team: deep-learning segmentation of aerial imagery, satellite and drone, into buildings, roads, and vegetation for geospatial mapping. Built with PyTorch on 500+ annotated images.",
-        "challenge": "Key challenges included handling variations in image resolution and lighting conditions, developing accurate segmentation models with limited annotated datasets, and optimizing model performance on resource-constrained hardware.",
-        "result": "The research produced a prototype segmentation model based on deep learning, demonstrating promising accuracy on a limited test dataset. It provided valuable insights into the challenges of aerial image segmentation and recommendations for future development, such as data augmentation and model fine-tuning.",
-        "statistics": {
-            "Training Time": "6 hours on entry-level GPU",
-            "Dataset Size": "500+ annotated aerial images"
-        },
-        "technologies_grouped": {
-            "Computer Vision": [
-                "Python",
-                "OpenCV",
-                "NumPy",
-                "COCO"
-            ],
-            "Deep Learning": [
-                "PyTorch"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Sample Segmentation Results",
-                "description": "Visualization of segmentation masks for buildings and roads on aerial imagery.",
-                "src": "/images/portofolio/ml/segmentation/gmf/Sample Segmentation Results.png"
-            },
-            {
-                "id": 2,
-                "title": "Sample Ground Truth Results",
-                "description": "Visualizing sample of ground truth annotations.",
-                "src": "/images/portofolio/ml/segmentation/gmf/Ground Truth.png"
-            }
-        ]
+    "technologies_grouped": {
+      "Frontend": [
+        "Python",
+        "OpenCV",
+        "NumPy"
+      ],
+      "Backend": [
+        "Flask"
+      ],
+      "Database": [
+        "PostgreSQL"
+      ],
+      "Real-time": [
+        "Socket.IO",
+        "WITSML"
+      ]
     },
-    {
-        "id": "3",
-        "name": "Tomato Leaf Disease Detection",
-        "role": "Machine Learning Engineer",
-        "timeline": "1 month",
-        "status": "Done",
-        "github_link": "https://github.com/aldyardnsyh/Tomato-Leaf-Deasease-Detection",
-        "demo_link": "https://tomato-leaf-deasease-detection.streamlit.app/",
-        "card_image_src": "/images/portofolio/ml/segmentation/klh/Cover-Tomato Leaf Disease Detection.png",
-        "category": "ML",
-        "overview": "Developed a lightweight deep learning model using TensorFlow Lite to detect diseases in tomato leaves from images. The model, based on transfer learning with MobileNetV2, achieves high accuracy with a compact size, suitable for deployment on resource-constrained devices.",
-        "challenge": "Optimizing a high-accuracy model to maintain performance within a compact 5MB size, handling a large dataset with 11 classes, and keeping detection steady across varied image conditions such as lighting and angles.",
-        "result": "The model achieved 99.4% accuracy in detecting 11 classes of tomato leaf diseases using a dataset of over 17,000 images. Deployed on Streamlit, the application allows users to upload images and receive real-time disease predictions, demonstrating potential for agricultural diagnostic tools.",
-        "statistics": {
-            "Model Accuracy": "99.4%",
-            "Dataset Size": "17,000+ images",
-            "Model Size": "5MB",
-            "Number of Classes": "11"
-        },
-        "technologies_grouped": {
-            "Machine Learning": [
-                "Python",
-                "TensorFlow",
-                "Keras"
-            ],
-            "Data Processing": [
-                "NumPy",
-                "Pandas"
-            ],
-            "Visualization": [
-                "Seaborn"
-            ],
-            "Deployment": [
-                "Streamlit",
-                "TensorFlow Lite"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Disease Detection Output",
-                "description": "Visualization of detected tomato leaf disease with confidence scores.",
-                "src": "/images/portofolio/ml/segmentation/klh/Result Prediction.png"
-            },
-            {
-                "id": 2,
-                "title": "Streamlit Interface",
-                "description": "Interactive Streamlit app showing real-time disease prediction results.",
-                "src": "/images/portofolio/ml/segmentation/klh/Tomato Streamlit Dashboard.png"
-            }
-        ]
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Real-time Rock Detection",
+        "description": "Live feed with detected rock contours on the shale shaker.",
+        "src": "/images/portofolio/ml/comvis/Rock Detection.png"
+      },
+      {
+        "id": 2,
+        "title": "Trend Analysis Graph",
+        "description": "Graph showing trends in rock composition over time.",
+        "src": "/images/portofolio/ml/comvis/Analysis Stone Detection.png"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Aerial Image Segmentation",
+    "role": "Computer Vision Engineer",
+    "timeline": "3 months",
+    "status": "Done",
+    "github_link": "https://colab.research.google.com/drive/1Kbel_A4KvzEqVWZPMts8d52cISi-jCxN?usp=sharing",
+    "demo_link": "https://universe.roboflow.com/multipurpose/segmentation-aerial-image",
+    "card_image_src": "/images/portofolio/ml/segmentation/gmf/Cover-Aerial Image Segmentation.png",
+    "category": "ML",
+    "overview": "Research prototype for my university UAV team: deep-learning segmentation of aerial imagery, satellite and drone, into buildings, roads, and vegetation for geospatial mapping. Built with PyTorch on 500+ annotated images.",
+    "challenge": "Key challenges included handling variations in image resolution and lighting conditions, developing accurate segmentation models with limited annotated datasets, and optimizing model performance on resource-constrained hardware.",
+    "result": "The research produced a prototype segmentation model based on deep learning, demonstrating promising accuracy on a limited test dataset. It provided valuable insights into the challenges of aerial image segmentation and recommendations for future development, such as data augmentation and model fine-tuning.",
+    "statistics": {
+      "Training Time": "6 hours on entry-level GPU",
+      "Dataset Size": "500+ annotated aerial images"
     },
-    {
-        "id": "4",
-        "name": "Prototype Chicken Detection Model",
-        "role": "Computer Vision Engineer",
-        "timeline": "2 weeks",
-        "status": "Done",
-        "github_link": "https://www.kaggle.com/code/aldyardiansyah17/chicken-poultry-detectron2-retinanet-resnet-50-fpn",
-        "demo_link": null,
-        "card_image_src": "/images/portofolio/ml/comvis/Cover-Chicken Cage-Comvis.png",
-        "category": "ML",
-        "overview": "Prototype poultry-monitoring system that detects and counts chickens in images and video. Built with Python, Detectron2, and PyTorch around a RetinaNet model with a ResNet-50 FPN backbone, compressed with dynamic quantization and structured pruning.",
-        "challenge": "Developing a high-sensitivity deep learning model for accurate real-time chicken detection in poultry farm environments.",
-        "result": "Developed a prototype capable of reliable chicken detection and counting in images and videos, designed for future integration into a real-time monitoring application.",
-        "statistics": {
-            "Model Size": "~150 MB",
-            "Detection Accuracy": "70%",
-            "Target Application": "Poultry Farm Monitoring"
-        },
-        "technologies_grouped": {
-            "Frameworks": [
-                "Detectron2",
-                "PyTorch"
-            ],
-            "Programming": [
-                "Python"
-            ],
-            "Libraries": [
-                "OpenCV",
-                "NumPy",
-                "Matplotlib"
-            ],
-            "Model Architecture": [
-                "RetinaNet with ResNet-50 FPN"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Chicken Detection Output",
-                "description": "Image with detected chickens and bounding boxes.",
-                "src": "/images/portofolio/ml/comvis/Chicken Cage 1.png"
-            },
-            {
-                "id": 2,
-                "title": "Video Detection Frame",
-                "description": "Frame from video showing result for chicken detection.",
-                "src": "/images/portofolio/ml/comvis/Output Chicken Detection.gif"
-            }
-        ]
+    "technologies_grouped": {
+      "Computer Vision": [
+        "Python",
+        "OpenCV",
+        "NumPy",
+        "COCO"
+      ],
+      "Deep Learning": [
+        "PyTorch"
+      ]
     },
-    {
-        "id": "5",
-        "name": "Forex Data Monitoring Dashboard",
-        "role": "Data Engineer",
-        "timeline": "2 weeks",
-        "status": "Done",
-        "github_link": null,
-        "demo_link": null,
-        "card_image_src": "/images/portofolio/de/Forex-Dashboard-Cover.png",
-        "category": "DE",
-        "overview": "Dashboard that tracks forex prices as they move and pushes updates through a Telegram bot. Python processes the feed, Grafana visualizes it, and Docker with PostgreSQL holds the pipeline together.",
-        "challenge": "Creating a scalable system to process real-time forex data and deliver timely notifications while ensuring the dashboard, database, and Telegram bot work as one pipeline.",
-        "result": "Delivered a working dashboard tracking live forex prices with automated Telegram alerts, containerized with Docker on PostgreSQL.",
-        "statistics": {
-            "Data Update Frequency": "Real-time",
-            "Notification Latency": "< 10 seconds",
-            "Target Application": "Forex Trading Monitoring"
-        },
-        "technologies_grouped": {
-            "Programming": [
-                "Python"
-            ],
-            "Visualization": [
-                "Grafana"
-            ],
-            "Containerization": [
-                "Docker"
-            ],
-            "Database": [
-                "PostgreSQL"
-            ],
-            "Messaging": [
-                "Telegram API"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Forex Dashboard",
-                "description": "Screenshot of the Grafana dashboard displaying real-time forex price trends.",
-                "src": "/images/portofolio/de/Dashboard Grafana.png"
-            },
-            {
-                "id": 2,
-                "title": "Telegram Notification",
-                "description": "Example of a price update notification sent via Telegram bot.",
-                "src": "/images/portofolio/de/Bot Telegram Update Forex.png"
-            },
-            {
-                "id": 3,
-                "title": "Docker Containerization",
-                "description": "Docker container setup for the forex monitoring system.",
-                "src": "/images/portofolio/de/Docker Container Forex.png"
-            }
-        ]
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Sample Segmentation Results",
+        "description": "Visualization of segmentation masks for buildings and roads on aerial imagery.",
+        "src": "/images/portofolio/ml/segmentation/gmf/Sample Segmentation Results.png"
+      },
+      {
+        "id": 2,
+        "title": "Sample Ground Truth Results",
+        "description": "Visualizing sample of ground truth annotations.",
+        "src": "/images/portofolio/ml/segmentation/gmf/Ground Truth.png"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Tomato Leaf Disease Detection",
+    "role": "Machine Learning Engineer",
+    "timeline": "1 month",
+    "status": "Done",
+    "github_link": "https://github.com/aldyardnsyh/Tomato-Leaf-Deasease-Detection",
+    "demo_link": "https://tomato-leaf-deasease-detection.streamlit.app/",
+    "card_image_src": "/images/portofolio/ml/segmentation/klh/Cover-Tomato Leaf Disease Detection.png",
+    "category": "ML",
+    "overview": "Developed a lightweight deep learning model using TensorFlow Lite to detect diseases in tomato leaves from images. The model, based on transfer learning with MobileNetV2, achieves high accuracy with a compact size, suitable for deployment on resource-constrained devices.",
+    "challenge": "Optimizing a high-accuracy model to maintain performance within a compact 5MB size, handling a large dataset with 11 classes, and keeping detection steady across varied image conditions such as lighting and angles.",
+    "result": "The model achieved 99.4% accuracy in detecting 11 classes of tomato leaf diseases using a dataset of over 17,000 images. Deployed on Streamlit, the application allows users to upload images and receive real-time disease predictions, demonstrating potential for agricultural diagnostic tools.",
+    "statistics": {
+      "Model Accuracy": "99.4%",
+      "Dataset Size": "17,000+ images",
+      "Model Size": "5MB",
+      "Number of Classes": "11"
     },
-    {
-        "id": "6",
-        "name": "AI - Sentiment Hub",
-        "role": "Data Engineer",
-        "timeline": "1 week",
-        "status": "Done",
-        "github_link": "https://github.com/aldyardnsyh/ai-sentiment-pipeline",
-        "demo_link": "https://ai-sentiment-pipeline.vercel.app/",
-        "card_image_src": "/images/portofolio/de/AI Sentimen Pipeline-Cover.png",
-        "category": "DE",
-        "overview": "Live sentiment dashboard over scraped news on AI, blockchain, finance, forex, and investing. BERT and VADER score each article, React shows the trends, FastAPI serves them, and PostgreSQL with Supabase stores everything, deployed on Render.",
-        "challenge": "Building an efficient ETL pipeline to scrape and process raw news data from News API, integrating BERT and VADER models for accurate sentiment analysis, and creating a responsive dashboard backed by a Swagger-documented API and PostgreSQL/Supabase storage.",
-        "result": "Delivered a working app where an ETL pipeline scrapes news, scores sentiment, and serves it through interactive dashboards and Swagger-documented endpoints.",
-        "statistics": {
-            "Data Source": "News API",
-            "Topics Analyzed": "AI, Blockchain, Finance, Forex, Investment",
-            "Sentiment Models": "BERT, VADER",
-            "Deployment Platform": "Render"
-        },
-        "technologies_grouped": {
-            "Programming": [
-                "Python"
-            ],
-            "Frontend": [
-                "React JS"
-            ],
-            "Backend": [
-                "FastAPI",
-                "Swagger"
-            ],
-            "Database": [
-                "PostgreSQL",
-                "Supabase"
-            ],
-            "Deployment": [
-                "Render"
-            ],
-            "Machine Learning": [
-                "BERT",
-                "VADER"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Sentiment Dashboard",
-                "description": "Screenshot of the main dashboard displaying real-time sentiment trends for selected topics.",
-                "src": "/images/portofolio/de/Home Page Sentimen Hub Dasboard.png"
-            },
-            {
-                "id": 2,
-                "title": "Project Overview",
-                "description": "Overview section highlighting the ETL pipeline and sentiment analysis workflow.",
-                "src": "/images/portofolio/de/Overview Data Stream Sentimen Hub.png"
-            },
-            {
-                "id": 3,
-                "title": "Analytics View",
-                "description": "Analytics page showing detailed sentiment breakdowns using BERT and VADER models.",
-                "src": "/images/portofolio/de/Comparisoin Data Stream Sentimen Hub.png"
-            },
-            {
-                "id": 4,
-                "title": "API Documentation",
-                "description": "Swagger interface for the FastAPI backend, documenting endpoints for sentiment data retrieval.",
-                "src": "/images/portofolio/de/Swagger API Sentimen Hub.png"
-            }
-        ]
+    "technologies_grouped": {
+      "Machine Learning": [
+        "Python",
+        "TensorFlow",
+        "Keras"
+      ],
+      "Data Processing": [
+        "NumPy",
+        "Pandas"
+      ],
+      "Visualization": [
+        "Seaborn"
+      ],
+      "Deployment": [
+        "Streamlit",
+        "TensorFlow Lite"
+      ]
     },
-    {
-        "id": "7",
-        "name": "Road Line Detection",
-        "role": "Machine Learning Engineer",
-        "timeline": "3 months",
-        "status": "Done",
-        "github_link": "https://github.com/aldyardnsyh/road_line_detection",
-        "demo_link": "https://motorescue-roadlinedetection.streamlit.app/",
-        "card_image_src": "/images/portofolio/ml/segmentation/sklv/Cover-SKLV-Road Line Detection.png",
-        "category": "ML",
-        "overview": "This project developed a model to detect road lane markings from image and video inputs at the Samsung Innovation Campus Batch 5 competition. The system was deployed using Streamlit, providing an interactive web interface for users to upload inputs and visualize detected lane lines in image and video processing, with potential applications in navigation and autonomous driving systems.",
-        "challenge": "Key challenges included handling varying conditions of image/video quality, developing an algorithm tolerant to different lane marking types, and ensuring the Streamlit application was responsive and efficient for processing.",
-        "result": "The system detected road lane markings from images and videos, with results visualized through an interactive Streamlit interface. Users could upload inputs and view detected lane lines with clear overlays, demonstrating potential for navigation systems or autonomous vehicle support.",
-        "statistics": {
-            "Supported Input Types": "Images (JPEG, PNG), Videos (MP4)",
-            "Frame Analysis": "Image analysis",
-            "Video Detection Analysis": "Generate results for videos",
-            "Deployment Status": "Successful on Streamlit"
-        },
-        "technologies_grouped": {
-            "Computer Vision": [
-                "Python",
-                "OpenCV",
-                "NumPy"
-            ],
-            "Data Processing": [
-                "Pandas"
-            ],
-            "Visualization": [
-                "Matplotlib"
-            ],
-            "Deployment": [
-                "Streamlit"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Road Line Detection Output",
-                "description": "Visualization of detected lane lines on an input image.",
-                "src": "/images/portofolio/ml/segmentation/sklv/Result Image Road Line Detection.jpg"
-            },
-            {
-                "id": 2,
-                "title": "IOT Devive",
-                "description": "IOT Device for Model Implementation.",
-                "src": "/images/portofolio/ml/segmentation/sklv/IOT Device MotoRescue.png"
-            }
-        ]
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Disease Detection Output",
+        "description": "Visualization of detected tomato leaf disease with confidence scores.",
+        "src": "/images/portofolio/ml/segmentation/klh/Result Prediction.png"
+      },
+      {
+        "id": 2,
+        "title": "Streamlit Interface",
+        "description": "Interactive Streamlit app showing real-time disease prediction results.",
+        "src": "/images/portofolio/ml/segmentation/klh/Tomato Streamlit Dashboard.png"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Prototype Chicken Detection Model",
+    "role": "Computer Vision Engineer",
+    "timeline": "2 weeks",
+    "status": "Done",
+    "github_link": "https://www.kaggle.com/code/aldyardiansyah17/chicken-poultry-detectron2-retinanet-resnet-50-fpn",
+    "demo_link": null,
+    "card_image_src": "/images/portofolio/ml/comvis/Cover-Chicken Cage-Comvis.png",
+    "category": "ML",
+    "overview": "Prototype poultry-monitoring system that detects and counts chickens in images and video. Built with Python, Detectron2, and PyTorch around a RetinaNet model with a ResNet-50 FPN backbone, compressed with dynamic quantization and structured pruning.",
+    "challenge": "Developing a high-sensitivity deep learning model for accurate real-time chicken detection in poultry farm environments.",
+    "result": "Developed a prototype capable of reliable chicken detection and counting in images and videos, designed for future integration into a real-time monitoring application.",
+    "statistics": {
+      "Model Size": "~150 MB",
+      "Detection Accuracy": "70%",
+      "Target Application": "Poultry Farm Monitoring"
     },
-    {
-        "id": "8",
-        "name": "SleepSense IoT Device for Sleep Apnea Monitoring",
-        "role": "IoT Engineer",
-        "timeline": "3 months",
-        "status": "Done",
-        "github_link": "https://github.com/aldyardnsyh/Microbacterium_Sleepsense_Hardware",
-        "demo_link": "https://github.com/sleepsense-project",
-        "card_image_src": "/images/portofolio/iot/Cover-IoT Device Sleep Apnea.png",
-        "category": "IoT",
-        "overview": "SleepSense is an affordable at-home system for early detection and rehabilitation of Obstructive Sleep Apnea (OSA): an ergonomic belt-thorax sensor records ECG and breathing patterns, a wireless pulse oximeter tracks blood oxygen and heart rate, and a web platform turns both streams into assisted analysis, clinical reports, and a direct line to doctors.",
-        "challenge": "Designing an ergonomic and cost-effective sensor system, ensuring reliable real-time data transmission via MQTT, and integrating diverse data streams (ECG, respiratory patterns, oxygen saturation, heart rate) into a unified web dashboard for clinical use.",
-        "result": "Developed and deployed SleepSense, enabling real-time monitoring of sleep apnea indicators with a production cost of approximately Rp2 million per unit. The system supports early diagnosis and long-term rehabilitation through a user-friendly dashboard, facilitating continuous patient-doctor communication and scalable healthcare solutions.",
-        "statistics": {
-            "Data Streams Belt": "ECG, respiratory patterns",
-            "Data Streams Finger": "Oxygen saturation, heart rate",
-            "Real-time Monitoring": "Enabled via MQTT"
-        },
-        "technologies_grouped": {
-            "Hardware": [
-                "Arduino"
-            ],
-            "Programming": [
-                "C++"
-            ],
-            "Messaging": [
-                "MQTT"
-            ],
-            "Database": [
-                "PostgreSQL",
-                "Azure SQL DB"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "SleepSense Device",
-                "description": "Ergonomic belt-thorax sensor and pulse oximeter for sleep apnea monitoring.",
-                "src": "/images/portofolio/iot/IoT Device Sleepsense.png"
-            },
-            {
-                "id": 2,
-                "title": "Web Dashboard",
-                "description": "Real-time dashboard AI Analytics.",
-                "src": "/images/portofolio/iot/Web Dashboard SleepSense.png"
-            }
-        ]
+    "technologies_grouped": {
+      "Frameworks": [
+        "Detectron2",
+        "PyTorch"
+      ],
+      "Programming": [
+        "Python"
+      ],
+      "Libraries": [
+        "OpenCV",
+        "NumPy",
+        "Matplotlib"
+      ],
+      "Model Architecture": [
+        "RetinaNet with ResNet-50 FPN"
+      ]
     },
-    {
-        "id": "9",
-        "name": "IoT Football Movement Tracker",
-        "role": "IoT Engineer",
-        "timeline": "2 weeks",
-        "status": "Done",
-        "github_link": "https://github.com/ItsmeAldy17/DashboardFootballGPSTracker",
-        "demo_link": "https://fortunafootball.vercel.app/",
-        "card_image_src": "/images/portofolio/iot/Cover-IoT Device Gps Tracker.png",
-        "category": "IoT",
-        "overview": "Developed an IoT device to track football players' movement patterns during matches. The device, attached to the back of players' jerseys, records real-time movement data and stores it locally on an SD card in Excel format for subsequent analysis on a dedicated web platform.",
-        "challenge": "Designing a compact and durable IoT device suitable for attachment to players' jerseys, ensuring reliable local storage of movement data on an SD card, and formatting data for direct import into the web-based analysis platform.",
-        "result": "Developed a wearable IoT device that accurately tracks and stores players' movement data locally in Excel format. The data integrates with a web platform for detailed analysis, supporting performance evaluation and tactical planning in football.",
-        "statistics": {
-            "Data Storage": "Local SD card",
-            "Output Format": "Excel",
-            "Tracking Capability": "Real-time movement patterns",
-            "Device Placement": "Back of player's jersey"
-        },
-        "technologies_grouped": {
-            "Software": [
-                "Arduino"
-            ],
-            "Programming": [
-                "C++"
-            ],
-            "Data Output": [
-                "Excel"
-            ],
-            "Data Store": [
-                "SD Card"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Wearable Tracker Device",
-                "description": "IoT device attached to player's jersey for movement tracking.",
-                "src": "/images/portofolio/iot/Implementasi Device Fortuna.jpg"
-            },
-            {
-                "id": 2,
-                "title": "Iot Device",
-                "description": "Design of IoT Device.",
-                "src": "/images/portofolio/iot/Iot Device Fortuna.png"
-            },
-            {
-                "id": 3,
-                "title": "Data Analytics Dashboard",
-                "description": "Analytical data processing results obtained from IoT devices.",
-                "src": "/images/portofolio/iot/Dashboard Web Fortuna.jpg"
-            }
-        ]
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Chicken Detection Output",
+        "description": "Image with detected chickens and bounding boxes.",
+        "src": "/images/portofolio/ml/comvis/Chicken Cage 1.png"
+      },
+      {
+        "id": 2,
+        "title": "Video Detection Frame",
+        "description": "Frame from video showing result for chicken detection.",
+        "src": "/images/portofolio/ml/comvis/Output Chicken Detection.gif"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Forex Data Monitoring Dashboard",
+    "role": "Data Engineer",
+    "timeline": "2 weeks",
+    "status": "Done",
+    "github_link": null,
+    "demo_link": null,
+    "card_image_src": "/images/portofolio/de/Forex-Dashboard-Cover.png",
+    "category": "DE",
+    "overview": "Dashboard that tracks forex prices as they move and pushes updates through a Telegram bot. Python processes the feed, Grafana visualizes it, and Docker with PostgreSQL holds the pipeline together.",
+    "challenge": "Creating a scalable system to process real-time forex data and deliver timely notifications while ensuring the dashboard, database, and Telegram bot work as one pipeline.",
+    "result": "Delivered a working dashboard tracking live forex prices with automated Telegram alerts, containerized with Docker on PostgreSQL.",
+    "statistics": {
+      "Data Update Frequency": "Real-time",
+      "Notification Latency": "< 10 seconds",
+      "Target Application": "Forex Trading Monitoring"
     },
-    {
-        "id": "10",
-        "name": "BIN-GO! Waste Management App",
-        "role": "Android Developer",
-        "timeline": "3 months",
-        "status": "Done",
-        "github_link": "https://github.com/ergegananputra/bin_go_android_apps_gdsc",
-        "demo_link": "https://github.com/ergegananputra/bin_go_android_apps_gdsc/tree/main/apk",
-        "card_image_src": "/images/portofolio/mobile/Cover-Bingo Mobile App.png",
-        "category": "Mobile",
-        "overview": "Developed BIN-GO!, a mobile application to address the waste crisis in Yogyakarta. The app integrates Google Maps to locate nearby recycling centers, provides a community forum for waste management discussions, includes a reporting feature for environmental issues, and incorporates gamification to promote sustainable behaviors.",
-        "challenge": "Integrating Google Maps for accurate recycling center location tracking, designing an intuitive forum and reporting system, and implementing gamification elements to enhance user engagement while ensuring stable performance on Android devices.",
-        "result": "Launched BIN-GO! in Yogyakarta, enabling users to locate recycling centers, report waste issues, and engage in community discussions. The gamification features encouraged sustainable practices, fostering a sense of shared responsibility for a cleaner environment.",
-        "statistics": {
-            "Main Features": "Bin-Community",
-            "Second Features": "Bin-Locator",
-            "Third Features": "Bin-Report",
-            "Another Features Gamifications": "Bin-Point"
-        },
-        "technologies_grouped": {
-            "Mobile Development": [
-                "Android Studio",
-                "Kotlin"
-            ],
-            "Backend": [
-                "Firebase"
-            ],
-            "Cloud Services": [
-                "Google Cloud Console"
-            ],
-            "Mapping": [
-                "Google Maps"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Bin-Locator Interface",
-                "description": "Map view showing nearby recycling centers using Google Maps.",
-                "src": "/images/portofolio/mobile/Bin Locator.png"
-            },
-            {
-                "id": 2,
-                "title": "Bin-Community Forum",
-                "description": "Community discussion interface for waste management topics.",
-                "src": "/images/portofolio/mobile/Bin Community.png"
-            },
-            {
-                "id": 3,
-                "title": "Bin-Report Feature",
-                "description": "Interface for reporting waste-related issues.",
-                "src": "/images/portofolio/mobile/Bin Report.png"
-            }
-        ]
+    "technologies_grouped": {
+      "Programming": [
+        "Python"
+      ],
+      "Visualization": [
+        "Grafana"
+      ],
+      "Containerization": [
+        "Docker"
+      ],
+      "Database": [
+        "PostgreSQL"
+      ],
+      "Messaging": [
+        "Telegram API"
+      ]
     },
-    {
-        "id": "11",
-        "name": "Broiler Monitoring v.1",
-        "role": "Project Manager",
-        "timeline": "6 months",
-        "status": "Done",
-        "github_link": "https://github.com/senaajibayumurti/BroMo.git",
-        "demo_link": "https://github.com/Whyaziz/Backend-BroMo.git",
-        "card_image_src": "/images/portofolio/pm/Broiler Monitoring v.1.png",
-        "category": "PM",
-        "overview": "Led the development of Broiler Monitoring (BroMo) v.1, a web-based information system designed to monitor poultry farms effectively. The application enables real-time monitoring of farm conditions for owners and workers, enhancing operational efficiency.",
-        "challenge": "Coordinating a multidisciplinary team to design an intuitive interface and ensure real-time data integration, while managing project timelines and stakeholder expectations using Agile methodologies.",
-        "result": "Delivered BroMo v.1, enabling real-time poultry farm monitoring, improving operational oversight for owners and workers, and receiving positive feedback for its usability and reliability.",
-        "statistics": {
-            "Team Developers": "2 developers",
-            "Team Design": "1 UI/UX Design",
-            "Development Phases": "12 sprints",
-            "Deployment Status": "On-time schedule"
-        },
-        "technologies_grouped": {
-            "Design": [
-                "Figma"
-            ],
-            "Frontend": [
-                "Laravel",
-                "Bootstrap"
-            ],
-            "Project Management": [
-                "Trello"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Farm Monitoring Dashboard",
-                "description": "Main interface for real-time poultry farm monitoring.",
-                "src": "/images/portofolio/pm/Landing Page Bromo v.1.png"
-            },
-            {
-                "id": 2,
-                "title": "Landing Page Interface",
-                "description": "Interface of welcoming page bromo website v.1.",
-                "src": "/images/portofolio/pm/Dashboard Web Bromo v.1.png"
-            },
-            {
-                "id": 3,
-                "title": "Trello Management",
-                "description": "Timeline schecule of project development",
-                "src": "/images/portofolio/pm/Trello Management.jpg"
-            }
-        ]
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Forex Dashboard",
+        "description": "Screenshot of the Grafana dashboard displaying real-time forex price trends.",
+        "src": "/images/portofolio/de/Dashboard Grafana.png"
+      },
+      {
+        "id": 2,
+        "title": "Telegram Notification",
+        "description": "Example of a price update notification sent via Telegram bot.",
+        "src": "/images/portofolio/de/Bot Telegram Update Forex.png"
+      },
+      {
+        "id": 3,
+        "title": "Docker Containerization",
+        "description": "Docker container setup for the forex monitoring system.",
+        "src": "/images/portofolio/de/Docker Container Forex.png"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "AI - Sentiment Hub",
+    "role": "Data Engineer",
+    "timeline": "1 week",
+    "status": "Done",
+    "github_link": "https://github.com/aldyardnsyh/ai-sentiment-pipeline",
+    "demo_link": "https://ai-sentiment-pipeline.vercel.app/",
+    "card_image_src": "/images/portofolio/de/AI Sentimen Pipeline-Cover.png",
+    "category": "DE",
+    "overview": "Live sentiment dashboard over scraped news on AI, blockchain, finance, forex, and investing. BERT and VADER score each article, React shows the trends, FastAPI serves them, and PostgreSQL with Supabase stores everything, deployed on Render.",
+    "challenge": "Building an efficient ETL pipeline to scrape and process raw news data from News API, integrating BERT and VADER models for accurate sentiment analysis, and creating a responsive dashboard backed by a Swagger-documented API and PostgreSQL/Supabase storage.",
+    "result": "Delivered a working app where an ETL pipeline scrapes news, scores sentiment, and serves it through interactive dashboards and Swagger-documented endpoints.",
+    "statistics": {
+      "Data Source": "News API",
+      "Topics Analyzed": "AI, Blockchain, Finance, Forex, Investment",
+      "Sentiment Models": "BERT, VADER",
+      "Deployment Platform": "Render"
     },
-    {
-        "id": "12",
-        "name": "Broiler Monitoring v.2",
-        "role": "Project Manager",
-        "timeline": "6 months",
-        "status": "Done",
-        "github_link": "https://github.com/senaajibayumurti/bromo-frontend.git",
-        "demo_link": "https://github.com/Whyaziz/Backend-BroMo.git",
-        "card_image_src": "/images/portofolio/pm/Broiler Monitoring v.2.png",
-        "category": "PM",
-        "overview": "Managed the development of Broiler Monitoring v.2, focusing on enhancing the user interface with a cleaner design and improved functionality. The project involved migrating the frontend framework from Laravel to Next.js while maintaining Laravel for the database API, ensuring a modern and efficient application.",
-        "challenge": "Overseeing the migration from Laravel to Next.js, ensuring the Next.js frontend works with the existing Laravel API, and implementing rigorous testing to maintain reliability and performance.",
-        "result": "Delivered BroMo v.2 with a modernized interface and enhanced functionality, improving user experience and maintaining system reliability through thorough testing and stakeholder alignment.",
-        "statistics": {
-            "Team Size": "2 developers",
-            "Migration Completion": "100%",
-            "Testing Coverage": "95%",
-            "User Satisfaction": "90% positive"
-        },
-        "technologies_grouped": {
-            "Design": [
-                "Figma"
-            ],
-            "Frontend": [
-                "Next.js",
-                "Tailwind CSS"
-            ],
-            "Backend": [
-                "Laravel"
-            ],
-            "Testing": [
-                "Selenium",
-                "Cucumber",
-                "Maven"
-            ],
-            "Project Management": [
-                "Trello"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Modernized Dashboard",
-                "description": "Updated interface with cleaner design for farm monitoring.",
-                "src": "/images/portofolio/pm/Dashboard Web Bromo v.2.png"
-            },
-            {
-                "id": 2,
-                "title": "Enhanced UI",
-                "description": "Improved user interface with Next.js and Tailwind CSS.",
-                "src": "/images/portofolio/pm/Landing Page Bromo v.2.png"
-            }
-        ]
+    "technologies_grouped": {
+      "Programming": [
+        "Python"
+      ],
+      "Frontend": [
+        "React JS"
+      ],
+      "Backend": [
+        "FastAPI",
+        "Swagger"
+      ],
+      "Database": [
+        "PostgreSQL",
+        "Supabase"
+      ],
+      "Deployment": [
+        "Render"
+      ],
+      "Machine Learning": [
+        "BERT",
+        "VADER"
+      ]
     },
-    {
-        "id": "13",
-        "name": "BWA Web Testing",
-        "role": "Quality Assurance",
-        "timeline": "1 week",
-        "status": "Done",
-        "github_link": "https://docs.google.com/spreadsheets/d/1wfBOFI9UvMoSIlDyyAE7JYEu2PKQV3JEx5ZEXO7CxpU/edit?gid=0#gid=0",
-        "demo_link": "https://www.buildwithangga.com/showcase/aldyardiansyah628/document-report-of-software-quality-testing-website-buildwithangga",
-        "card_image_src": "/images/portofolio/qa/BWA Platform.png",
-        "category": "QA",
-        "overview": "Conducted quality assurance testing for a web application as part of a course, focusing on creating and executing test cases for two case studies to verify the functionality and reliability of the BuildWithAngga platform.",
-        "challenge": "Developing comprehensive test cases to cover critical functionalities within a short timeframe, and documenting results clearly using Excel for effective reporting and analysis.",
-        "result": "Created and executed test cases for two case studies, identifying key issues and ensuring the functionality of the BuildWithAngga platform, with all findings documented in Excel for stakeholder review.",
-        "statistics": {
-            "Test Cases Created": "2 case studies",
-            "Issues Identified": "Multiple functional issues",
-            "Documentation Format": "Excel",
-            "Completion Time": "1 week"
-        },
-        "technologies_grouped": {
-            "Testing": [
-                "Excel"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Test Case Spreadsheet",
-                "description": "Excel document outlining test cases for the BuildWithAngga platform.",
-                "src": "/images/portofolio/qa/Spreadsheets BWA Platform.png"
-            }
-        ]
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Sentiment Dashboard",
+        "description": "Screenshot of the main dashboard displaying real-time sentiment trends for selected topics.",
+        "src": "/images/portofolio/de/Home Page Sentimen Hub Dasboard.png"
+      },
+      {
+        "id": 2,
+        "title": "Project Overview",
+        "description": "Overview section highlighting the ETL pipeline and sentiment analysis workflow.",
+        "src": "/images/portofolio/de/Overview Data Stream Sentimen Hub.png"
+      },
+      {
+        "id": 3,
+        "title": "Analytics View",
+        "description": "Analytics page showing detailed sentiment breakdowns using BERT and VADER models.",
+        "src": "/images/portofolio/de/Comparisoin Data Stream Sentimen Hub.png"
+      },
+      {
+        "id": 4,
+        "title": "API Documentation",
+        "description": "Swagger interface for the FastAPI backend, documenting endpoints for sentiment data retrieval.",
+        "src": "/images/portofolio/de/Swagger API Sentimen Hub.png"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Road Line Detection",
+    "role": "Machine Learning Engineer",
+    "timeline": "3 months",
+    "status": "Done",
+    "github_link": "https://github.com/aldyardnsyh/road_line_detection",
+    "demo_link": "https://motorescue-roadlinedetection.streamlit.app/",
+    "card_image_src": "/images/portofolio/ml/segmentation/sklv/Cover-SKLV-Road Line Detection.png",
+    "category": "ML",
+    "overview": "This project developed a model to detect road lane markings from image and video inputs at the Samsung Innovation Campus Batch 5 competition. The system was deployed using Streamlit, providing an interactive web interface for users to upload inputs and visualize detected lane lines in image and video processing, with potential applications in navigation and autonomous driving systems.",
+    "challenge": "Key challenges included handling varying conditions of image/video quality, developing an algorithm tolerant to different lane marking types, and ensuring the Streamlit application was responsive and efficient for processing.",
+    "result": "The system detected road lane markings from images and videos, with results visualized through an interactive Streamlit interface. Users could upload inputs and view detected lane lines with clear overlays, demonstrating potential for navigation systems or autonomous vehicle support.",
+    "statistics": {
+      "Supported Input Types": "Images (JPEG, PNG), Videos (MP4)",
+      "Frame Analysis": "Image analysis",
+      "Video Detection Analysis": "Generate results for videos",
+      "Deployment Status": "Successful on Streamlit"
     },
-    {
-        "id": "14",
-        "name": "Tokopedia Web Testing",
-        "role": "Quality Assurance",
-        "timeline": "1 week",
-        "status": "Done",
-        "github_link": "#",
-        "demo_link": "#",
-        "card_image_src": "/images/portofolio/qa/Tokped Web.png",
-        "category": "QA",
-        "overview": "Conducted quality assurance testing for the Tokopedia e-commerce platform, focusing on creating and executing three test cases (positive and negative scenarios) to validate the functionality of adding items to the wishlist, adding items to the cart, and performing checkout.",
-        "challenge": "Designing comprehensive positive and negative test cases across critical user flows, and documenting results in Excel for clear reporting within a limited timeframe.",
-        "result": "Developed and executed three test cases for Tokopedia's wishlist, cart, and checkout features, identifying potential issues, with all findings documented in Excel for stakeholder review.",
-        "statistics": {
-            "Test Cases Created": "3 (positive and negative)",
-            "Features Tested": "Wishlist, Cart, Checkout",
-            "Documentation Format": "Excel",
-            "Completion Time": "1 week"
-        },
-        "technologies_grouped": {
-            "Testing": [
-                "Excel"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Test Case Spreadsheet",
-                "description": "Excel document detailing test cases for Tokopedia's wishlist, cart, and checkout features.",
-                "src": "/images/portofolio/qa/Spreadsheets Tokped Web.png"
-            }
-        ]
+    "technologies_grouped": {
+      "Computer Vision": [
+        "Python",
+        "OpenCV",
+        "NumPy"
+      ],
+      "Data Processing": [
+        "Pandas"
+      ],
+      "Visualization": [
+        "Matplotlib"
+      ],
+      "Deployment": [
+        "Streamlit"
+      ]
     },
-    {
-        "id": "15",
-        "name": "Visit Bantaragung Tourism Platform",
-        "role": "Full-Stack AI Engineer",
-        "timeline": "December 2025 - February 2026",
-        "status": "Done",
-        "github_link": "https://github.com/aldyardnsyh/VisitBantaragung",
-        "demo_link": "https://visitbantaragung.com/",
-        "card_image_src": "/images/portofolio/web/VisitBantaragung-Home.jpeg",
-        "category": "Web",
-        "overview": "Built Visit Bantaragung, the official smart-tourism platform for Desa Wisata Bantaragung in Majalengka, as an all-in-one system across 166 commits with the KKN-PPM UGM Simfoni Sindangwangi team. It combines a public Next.js 16 + React 19 landing (destinations, Kampung Herbal B2H catalog, BDB village branding with homestays and MSMEs, BIC information center, Leaflet digital map, gallery), a Git-based content CMS where every save is one commit with zero database, and a RAG chatbot guide with BM25 retrieval, query expansion, reranking, and anti-hallucination guardrails in Indonesian, English, and Javanese.",
-        "challenge": "Unifying destinations, herbal catalog, homestays, MSMEs, news, and a digital map into one fast site. Giving villagers with no database background a CMS they can actually operate. Making a trilingual guide that answers only from village records, says so when it does not know, and resists jailbreaks, all of it testable without spending LLM quota.",
-        "result": "Shipped the live official platform at visitbantaragung.com with a 1-commit-per-save CMS (schema validation, browser-compressed media library, AI-assisted news sync with stage gate) and a deterministic RAG guide (~190 knowledge entries, chunking with overlap, per-article dedup reranker, LLM fallback chain with health tracking) covered by 9 regression suites.",
-        "statistics": {
-            "Commits Shipped": "166",
-            "Knowledge Entries": "~190 ID-EN",
-            "Regression Suites": "9",
-            "CMS Saves": "1 commit per save"
-        },
-        "technologies_grouped": {
-            "Platform": [
-                "Next.js 16",
-                "React 19",
-                "TypeScript",
-                "Tailwind CSS 4",
-                "Leaflet"
-            ],
-            "Content & CMS": [
-                "Git-based CMS",
-                "Schema Validation",
-                "Browser Image Compression",
-                "News Crawler + AI Rewrite"
-            ],
-            "AI / RAG": [
-                "BM25 Retrieval",
-                "Fuzzy Entity Matching",
-                "Query Expansion",
-                "Reranking",
-                "LLM Fallback Chain",
-                "Guardrails ID/EN/Jawa"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Homepage",
-                "description": "Public landing of the smart tourism platform: destinations, herbal village, digital map, and visitor stats in one view.",
-                "src": "/images/portofolio/web/VisitBantaragung-Home.jpeg"
-            },
-            {
-                "id": 2,
-                "title": "Bantaragung Guide Chatbot",
-                "description": "RAG assistant answering with grounded prices, citations, and entity cards. It refuses to invent what is not in village records.",
-                "src": "/images/portofolio/web/VisitBantaragung-Chatbot-Guide.jpeg"
-            },
-            {
-                "id": 3,
-                "title": "CMS Content Collections",
-                "description": "Git-based content dashboard: news, destinations, herbal catalog, homestays, and MSMEs managed without a database.",
-                "src": "/images/portofolio/web/VisitBantaragung-CMS-Collections.jpeg"
-            }
-        ]
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Road Line Detection Output",
+        "description": "Visualization of detected lane lines on an input image.",
+        "src": "/images/portofolio/ml/segmentation/sklv/Result Image Road Line Detection.jpg"
+      },
+      {
+        "id": 2,
+        "title": "IOT Devive",
+        "description": "IOT Device for Model Implementation.",
+        "src": "/images/portofolio/ml/segmentation/sklv/IOT Device MotoRescue.png"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "name": "SleepSense IoT Device for Sleep Apnea Monitoring",
+    "role": "IoT Engineer",
+    "timeline": "3 months",
+    "status": "Done",
+    "github_link": "https://github.com/aldyardnsyh/Microbacterium_Sleepsense_Hardware",
+    "demo_link": "https://github.com/sleepsense-project",
+    "card_image_src": "/images/portofolio/iot/Cover-IoT Device Sleep Apnea.png",
+    "category": "IoT",
+    "overview": "SleepSense is an affordable at-home system for early detection and rehabilitation of Obstructive Sleep Apnea (OSA): an ergonomic belt-thorax sensor records ECG and breathing patterns, a wireless pulse oximeter tracks blood oxygen and heart rate, and a web platform turns both streams into assisted analysis, clinical reports, and a direct line to doctors.",
+    "challenge": "Designing an ergonomic and cost-effective sensor system, ensuring reliable real-time data transmission via MQTT, and integrating diverse data streams (ECG, respiratory patterns, oxygen saturation, heart rate) into a unified web dashboard for clinical use.",
+    "result": "Developed and deployed SleepSense, enabling real-time monitoring of sleep apnea indicators with a production cost of approximately Rp2 million per unit. The system supports early diagnosis and long-term rehabilitation through a user-friendly dashboard, facilitating continuous patient-doctor communication and scalable healthcare solutions.",
+    "statistics": {
+      "Data Streams Belt": "ECG, respiratory patterns",
+      "Data Streams Finger": "Oxygen saturation, heart rate",
+      "Real-time Monitoring": "Enabled via MQTT"
     },
-    {
-        "id": "16",
-        "name": "Building Automation System Dashboard",
-        "role": "IoT Dashboard Engineer",
-        "timeline": "2025",
-        "status": "Done",
-        "github_link": "https://github.com/aldyardnsyh/Building-Automation-System",
-        "demo_link": "https://building-automation-system.vercel.app/",
-        "card_image_src": "/images/portofolio/web/Cover-Building-Automation-System.png",
-        "category": "IoT",
-        "overview": "Built the data visualization and integration layer of a Building Automation System monitoring dashboard for the Lab Perancangan Polban. The dashboard unifies WWTP, clean water, and fire protection monitoring over OPC UA, MQTT, and Modbus TCP/IP, with threshold alarms and a simulation mode for testing.",
-        "challenge": "Unifying three subsystems and three industrial protocols into one readable dashboard, while keeping live values, alarm states, and a simulation mode for testing without production data.",
-        "result": "Delivered a live dashboard with a system summary, per-unit monitoring for WWTP, clean water, and fire protection, configurable alarm thresholds, and a simulation mode for safe testing.",
-        "technologies_grouped": {
-            "Visualization": [
-                "React"
-            ],
-            "Integration": [
-                "Python"
-            ],
-            "Protocols": [
-                "OPC UA",
-                "MQTT",
-                "Modbus TCP/IP"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Monitoring Dashboard",
-                "description": "Main BAS dashboard with system summary and per-unit monitoring.",
-                "src": "/images/portofolio/web/Cover-Building-Automation-System.png"
-            },
-            {
-                "id": 2,
-                "title": "Unit Monitoring in Action",
-                "description": "Live WWTP, clean water, and fire protection values with threshold alarms.",
-                "src": "/images/portofolio/web/BAS-Unit-Monitoring.gif"
-            }
-        ]
+    "technologies_grouped": {
+      "Hardware": [
+        "Arduino"
+      ],
+      "Programming": [
+        "C++"
+      ],
+      "Messaging": [
+        "MQTT"
+      ],
+      "Database": [
+        "PostgreSQL",
+        "Azure SQL DB"
+      ]
     },
-    {
-        "id": "17",
-        "name": "Shale Shaker Cutting Monitoring Web",
-        "role": "Full-Stack ML Engineer",
-        "timeline": "2026",
-        "status": "Done",
-        "github_link": "https://github.com/aldyardnsyh/ShaleShakerCuttingMonitor",
-        "demo_link": "https://shaleshakercuttingmonitor.web.id/",
-        "card_image_src": "/images/portofolio/web/Cover-Shale-Shaker-Web.png",
-        "category": "ML",
-        "overview": "Built as my undergraduate thesis (Tugas Akhir): a full migration of the desktop shale-shaker monitoring system to the web. Where v1 used classical OpenCV without deep learning, this version runs deep learning (MobileViT + BiSeNet v2) behind a web tool where users upload a video, mark a 4-point ROI, tune the model, and run live detection with trend visualization.",
-        "challenge": "Turning an offline detection model into a usable web tool: video upload, 4-point ROI selection, tunable inference settings, and live trend charts in one session flow.",
-        "result": "Delivered a live internal tool (v0.2) running a MobileViT model over ONNX with FastAPI, WebSocket updates, and SQLite session history.",
-        "statistics": {
-            "Version": "v0.2 (web migration)",
-            "Model": "MobileViT",
-            "Runtime": "ONNX",
-            "Backend": "FastAPI",
-            "Updates": "WebSocket"
-        },
-        "technologies_grouped": {
-            "Computer Vision": [
-                "Python",
-                "OpenCV",
-                "MobileViT",
-                "BiSeNet v2",
-                "ONNX"
-            ],
-            "Backend": [
-                "FastAPI",
-                "WebSocket",
-                "SQLite"
-            ],
-            "Deployment": [
-                "Docker"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Detection Dashboard",
-                "description": "Live detection view with ROI overlay and coverage trend chart.",
-                "src": "/images/portofolio/web/Cover-Shale-Shaker-Web.png"
-            },
-            {
-                "id": 2,
-                "title": "Live Detection Session",
-                "description": "Real session with ROI overlay, coverage trend, and last coverage value.",
-                "src": "/images/portofolio/web/Shale-Live-Session.gif"
-            }
-        ]
+    "gallery": [
+      {
+        "id": 1,
+        "title": "SleepSense Device",
+        "description": "Ergonomic belt-thorax sensor and pulse oximeter for sleep apnea monitoring.",
+        "src": "/images/portofolio/iot/IoT Device Sleepsense.png"
+      },
+      {
+        "id": 2,
+        "title": "Web Dashboard",
+        "description": "Real-time dashboard AI Analytics.",
+        "src": "/images/portofolio/iot/Web Dashboard SleepSense.png"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "name": "IoT Football Movement Tracker",
+    "role": "IoT Engineer",
+    "timeline": "2 weeks",
+    "status": "Done",
+    "github_link": "https://github.com/ItsmeAldy17/DashboardFootballGPSTracker",
+    "demo_link": "https://fortunafootball.vercel.app/",
+    "card_image_src": "/images/portofolio/iot/Cover-IoT Device Gps Tracker.png",
+    "category": "IoT",
+    "overview": "Developed an IoT device to track football players' movement patterns during matches. The device, attached to the back of players' jerseys, records real-time movement data and stores it locally on an SD card in Excel format for subsequent analysis on a dedicated web platform.",
+    "challenge": "Designing a compact and durable IoT device suitable for attachment to players' jerseys, ensuring reliable local storage of movement data on an SD card, and formatting data for direct import into the web-based analysis platform.",
+    "result": "Developed a wearable IoT device that accurately tracks and stores players' movement data locally in Excel format. The data integrates with a web platform for detailed analysis, supporting performance evaluation and tactical planning in football.",
+    "statistics": {
+      "Data Storage": "Local SD card",
+      "Output Format": "Excel",
+      "Tracking Capability": "Real-time movement patterns",
+      "Device Placement": "Back of player's jersey"
     },
-    {
-        "id": "18",
-        "name": "Wind Turbine Defect Dataset (100K VLM)",
-        "role": "Project Lead & QC Specialist",
-        "timeline": "September 2025 - January 2026",
-        "status": "Done",
-        "github_link": null,
-        "demo_link": null,
-        "card_image_src": "/images/portofolio/ml/dataset/Cover-Wind-Turbine-Defect-Dataset.png",
-        "category": "ML",
-        "overview": "Co-led dataset construction for a vision-language model that spots defects on wind turbine blades: 100,000 real drone-inspection photos across 14 defect classes, from LEP erosion to laminate cracks. With one fellow lead, I ran 5 mentors and 35 annotators across Indonesia: writing inspection guidelines, recording tutorials, holding daily QC syncs, and bridging the company team with the workers on the ground.",
-        "challenge": "Keeping 40 annotators consistent across 14 visually similar defect classes, training mentors faster than the labeling queue grew, and holding daily throughput without letting bad labels through.",
-        "result": "Delivered the full 100,000-photo batch at 98.8% QC validity: a 14-class defect taxonomy verified by domain experts, plus an annotation pipeline the team could keep running.",
-        "statistics": {
-            "Photos": "100,000 real drone inspections",
-            "Annotators": "40 across Indonesia",
-            "Defect Classes": "14",
-            "QC Validity": "98.8%"
-        },
-        "technologies_grouped": {
-            "Annotation": [
-                "CVAT"
-            ],
-            "Data": [
-                "Drone Imagery"
-            ],
-            "Model Target": [
-                "Vision Language Models"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Weekly Sync With Company Team",
-                "description": "Weekly alignment between the Korean company team and the Indonesian annotation crew.",
-                "src": "/images/portofolio/ml/dataset/Weekly-Meeting-01.png"
-            },
-            {
-                "id": 2,
-                "title": "QC Review Session",
-                "description": "Reviewing edge-case labels and throughput with mentors and the company team.",
-                "src": "/images/portofolio/ml/dataset/Weekly-Meeting-02.png"
-            }
-        ]
+    "technologies_grouped": {
+      "Software": [
+        "Arduino"
+      ],
+      "Programming": [
+        "C++"
+      ],
+      "Data Output": [
+        "Excel"
+      ],
+      "Data Store": [
+        "SD Card"
+      ]
     },
-    {
-        "id": "19",
-        "name": "LolosCV ATS Resume Builder",
-        "role": "Full-Stack Developer",
-        "timeline": "September 2026",
-        "status": "Done",
-        "github_link": "https://github.com/aldyardnsyh/Lolos-CV",
-        "demo_link": "https://loloscvats.web.id",
-        "card_image_src": "/images/portofolio/web/Cover-Lolos-CV.png",
-        "category": "Web",
-        "overview": "Free resume builder that works backwards from the job posting: paste a LinkedIn, JobStreet, or Glints job URL (or the raw text), let AI break down the requirements, generate a draft, refine it in a drag-and-drop template builder, check the ATS score, then export a pixel-accurate PDF. Runs client-side with a bring-your-own-key AI setup, so resumes, imported PDFs, and API keys never leave the browser.",
-        "challenge": "Making ATS optimization approachable without a backend: every job site structures its HTML differently, the score has to reflect the actual extracted requirements, and privacy had to be real rather than a promise, with resumes, imported PDFs, and AI keys all kept in the browser.",
-        "result": "Delivered a live platform at loloscvats.web.id with four ATS-aware templates (classic, photo, creative, modern minimal), full Indonesian and English output, PDF import, reorderable sections, and one-click export that auto-fits one page or two.",
-        "statistics": {
-            "Templates": "4 ATS-ready layouts",
-            "Languages": "Indonesian & English",
-            "AI Setup": "Bring your own key",
-            "Export": "Pixel-accurate PDF, 1-2 pages"
-        },
-        "technologies_grouped": {
-            "Frontend": [
-                "Next.js",
-                "React",
-                "Tailwind CSS"
-            ],
-            "AI Features": [
-                "Job posting analyzer",
-                "ATS score",
-                "BYOK providers"
-            ],
-            "Document": [
-                "PDF import",
-                "PDF export"
-            ],
-            "Deployment": [
-                "Docker",
-                "Self-hosted"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Platform Cover",
-                "description": "LolosCV: build a CV that answers the job posting.",
-                "src": "/images/portofolio/web/Cover-Lolos-CV.png"
-            }
-        ]
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Wearable Tracker Device",
+        "description": "IoT device attached to player's jersey for movement tracking.",
+        "src": "/images/portofolio/iot/Implementasi Device Fortuna.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Iot Device",
+        "description": "Design of IoT Device.",
+        "src": "/images/portofolio/iot/Iot Device Fortuna.png"
+      },
+      {
+        "id": 3,
+        "title": "Data Analytics Dashboard",
+        "description": "Analytical data processing results obtained from IoT devices.",
+        "src": "/images/portofolio/iot/Dashboard Web Fortuna.jpg"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": "BIN-GO! Waste Management App",
+    "role": "Android Developer",
+    "timeline": "3 months",
+    "status": "Done",
+    "github_link": "https://github.com/ergegananputra/bin_go_android_apps_gdsc",
+    "demo_link": "https://github.com/ergegananputra/bin_go_android_apps_gdsc/tree/main/apk",
+    "card_image_src": "/images/portofolio/mobile/Cover-Bingo Mobile App.png",
+    "category": "Mobile",
+    "overview": "Developed BIN-GO!, a mobile application to address the waste crisis in Yogyakarta. The app integrates Google Maps to locate nearby recycling centers, provides a community forum for waste management discussions, includes a reporting feature for environmental issues, and incorporates gamification to promote sustainable behaviors.",
+    "challenge": "Integrating Google Maps for accurate recycling center location tracking, designing an intuitive forum and reporting system, and implementing gamification elements to enhance user engagement while ensuring stable performance on Android devices.",
+    "result": "Launched BIN-GO! in Yogyakarta, enabling users to locate recycling centers, report waste issues, and engage in community discussions. The gamification features encouraged sustainable practices, fostering a sense of shared responsibility for a cleaner environment.",
+    "statistics": {
+      "Main Features": "Bin-Community",
+      "Second Features": "Bin-Locator",
+      "Third Features": "Bin-Report",
+      "Another Features Gamifications": "Bin-Point"
     },
-    {
-        "id": "20",
-        "name": "Smart Document Scanner & OCR Service",
-        "role": "Computer Vision Engineer",
-        "timeline": "September - October 2026",
-        "status": "Done",
-        "github_link": "https://github.com/aldyardnsyh/smart-document-scanner",
-        "demo_link": "https://smart-document-scanner-production.up.railway.app/",
-        "card_image_src": "/images/portofolio/ml/ocr/Cover-Smart-Document-Scanner.png",
-        "category": "ML",
-        "overview": "Production-ready scanning pipeline: detects a card or document in a photograph, corrects its perspective, enhances legibility, reads it with a neural OCR engine (RapidOCR / PP-OCRv6 on ONNX Runtime), and emits structured JSON where every field carries a confidence and the rule that produced it. The same Dockerfile runs locally, in Compose, and on Railway.",
-        "challenge": "Hard captures (cluttered desks, low light, blur, rotation, low contrast) pull in background text and drop characters, so the pipeline scores crops by recovered text coverage instead of confidence, keeps a full-frame fallback, and reports failures such as NO_DOCUMENT or NO_CONTENT rather than empty successes.",
-        "result": "Deployed from a three-stage Docker build with a C++17 accelerator, a batch CLI, and an anti-hardcoding CI gate. On the benchmark it scores 72.3% mean per-key with 67.2% exact matches and detection recall of 11 of 11 images, with every result traceable back to the pixels that produced it.",
-        "statistics": {
-            "Mean per-key score": "72.3%",
-            "Exact-match rate": "67.2% (43 of 64 keys)",
-            "Detection recall": "11 / 11 images",
-            "Recognition time": "~45 s per card on CPU"
-        },
-        "technologies_grouped": {
-            "Computer Vision": [
-                "Python",
-                "OpenCV",
-                "C++17"
-            ],
-            "OCR": [
-                "RapidOCR (PP-OCRv6)",
-                "ONNX Runtime"
-            ],
-            "Backend": [
-                "FastAPI",
-                "Uvicorn"
-            ],
-            "Frontend": [
-                "Next.js",
-                "React"
-            ],
-            "Testing": [
-                "pytest",
-                "Playwright"
-            ],
-            "Deployment": [
-                "Docker",
-                "Railway"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Scanning Pipeline",
-                "description": "Detect, correct, enhance, read, parse: one photo to structured JSON.",
-                "src": "/images/portofolio/ml/ocr/Cover-Smart-Document-Scanner.png"
-            }
-        ]
+    "technologies_grouped": {
+      "Mobile Development": [
+        "Android Studio",
+        "Kotlin"
+      ],
+      "Backend": [
+        "Firebase"
+      ],
+      "Cloud Services": [
+        "Google Cloud Console"
+      ],
+      "Mapping": [
+        "Google Maps"
+      ]
     },
-    {
-        "id": "21",
-        "name": "PasFotoIn Browser Photo Editor",
-        "role": "Frontend Developer",
-        "timeline": "October 2026",
-        "status": "Done",
-        "github_link": "https://github.com/aldyardnsyh/PasFotoIn",
-        "demo_link": "https://pasfotoin.vercel.app",
-        "card_image_src": "/images/portofolio/web/Cover-PasFotoIn.png",
-        "category": "Web",
-        "overview": "Browser-based editor for Indonesian ID photos and social crops. Every process runs on the user's device: no uploads, no server, no account. Presets in centimeters (2x3, 3x4, 4x6, 6x9), ICAO-compliant international sizes, automatic subject cutout via an in-browser segmentation model, and an A4 print sheet ready to cut.",
-        "challenge": "Running a segmentation model in the browser without freezing the page: inference moved into a Web Worker with multithreaded WASM (65 s down to 30 s), previews capped at 2048 px to keep drag latency low, and a non-destructive edit model so every adjustment can be undone and exported at full resolution.",
-        "result": "Live at pasfotoin.vercel.app with 26 presets across ratios, Indonesian document sizes, ICAO sizes, and social media; an 8-stage matte post-processing pipeline; batch ZIP export; and a 300 DPI A4 print sheet, all on-device and covered by Vitest and Playwright suites.",
-        "statistics": {
-            "Presets": "26 (ratios, documents, ICAO, social)",
-            "Processing": "100% on-device",
-            "Matte pipeline": "8-stage post-processing",
-            "Export": "PNG, JPEG, WebP + A4 sheet"
-        },
-        "technologies_grouped": {
-            "Frontend": [
-                "Next.js",
-                "React",
-                "TypeScript",
-                "Tailwind CSS"
-            ],
-            "State & Storage": [
-                "Zustand",
-                "IndexedDB",
-                "localStorage"
-            ],
-            "In-Browser ML": [
-                "ONNX Runtime Web",
-                "Web Worker",
-                "WebAssembly"
-            ],
-            "Export": [
-                "PNG",
-                "JPEG",
-                "WebP",
-                "A4 print sheet"
-            ],
-            "Testing": [
-                "Vitest",
-                "Playwright"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Editor Cover",
-                "description": "PasFotoIn editor with Indonesian document presets and on-device cutout.",
-                "src": "/images/portofolio/web/Cover-PasFotoIn.png"
-            }
-        ]
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Bin-Locator Interface",
+        "description": "Map view showing nearby recycling centers using Google Maps.",
+        "src": "/images/portofolio/mobile/Bin Locator.png"
+      },
+      {
+        "id": 2,
+        "title": "Bin-Community Forum",
+        "description": "Community discussion interface for waste management topics.",
+        "src": "/images/portofolio/mobile/Bin Community.png"
+      },
+      {
+        "id": 3,
+        "title": "Bin-Report Feature",
+        "description": "Interface for reporting waste-related issues.",
+        "src": "/images/portofolio/mobile/Bin Report.png"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Broiler Monitoring v.1",
+    "role": "Project Manager",
+    "timeline": "6 months",
+    "status": "Done",
+    "github_link": "https://github.com/senaajibayumurti/BroMo.git",
+    "demo_link": "https://github.com/Whyaziz/Backend-BroMo.git",
+    "card_image_src": "/images/portofolio/pm/Broiler Monitoring v.1.png",
+    "category": "PM",
+    "overview": "Led the development of Broiler Monitoring (BroMo) v.1, a web-based information system designed to monitor poultry farms effectively. The application enables real-time monitoring of farm conditions for owners and workers, enhancing operational efficiency.",
+    "challenge": "Coordinating a multidisciplinary team to design an intuitive interface and ensure real-time data integration, while managing project timelines and stakeholder expectations using Agile methodologies.",
+    "result": "Delivered BroMo v.1, enabling real-time poultry farm monitoring, improving operational oversight for owners and workers, and receiving positive feedback for its usability and reliability.",
+    "statistics": {
+      "Team Developers": "2 developers",
+      "Team Design": "1 UI/UX Design",
+      "Development Phases": "12 sprints",
+      "Deployment Status": "On-time schedule"
     },
-    {
-        "id": "22",
-        "name": "Intelligent Document Assistant (RAG)",
-        "role": "AI / Backend Engineer",
-        "timeline": "October 2026",
-        "status": "Done",
-        "github_link": "https://github.com/aldyardnsyh/IntelligenceDocumentSystem",
-        "demo_link": "https://rag-ids.web.id",
-        "card_image_src": "/images/portofolio/ml/rag/Cover-Intelligent-Document-Assistant.png",
-        "category": "ML",
-        "overview": "RAG-based document Q&A assistant: upload PDF, TXT, or Markdown, then ask questions in Indonesian and get answers with clickable citations. The system refuses to answer when the context is not enough, and general-knowledge answers are clearly labelled so they are never confused with document-sourced ones. Includes per-document private conversations, retrieval quality evaluation, and observability.",
-        "challenge": "Keeping the assistant trustworthy: no citation without context, a measured similarity threshold (0.82) instead of a default one because irrelevant text still scores 0.72-0.81, document scope stored in the session so private chats stay private, and a multilingual embedding model because English-only models perform far worse for Indonesian.",
-        "result": "Delivered a full-stack RAG system with FastAPI, ChromaDB, and SQLite behind a Next.js 16 frontend: 434 backend tests at 83% coverage, 46 Playwright scenarios, 21 end-to-end checks, and a RAGAS evaluation dataset where questions that must be refused are scored as strictly as the ones that must be answered.",
-        "statistics": {
-            "Backend tests": "434 tests, 83% coverage",
-            "Browser scenarios": "46 Playwright specs",
-            "Embedding model": "multilingual-e5-small",
-            "Similarity threshold": "0.82, measured not guessed"
-        },
-        "technologies_grouped": {
-            "Backend": [
-                "FastAPI",
-                "Python",
-                "SQLite"
-            ],
-            "RAG": [
-                "ChromaDB",
-                "multilingual-e5-small",
-                "Hybrid retrieval"
-            ],
-            "LLM": [
-                "Groq",
-                "Ollama fallback"
-            ],
-            "Frontend": [
-                "Next.js",
-                "React",
-                "TypeScript",
-                "Tailwind CSS"
-            ],
-            "Quality": [
-                "pytest",
-                "Playwright",
-                "RAGAS"
-            ],
-            "Deployment": [
-                "Docker",
-                "Caddy",
-                "AWS EC2"
-            ]
-        },
-        "gallery": [
-            {
-                "id": 1,
-                "title": "Dashboard",
-                "description": "System overview with live document, chunk, and provider counts read straight from the backend.",
-                "src": "/images/portofolio/ml/rag/IDS-Menu-Beranda.png"
-            },
-            {
-                "id": 2,
-                "title": "Chat with Citations",
-                "description": "Answers stream in with a source panel that shows the quoted text, chunk number, and similarity score.",
-                "src": "/images/portofolio/ml/rag/IDS-Menu-Chat.png"
-            },
-            {
-                "id": 3,
-                "title": "Documents",
-                "description": "Upload PDF, TXT, or Markdown and follow indexing status until the file is ready to query.",
-                "src": "/images/portofolio/ml/rag/IDS-Menu-Documents.png"
-            },
-            {
-                "id": 4,
-                "title": "Analytics",
-                "description": "Latency, source counts, and question logs, plus retrieval evaluation runs saved so changes can be compared.",
-                "src": "/images/portofolio/ml/rag/IDS-Menu-Analytics.png"
-            },
-            {
-                "id": 5,
-                "title": "Settings",
-                "description": "Top K and similarity threshold stored on the backend, so one retrieval behaviour applies to every session.",
-                "src": "/images/portofolio/ml/rag/IDS-Menu-Settings.png"
-            },
-            {
-                "id": 6,
-                "title": "About and Architecture",
-                "description": "The full path from upload to answer, with the stack and the reason behind each choice.",
-                "src": "/images/portofolio/ml/rag/IDS-Menu-About.png"
-            }
-        ]
-    }
+    "technologies_grouped": {
+      "Design": [
+        "Figma"
+      ],
+      "Frontend": [
+        "Laravel",
+        "Bootstrap"
+      ],
+      "Project Management": [
+        "Trello"
+      ]
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Farm Monitoring Dashboard",
+        "description": "Main interface for real-time poultry farm monitoring.",
+        "src": "/images/portofolio/pm/Landing Page Bromo v.1.png"
+      },
+      {
+        "id": 2,
+        "title": "Landing Page Interface",
+        "description": "Interface of welcoming page bromo website v.1.",
+        "src": "/images/portofolio/pm/Dashboard Web Bromo v.1.png"
+      },
+      {
+        "id": 3,
+        "title": "Trello Management",
+        "description": "Timeline schecule of project development",
+        "src": "/images/portofolio/pm/Trello Management.jpg"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Broiler Monitoring v.2",
+    "role": "Project Manager",
+    "timeline": "6 months",
+    "status": "Done",
+    "github_link": "https://github.com/senaajibayumurti/bromo-frontend.git",
+    "demo_link": "https://github.com/Whyaziz/Backend-BroMo.git",
+    "card_image_src": "/images/portofolio/pm/Broiler Monitoring v.2.png",
+    "category": "PM",
+    "overview": "Managed the development of Broiler Monitoring v.2, focusing on enhancing the user interface with a cleaner design and improved functionality. The project involved migrating the frontend framework from Laravel to Next.js while maintaining Laravel for the database API, ensuring a modern and efficient application.",
+    "challenge": "Overseeing the migration from Laravel to Next.js, ensuring the Next.js frontend works with the existing Laravel API, and implementing rigorous testing to maintain reliability and performance.",
+    "result": "Delivered BroMo v.2 with a modernized interface and enhanced functionality, improving user experience and maintaining system reliability through thorough testing and stakeholder alignment.",
+    "statistics": {
+      "Team Size": "2 developers",
+      "Migration Completion": "100%",
+      "Testing Coverage": "95%",
+      "User Satisfaction": "90% positive"
+    },
+    "technologies_grouped": {
+      "Design": [
+        "Figma"
+      ],
+      "Frontend": [
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "Backend": [
+        "Laravel"
+      ],
+      "Testing": [
+        "Selenium",
+        "Cucumber",
+        "Maven"
+      ],
+      "Project Management": [
+        "Trello"
+      ]
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Modernized Dashboard",
+        "description": "Updated interface with cleaner design for farm monitoring.",
+        "src": "/images/portofolio/pm/Dashboard Web Bromo v.2.png"
+      },
+      {
+        "id": 2,
+        "title": "Enhanced UI",
+        "description": "Improved user interface with Next.js and Tailwind CSS.",
+        "src": "/images/portofolio/pm/Landing Page Bromo v.2.png"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "name": "BWA Web Testing",
+    "role": "Quality Assurance",
+    "timeline": "1 week",
+    "status": "Done",
+    "github_link": "https://docs.google.com/spreadsheets/d/1wfBOFI9UvMoSIlDyyAE7JYEu2PKQV3JEx5ZEXO7CxpU/edit?gid=0#gid=0",
+    "demo_link": "https://www.buildwithangga.com/showcase/aldyardiansyah628/document-report-of-software-quality-testing-website-buildwithangga",
+    "card_image_src": "/images/portofolio/qa/BWA Platform.png",
+    "category": "QA",
+    "overview": "Conducted quality assurance testing for a web application as part of a course, focusing on creating and executing test cases for two case studies to verify the functionality and reliability of the BuildWithAngga platform.",
+    "challenge": "Developing comprehensive test cases to cover critical functionalities within a short timeframe, and documenting results clearly using Excel for effective reporting and analysis.",
+    "result": "Created and executed test cases for two case studies, identifying key issues and ensuring the functionality of the BuildWithAngga platform, with all findings documented in Excel for stakeholder review.",
+    "statistics": {
+      "Test Cases Created": "2 case studies",
+      "Issues Identified": "Multiple functional issues",
+      "Documentation Format": "Excel",
+      "Completion Time": "1 week"
+    },
+    "technologies_grouped": {
+      "Testing": [
+        "Excel"
+      ]
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Test Case Spreadsheet",
+        "description": "Excel document outlining test cases for the BuildWithAngga platform.",
+        "src": "/images/portofolio/qa/Spreadsheets BWA Platform.png"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "name": "Tokopedia Web Testing",
+    "role": "Quality Assurance",
+    "timeline": "1 week",
+    "status": "Done",
+    "github_link": "#",
+    "demo_link": "#",
+    "card_image_src": "/images/portofolio/qa/Tokped Web.png",
+    "category": "QA",
+    "overview": "Conducted quality assurance testing for the Tokopedia e-commerce platform, focusing on creating and executing three test cases (positive and negative scenarios) to validate the functionality of adding items to the wishlist, adding items to the cart, and performing checkout.",
+    "challenge": "Designing comprehensive positive and negative test cases across critical user flows, and documenting results in Excel for clear reporting within a limited timeframe.",
+    "result": "Developed and executed three test cases for Tokopedia's wishlist, cart, and checkout features, identifying potential issues, with all findings documented in Excel for stakeholder review.",
+    "statistics": {
+      "Test Cases Created": "3 (positive and negative)",
+      "Features Tested": "Wishlist, Cart, Checkout",
+      "Documentation Format": "Excel",
+      "Completion Time": "1 week"
+    },
+    "technologies_grouped": {
+      "Testing": [
+        "Excel"
+      ]
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Test Case Spreadsheet",
+        "description": "Excel document detailing test cases for Tokopedia's wishlist, cart, and checkout features.",
+        "src": "/images/portofolio/qa/Spreadsheets Tokped Web.png"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "name": "Visit Bantaragung Tourism Platform",
+    "role": "Full-Stack AI Engineer",
+    "timeline": "December 2025 - February 2026",
+    "status": "Done",
+    "github_link": "https://github.com/aldyardnsyh/VisitBantaragung",
+    "demo_link": "https://visitbantaragung.com/",
+    "card_image_src": "/images/portofolio/web/VisitBantaragung-Home.jpeg",
+    "category": "Web",
+    "overview": "Built Visit Bantaragung, the official smart-tourism platform for Desa Wisata Bantaragung in Majalengka, as an all-in-one system across 166 commits with the KKN-PPM UGM Simfoni Sindangwangi team. It combines a public Next.js 16 + React 19 landing (destinations, Kampung Herbal B2H catalog, BDB village branding with homestays and MSMEs, BIC information center, Leaflet digital map, gallery), a Git-based content CMS where every save is one commit with zero database, and a RAG chatbot guide with BM25 retrieval, query expansion, reranking, and anti-hallucination guardrails in Indonesian, English, and Javanese.",
+    "challenge": "Unifying destinations, herbal catalog, homestays, MSMEs, news, and a digital map into one fast site. Giving villagers with no database background a CMS they can actually operate. Making a trilingual guide that answers only from village records, says so when it does not know, and resists jailbreaks, all of it testable without spending LLM quota.",
+    "result": "Shipped the live official platform at visitbantaragung.com with a 1-commit-per-save CMS (schema validation, browser-compressed media library, AI-assisted news sync with stage gate) and a deterministic RAG guide (~190 knowledge entries, chunking with overlap, per-article dedup reranker, LLM fallback chain with health tracking) covered by 9 regression suites.",
+    "statistics": {
+      "Commits Shipped": "166",
+      "Knowledge Entries": "~190 ID-EN",
+      "Regression Suites": "9",
+      "CMS Saves": "1 commit per save"
+    },
+    "technologies_grouped": {
+      "Platform": [
+        "Next.js 16",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS 4",
+        "Leaflet"
+      ],
+      "Content & CMS": [
+        "Git-based CMS",
+        "Schema Validation",
+        "Browser Image Compression",
+        "News Crawler + AI Rewrite"
+      ],
+      "AI / RAG": [
+        "BM25 Retrieval",
+        "Fuzzy Entity Matching",
+        "Query Expansion",
+        "Reranking",
+        "LLM Fallback Chain",
+        "Guardrails ID/EN/Jawa"
+      ]
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Homepage",
+        "description": "Public landing of the smart tourism platform: destinations, herbal village, digital map, and visitor stats in one view.",
+        "src": "/images/portofolio/web/VisitBantaragung-Home.jpeg"
+      },
+      {
+        "id": 2,
+        "title": "Bantaragung Guide Chatbot",
+        "description": "RAG assistant answering with grounded prices, citations, and entity cards. It refuses to invent what is not in village records.",
+        "src": "/images/portofolio/web/VisitBantaragung-Chatbot-Guide.jpeg"
+      },
+      {
+        "id": 3,
+        "title": "CMS Content Collections",
+        "description": "Git-based content dashboard: news, destinations, herbal catalog, homestays, and MSMEs managed without a database.",
+        "src": "/images/portofolio/web/VisitBantaragung-CMS-Collections.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "name": "Building Automation System Dashboard",
+    "role": "IoT Dashboard Engineer",
+    "timeline": "2025",
+    "status": "Done",
+    "github_link": "https://github.com/aldyardnsyh/Building-Automation-System",
+    "demo_link": "https://building-automation-system.vercel.app/",
+    "card_image_src": "/images/portofolio/web/Cover-Building-Automation-System.png",
+    "category": "IoT",
+    "overview": "Built the data visualization and integration layer of a Building Automation System monitoring dashboard for the Lab Perancangan Polban. The dashboard unifies WWTP, clean water, and fire protection monitoring over OPC UA, MQTT, and Modbus TCP/IP, with threshold alarms and a simulation mode for testing.",
+    "challenge": "Unifying three subsystems and three industrial protocols into one readable dashboard, while keeping live values, alarm states, and a simulation mode for testing without production data.",
+    "result": "Delivered a live dashboard with a system summary, per-unit monitoring for WWTP, clean water, and fire protection, configurable alarm thresholds, and a simulation mode for safe testing.",
+    "technologies_grouped": {
+      "Visualization": [
+        "React"
+      ],
+      "Integration": [
+        "Python"
+      ],
+      "Protocols": [
+        "OPC UA",
+        "MQTT",
+        "Modbus TCP/IP"
+      ]
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Monitoring Dashboard",
+        "description": "Main BAS dashboard with system summary and per-unit monitoring.",
+        "src": "/images/portofolio/web/Cover-Building-Automation-System.png"
+      },
+      {
+        "id": 2,
+        "title": "Unit Monitoring in Action",
+        "description": "Live WWTP, clean water, and fire protection values with threshold alarms.",
+        "src": "/images/portofolio/web/BAS-Unit-Monitoring.gif"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "name": "Shale Shaker Cutting Monitoring Web",
+    "role": "Full-Stack ML Engineer",
+    "timeline": "2026",
+    "status": "Done",
+    "github_link": "https://github.com/aldyardnsyh/ShaleShakerCuttingMonitor",
+    "demo_link": "https://shaleshakercuttingmonitor.web.id/",
+    "card_image_src": "/images/portofolio/web/Cover-Shale-Shaker-Web.png",
+    "category": "ML",
+    "overview": "Built as my undergraduate thesis (Tugas Akhir): a full migration of the desktop shale-shaker monitoring system to the web. Where v1 used classical OpenCV without deep learning, this version runs deep learning (MobileViT + BiSeNet v2) behind a web tool where users upload a video, mark a 4-point ROI, tune the model, and run live detection with trend visualization.",
+    "challenge": "Turning an offline detection model into a usable web tool: video upload, 4-point ROI selection, tunable inference settings, and live trend charts in one session flow.",
+    "result": "Delivered a live internal tool (v0.2) running a MobileViT model over ONNX with FastAPI, WebSocket updates, and SQLite session history.",
+    "statistics": {
+      "Version": "v0.2 (web migration)",
+      "Model": "MobileViT",
+      "Runtime": "ONNX",
+      "Backend": "FastAPI",
+      "Updates": "WebSocket"
+    },
+    "technologies_grouped": {
+      "Computer Vision": [
+        "Python",
+        "OpenCV",
+        "MobileViT",
+        "BiSeNet v2",
+        "ONNX"
+      ],
+      "Backend": [
+        "FastAPI",
+        "WebSocket",
+        "SQLite"
+      ],
+      "Deployment": [
+        "Docker"
+      ]
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Detection Dashboard",
+        "description": "Live detection view with ROI overlay and coverage trend chart.",
+        "src": "/images/portofolio/web/Cover-Shale-Shaker-Web.png"
+      },
+      {
+        "id": 2,
+        "title": "Live Detection Session",
+        "description": "Real session with ROI overlay, coverage trend, and last coverage value.",
+        "src": "/images/portofolio/web/Shale-Live-Session.gif"
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "name": "Wind Turbine Defect Dataset (100K VLM)",
+    "role": "Project Lead & QC Specialist",
+    "timeline": "September 2025 - January 2026",
+    "status": "Done",
+    "github_link": null,
+    "demo_link": null,
+    "card_image_src": "/images/portofolio/ml/dataset/Cover-Wind-Turbine-Defect-Dataset.png",
+    "category": "ML",
+    "overview": "Co-led dataset construction for a vision-language model that spots defects on wind turbine blades: 100,000 real drone-inspection photos across 14 defect classes, from LEP erosion to laminate cracks. With one fellow lead, I ran 5 mentors and 35 annotators across Indonesia: writing inspection guidelines, recording tutorials, holding daily QC syncs, and bridging the company team with the workers on the ground.",
+    "challenge": "Keeping 40 annotators consistent across 14 visually similar defect classes, training mentors faster than the labeling queue grew, and holding daily throughput without letting bad labels through.",
+    "result": "Delivered the full 100,000-photo batch at 98.8% QC validity: a 14-class defect taxonomy verified by domain experts, plus an annotation pipeline the team could keep running.",
+    "statistics": {
+      "Photos": "100,000 real drone inspections",
+      "Annotators": "40 across Indonesia",
+      "Defect Classes": "14",
+      "QC Validity": "98.8%"
+    },
+    "technologies_grouped": {
+      "Annotation": [
+        "CVAT"
+      ],
+      "Data": [
+        "Drone Imagery"
+      ],
+      "Model Target": [
+        "Vision Language Models"
+      ]
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Weekly Sync With Company Team",
+        "description": "Weekly alignment between the Korean company team and the Indonesian annotation crew.",
+        "src": "/images/portofolio/ml/dataset/Weekly-Meeting-01.png"
+      },
+      {
+        "id": 2,
+        "title": "QC Review Session",
+        "description": "Reviewing edge-case labels and throughput with mentors and the company team.",
+        "src": "/images/portofolio/ml/dataset/Weekly-Meeting-02.png"
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "name": "LolosCV ATS Resume Builder",
+    "role": "Full-Stack Developer",
+    "timeline": "September 2026",
+    "status": "Done",
+    "github_link": "https://github.com/aldyardnsyh/Lolos-CV",
+    "demo_link": "https://loloscvats.web.id",
+    "card_image_src": "/images/portofolio/web/Cover-Lolos-CV.png",
+    "category": "Web",
+    "overview": "Free resume builder that works backwards from the job posting: paste a LinkedIn, JobStreet, or Glints job URL (or the raw text), let AI break down the requirements, generate a draft, refine it in a drag-and-drop template builder, check the ATS score, then export a pixel-accurate PDF. Runs client-side with a bring-your-own-key AI setup, so resumes, imported PDFs, and API keys never leave the browser.",
+    "challenge": "Making ATS optimization approachable without a backend: every job site structures its HTML differently, the score has to reflect the actual extracted requirements, and privacy had to be real rather than a promise, with resumes, imported PDFs, and AI keys all kept in the browser.",
+    "result": "Delivered a live platform at loloscvats.web.id with four ATS-aware templates (classic, photo, creative, modern minimal), full Indonesian and English output, PDF import, reorderable sections, and one-click export that auto-fits one page or two.",
+    "statistics": {
+      "Templates": "4 ATS-ready layouts",
+      "Languages": "Indonesian & English",
+      "AI Setup": "Bring your own key",
+      "Export": "Pixel-accurate PDF, 1-2 pages"
+    },
+    "technologies_grouped": {
+      "Frontend": [
+        "Next.js",
+        "React",
+        "Tailwind CSS"
+      ],
+      "AI Features": [
+        "Job posting analyzer",
+        "ATS score",
+        "BYOK providers"
+      ],
+      "Document": [
+        "PDF import",
+        "PDF export"
+      ],
+      "Deployment": [
+        "Docker",
+        "Self-hosted"
+      ]
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Platform Cover",
+        "description": "LolosCV: build a CV that answers the job posting.",
+        "src": "/images/portofolio/web/Cover-Lolos-CV.png"
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "name": "Smart Document Scanner & OCR Service",
+    "role": "Computer Vision Engineer",
+    "timeline": "September - October 2026",
+    "status": "Done",
+    "github_link": "https://github.com/aldyardnsyh/smart-document-scanner",
+    "demo_link": "https://smart-document-scanner-production.up.railway.app/",
+    "card_image_src": "/images/portofolio/ml/ocr/Cover-Smart-Document-Scanner.png",
+    "category": "ML",
+    "overview": "Production-ready scanning pipeline: detects a card or document in a photograph, corrects its perspective, enhances legibility, reads it with a neural OCR engine (RapidOCR / PP-OCRv6 on ONNX Runtime), and emits structured JSON where every field carries a confidence and the rule that produced it. The same Dockerfile runs locally, in Compose, and on Railway.",
+    "challenge": "Hard captures (cluttered desks, low light, blur, rotation, low contrast) pull in background text and drop characters, so the pipeline scores crops by recovered text coverage instead of confidence, keeps a full-frame fallback, and reports failures such as NO_DOCUMENT or NO_CONTENT rather than empty successes.",
+    "result": "Deployed from a three-stage Docker build with a C++17 accelerator, a batch CLI, and an anti-hardcoding CI gate. On the benchmark it scores 72.3% mean per-key with 67.2% exact matches and detection recall of 11 of 11 images, with every result traceable back to the pixels that produced it.",
+    "statistics": {
+      "Mean per-key score": "72.3%",
+      "Exact-match rate": "67.2% (43 of 64 keys)",
+      "Detection recall": "11 / 11 images",
+      "Recognition time": "~45 s per card on CPU"
+    },
+    "technologies_grouped": {
+      "Computer Vision": [
+        "Python",
+        "OpenCV",
+        "C++17"
+      ],
+      "OCR": [
+        "RapidOCR (PP-OCRv6)",
+        "ONNX Runtime"
+      ],
+      "Backend": [
+        "FastAPI",
+        "Uvicorn"
+      ],
+      "Frontend": [
+        "Next.js",
+        "React"
+      ],
+      "Testing": [
+        "pytest",
+        "Playwright"
+      ],
+      "Deployment": [
+        "Docker",
+        "Railway"
+      ]
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Scanning Pipeline",
+        "description": "Detect, correct, enhance, read, parse: one photo to structured JSON.",
+        "src": "/images/portofolio/ml/ocr/Cover-Smart-Document-Scanner.png"
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "name": "PasFotoIn Browser Photo Editor",
+    "role": "Frontend Developer",
+    "timeline": "October 2026",
+    "status": "Done",
+    "github_link": "https://github.com/aldyardnsyh/PasFotoIn",
+    "demo_link": "https://www.pasfotoin.web.id/",
+    "card_image_src": "/images/portofolio/web/Cover-PasFotoIn.png",
+    "category": "Web",
+    "overview": "Browser-based editor for Indonesian ID photos and social crops. Every process runs on the user's device: no uploads, no server, no account. Presets in centimeters (2x3, 3x4, 4x6, 6x9), ICAO-compliant international sizes, automatic subject cutout via an in-browser segmentation model, and an A4 print sheet ready to cut.",
+    "challenge": "Running a segmentation model in the browser without freezing the page: inference moved into a Web Worker with multithreaded WASM (65 s down to 30 s), previews capped at 2048 px to keep drag latency low, and a non-destructive edit model so every adjustment can be undone and exported at full resolution.",
+    "result": "Live at www.pasfotoin.web.id with 26 presets across ratios, Indonesian document sizes, ICAO sizes, and social media; an 8-stage matte post-processing pipeline; batch ZIP export; and a 300 DPI A4 print sheet, all on-device and covered by Vitest and Playwright suites.",
+    "statistics": {
+      "Presets": "26 (ratios, documents, ICAO, social)",
+      "Processing": "100% on-device",
+      "Matte pipeline": "8-stage post-processing",
+      "Export": "PNG, JPEG, WebP + A4 sheet"
+    },
+    "technologies_grouped": {
+      "Frontend": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "State & Storage": [
+        "Zustand",
+        "IndexedDB",
+        "localStorage"
+      ],
+      "In-Browser ML": [
+        "ONNX Runtime Web",
+        "Web Worker",
+        "WebAssembly"
+      ],
+      "Export": [
+        "PNG",
+        "JPEG",
+        "WebP",
+        "A4 print sheet"
+      ],
+      "Testing": [
+        "Vitest",
+        "Playwright"
+      ]
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Homepage Dropzone",
+        "description": "Landing doubles as workspace: drag a photo, paste with Ctrl V, or jump in with one click document shortcuts.",
+        "src": "/images/portofolio/web/PasFotoIn-Home.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Ratio and Document Presets",
+        "description": "Editor canvas with Ratio tab: general ratios, Indonesian centimeter sizes, ICAO sizes, plus Fill and Fit placement modes.",
+        "src": "/images/portofolio/web/PasFotoIn-Ratio.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Background and Subject Cutout",
+        "description": "Background tab: official red blue white studio colors, gradients, blur, plus on device segmentation in three quality tiers.",
+        "src": "/images/portofolio/web/PasFotoIn-Background.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Adjust with Histogram and Levels",
+        "description": "Adjust tab: six sliders, 256 bin light and RGB histogram, draggable levels, Auto Levels, and detail enhancement.",
+        "src": "/images/portofolio/web/PasFotoIn-Adjust.jpg"
+      },
+      {
+        "id": 5,
+        "title": "Export Tab",
+        "description": "Export tab: PNG JPEG WebP at quality 40 to 100, preset or custom pixels, 300 or 600 DPI, size estimate, and batch ZIP.",
+        "src": "/images/portofolio/web/PasFotoIn-Export.jpg"
+      },
+      {
+        "id": 6,
+        "title": "Export Dialog",
+        "description": "Export dialog with per file settings, clipboard copy, batch ZIP progress with cancel, and EXIF stripped output.",
+        "src": "/images/portofolio/web/PasFotoIn-ExportDialog.jpg"
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "name": "Intelligent Document Assistant (RAG)",
+    "role": "AI / Backend Engineer",
+    "timeline": "October 2026",
+    "status": "Done",
+    "github_link": "https://github.com/aldyardnsyh/IntelligenceDocumentSystem",
+    "demo_link": "https://rag-ids.web.id",
+    "card_image_src": "/images/portofolio/ml/rag/Cover-Intelligent-Document-Assistant.png",
+    "category": "ML",
+    "overview": "RAG-based document Q&A assistant: upload PDF, TXT, or Markdown, then ask questions in Indonesian and get answers with clickable citations. The system refuses to answer when the context is not enough, and general-knowledge answers are clearly labelled so they are never confused with document-sourced ones. Includes per-document private conversations, retrieval quality evaluation, and observability.",
+    "challenge": "Keeping the assistant trustworthy: no citation without context, a measured similarity threshold (0.82) instead of a default one because irrelevant text still scores 0.72-0.81, document scope stored in the session so private chats stay private, and a multilingual embedding model because English-only models perform far worse for Indonesian.",
+    "result": "Delivered a full-stack RAG system with FastAPI, ChromaDB, and SQLite behind a Next.js 16 frontend: 534 backend tests at 83% coverage, 59 Playwright scenarios, 21 end-to-end checks, and a RAGAS evaluation dataset where questions that must be refused are scored as strictly as the ones that must be answered.",
+    "statistics": {
+      "Backend tests": "534 tests, 83% coverage",
+      "Browser scenarios": "59 Playwright specs",
+      "Embedding model": "multilingual-e5-small",
+      "Similarity threshold": "0.82, measured not guessed"
+    },
+    "technologies_grouped": {
+      "Backend": [
+        "FastAPI",
+        "Python",
+        "SQLite"
+      ],
+      "RAG": [
+        "ChromaDB",
+        "multilingual-e5-small",
+        "Hybrid retrieval"
+      ],
+      "LLM": [
+        "Groq",
+        "Ollama fallback"
+      ],
+      "Frontend": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "Quality": [
+        "pytest",
+        "Playwright",
+        "RAGAS"
+      ],
+      "Deployment": [
+        "Docker",
+        "Caddy",
+        "AWS EC2"
+      ]
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Dashboard",
+        "description": "System overview with live document, chunk, and provider counts read straight from the backend.",
+        "src": "/images/portofolio/ml/rag/IDS-Menu-Beranda.png"
+      },
+      {
+        "id": 2,
+        "title": "Chat with Citations",
+        "description": "Answers stream in with a source panel that shows the quoted text, chunk number, and similarity score.",
+        "src": "/images/portofolio/ml/rag/IDS-Menu-Chat.png"
+      },
+      {
+        "id": 3,
+        "title": "Documents",
+        "description": "Upload PDF, TXT, or Markdown and follow indexing status until the file is ready to query.",
+        "src": "/images/portofolio/ml/rag/IDS-Menu-Documents.png"
+      },
+      {
+        "id": 4,
+        "title": "Analytics",
+        "description": "Latency, source counts, and question logs, plus retrieval evaluation runs saved so changes can be compared.",
+        "src": "/images/portofolio/ml/rag/IDS-Menu-Analytics.png"
+      },
+      {
+        "id": 5,
+        "title": "Settings",
+        "description": "Top K and similarity threshold stored on the backend, so one retrieval behaviour applies to every session.",
+        "src": "/images/portofolio/ml/rag/IDS-Menu-Settings.png"
+      },
+      {
+        "id": 6,
+        "title": "About and Architecture",
+        "description": "The full path from upload to answer, with the stack and the reason behind each choice.",
+        "src": "/images/portofolio/ml/rag/IDS-Menu-About.png"
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "name": "MyRouter AI Routing Gateway",
+    "role": "Full-Stack Developer",
+    "timeline": "2026",
+    "status": "Done",
+    "github_link": "https://github.com/aldyardnsyh/MyRouter",
+    "demo_link": "https://github.com/aldyardnsyh/MyRouter/releases/latest",
+    "card_image_src": "/images/portofolio/web/Cover-MyRouter.png",
+    "category": "Web",
+    "overview": "Self-hosted AI routing gateway: one OpenAI-compatible endpoint for many upstream providers (OpenAI, Anthropic, Gemini, DeepSeek, any OpenAI-compatible gateway) with automatic fallback, per-key access limits, and a dashboard. Ships as a single Go binary with the React console embedded and SQLite storage, so there are no external services to operate.",
+    "challenge": "Giving every client one stable base URL while upstreams fail in different ways: rate limits, timeouts, 5xx, network errors, and billing cutoffs each need their own fallback trigger, per-key and per-route guard policies must hold under concurrency, and cost accounting has to stay honest against official catalog prices instead of inventing numbers.",
+    "result": "Delivered a working gateway with virtual model aliases backed by ordered primary to fallback chains, server-side skills injected as system context on every request, live observability with per-request traces, and reproducible demo screenshots generated through the public admin API by seed scripts rather than mocked UI state.",
+    "statistics": {
+      "Upstream protocols": "OpenAI, Anthropic, Gemini wire formats",
+      "Release": "v0.1.10",
+      "Storage": "Embedded SQLite, no external services",
+      "Verification": "go test plus npm typecheck"
+    },
+    "technologies_grouped": {
+      "Backend": [
+        "Go 1.23+",
+        "SQLite"
+      ],
+      "Frontend": [
+        "React 18",
+        "TypeScript 5.6",
+        "Tailwind CSS 3.4"
+      ],
+      "AI / Gateway": [
+        "OpenAI-compatible endpoint",
+        "Fallback chains",
+        "Server-side skills",
+        "models.dev catalog pricing"
+      ],
+      "Quality": [
+        "go test",
+        "npm typecheck",
+        "E2E API harness",
+        "Secret scan scripts"
+      ],
+      "Deployment": [
+        "Single binary",
+        "Docker",
+        "Windows tray app"
+      ]
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Dashboard",
+        "description": "Live routing, provider health, throughput chart with 24h to 30d ranges, and recent activity.",
+        "src": "/images/portofolio/web/MyRouter-Dashboard.png"
+      },
+      {
+        "id": 2,
+        "title": "Providers",
+        "description": "Upstream endpoints, credentials, health, and per-provider tabs for overview, models, and guard policy.",
+        "src": "/images/portofolio/web/MyRouter-Providers.png"
+      },
+      {
+        "id": 3,
+        "title": "Routes",
+        "description": "Virtual model aliases with ordered primary to fallback chains and per-category triggers.",
+        "src": "/images/portofolio/web/MyRouter-Routes.png"
+      },
+      {
+        "id": 4,
+        "title": "Guard",
+        "description": "RPM and TPM caps, daily and monthly token limits, concurrency, IP and device limits with auto-blocking.",
+        "src": "/images/portofolio/web/MyRouter-Guard.png"
+      },
+      {
+        "id": 5,
+        "title": "Skills",
+        "description": "Built-in and custom skills with bindings plus a knowledge drawer for stored items.",
+        "src": "/images/portofolio/web/MyRouter-Skills.png"
+      },
+      {
+        "id": 6,
+        "title": "Test Lab",
+        "description": "Playground for sending real prompts through a route and seeing which provider and model answered.",
+        "src": "/images/portofolio/web/MyRouter-Playground.png"
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "name": "ShelfOpsRetail Operations Platform",
+    "role": "Full-Stack Developer",
+    "timeline": "2026",
+    "status": "Done",
+    "github_link": "https://github.com/aldyardnsyh/ShelfOpsRetail",
+    "demo_link": "https://shelfopsretail.web.id",
+    "card_image_src": "/images/portofolio/web/Cover-ShelfOpsRetail.png",
+    "category": "Web",
+    "overview": "Retail operations OS that turns CCTV and shelf photos into actionable numbers: stable-ID visitor tracking, per-zone dwell, empty-shelf detection, price mismatch, stock and mutations, procurement, tasks, reports, and a Copilot that answers from SOP and store data with citations. Built as a full Docker stack: Next.js web, Go gateway and worker, Python AI services over gRPC, PostgreSQL 16 with pgvector, fronted by Caddy on a VPS.",
+    "challenge": "Unifying five layers (capture, understand, record, act, learn) into one readable system: CCTV and photo ingest, visitor and shelf detection, stock and price book records, alerts with SLA tasks, and a cited Copilot, all behind one domain with session cookies and a production guard that refuses to boot on mock AI providers.",
+    "result": "Shipped a healthy production stack with green healthz and readyz, passing end-to-end smoke tests (login, document upload, chat, audit to finalize, PO, idempotent GRN, IDOR guard), Playwright browser E2E on landing plus demo login flow, and a static demo mode that runs the web without any backend from gateway-shaped fixtures.",
+    "statistics": {
+      "Stack services": "Caddy, web, gateway, Postgres, ai-rag, ai-vision",
+      "Smoke tests": "Login, chat, audit finalize, PO, GRN, IDOR guard",
+      "Browser E2E": "Playwright landing desktop plus mobile",
+      "Demo modes": "Backend demo session plus static fixtures"
+    },
+    "technologies_grouped": {
+      "Frontend": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI",
+        "Recharts"
+      ],
+      "Backend": [
+        "Go",
+        "chi",
+        "pgx",
+        "OpenAPI 3.1",
+        "Protocol Buffers",
+        "gRPC"
+      ],
+      "AI": [
+        "Python",
+        "FastAPI",
+        "ONNX Runtime",
+        "RAG hybrid pgvector plus tsvector"
+      ],
+      "Data": [
+        "PostgreSQL 16",
+        "pgvector"
+      ],
+      "Deployment": [
+        "Docker Compose",
+        "Caddy",
+        "GitHub Actions"
+      ]
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Store Summary",
+        "description": "Operational overview with visitor counts, empty shelves, and active cameras for the demo store.",
+        "src": "/images/portofolio/web/ShelfOpsRetail-Dashboard.png"
+      },
+      {
+        "id": 2,
+        "title": "Inventory",
+        "description": "Per-store and per-location stock balances with inbound and outbound mutation history.",
+        "src": "/images/portofolio/web/ShelfOpsRetail-Inventory.png"
+      },
+      {
+        "id": 3,
+        "title": "Procurement",
+        "description": "Purchase orders and goods receipts that add stock with an idempotent mutation trail.",
+        "src": "/images/portofolio/web/ShelfOpsRetail-Purchasing.png"
+      },
+      {
+        "id": 4,
+        "title": "Shelf Monitoring",
+        "description": "Shelf photo audit flow from session to finalize, auto-creating alerts and tasks.",
+        "src": "/images/portofolio/web/ShelfOpsRetail-Audit.png"
+      },
+      {
+        "id": 5,
+        "title": "Tasks",
+        "description": "Follow-up queue where OOS and price alerts become owned tasks with deadlines.",
+        "src": "/images/portofolio/web/ShelfOpsRetail-Tasks.png"
+      },
+      {
+        "id": 6,
+        "title": "Copilot with Citations",
+        "description": "Store-grounded Q&A over SOP and live data with sources and a daily cost cap.",
+        "src": "/images/portofolio/web/ShelfOpsRetail-Copilot.png"
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "name": "DataLoom Data Operator Workspace",
+    "role": "Full-Stack Data Engineer",
+    "timeline": "October 2026",
+    "status": "Done",
+    "github_link": "https://github.com/aldyardnsyh/DataLoom",
+    "demo_link": "https://www.dataloom.web.id/",
+    "card_image_src": "/images/portofolio/de/DataLoom-Landing.png",
+    "category": "DE",
+    "overview": "Data operator workspace to build, run, and monitor end to end pipelines. Raw data lands in Bronze, is cleaned deterministically into Silver, passes a four rule quality gate, and is promoted to Gold only when fit for use. Every rejected row lands in Quarantine with a reason code, agents only propose while humans approve, and validation rules plus project thresholds are readable in the data contract page.",
+    "challenge": "Guaranteeing that bad data never reaches reports: rejected rows need recorded reasons instead of silent drops, promotion needs deterministic reconciliation instead of model opinion, and rule changes need versioning plus human approval instead of silent formula edits.",
+    "result": "Shipped a live platform at dataloom.web.id with a demo mode that runs fully in the browser: guided setup, DAG canvas, run monitor with gate checklist, quarantine with reason codes, data contract, agent approval workspace, read only text to SQL, and usage billing. Verified per README: web typecheck and lint pass with 25 of 25 pages built, 320 backend unit tests pass, and a 58 step browser suite passes with zero console errors.",
+    "statistics": {
+      "Backend unit tests": "320 passed, 0 failed",
+      "Browser suite": "58 steps passed, zero console errors",
+      "Web build": "25 of 25 pages, typecheck and lint pass",
+      "Screenshots": "33 demo captures in docs/screenshots"
+    },
+    "technologies_grouped": {
+      "Frontend": [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS",
+        "React Flow",
+        "Recharts"
+      ],
+      "Backend": [
+        "FastAPI",
+        "SQLAlchemy 2",
+        "Pydantic v2",
+        "Polars",
+        "DuckDB",
+        "Redis Streams"
+      ],
+      "Agents": [
+        "LangGraph",
+        "sqlglot guard",
+        "Pydantic output"
+      ],
+      "Data": [
+        "Postgres",
+        "Redis 7",
+        "S3-compatible storage"
+      ],
+      "Quality": [
+        "pytest",
+        "Playwright"
+      ],
+      "Deployment": [
+        "Docker Compose",
+        "Caddy",
+        "Prometheus"
+      ]
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Landing",
+        "description": "Public landing: quality gates, quarantine, reconciliation, and data contract as the product promise.",
+        "src": "/images/portofolio/de/DataLoom-Landing.png"
+      },
+      {
+        "id": 2,
+        "title": "Dashboard",
+        "description": "24 hour summary, pipeline health, and latest runs across three demo projects.",
+        "src": "/images/portofolio/de/DataLoom-Dashboard.png"
+      },
+      {
+        "id": 3,
+        "title": "Pipeline Canvas",
+        "description": "Source, validate, clean, transform, aggregate, and sink nodes with deterministic validation.",
+        "src": "/images/portofolio/de/DataLoom-Pipeline-Canvas.png"
+      },
+      {
+        "id": 4,
+        "title": "Run Monitor",
+        "description": "Node timeline, rows in and out, quarantine counts, gate checklist, and live logs.",
+        "src": "/images/portofolio/de/DataLoom-Run-Detail.png"
+      },
+      {
+        "id": 5,
+        "title": "Quarantine and Reconciliation",
+        "description": "Rejected rows with reason codes, ratio against project threshold, and reconciliation status.",
+        "src": "/images/portofolio/de/DataLoom-Quarantine.png"
+      },
+      {
+        "id": 6,
+        "title": "Data Contract",
+        "description": "Project policy, four gate rules, and per pipeline row validation rules with enforcement links.",
+        "src": "/images/portofolio/de/DataLoom-Data-Contract.png"
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "name": "RigDaily Daily Drilling Report System",
+    "role": "Full-Stack Developer",
+    "timeline": "2026",
+    "status": "Done",
+    "github_link": "https://github.com/aldyardnsyh/RigDaily",
+    "demo_link": "https://rigdaily.web.id/",
+    "card_image_src": "/images/portofolio/web/RigDaily-Menu-Dashboard.png",
+    "category": "Web",
+    "overview": "Daily well operations reporting that connects rig and office in one controlled report flow: DDR, 24 hour time breakdown, NPT, cost and AFE, billing, personnel, marine, safety, and rig to office sync. Runs as a Next.js web app for the office and an offline-first Electron desktop .exe with local SQLite for the rig, syncing through an outbox when the network returns. Seven roles from Rig Clerk to Administrator have server-checked permissions, and every approved report locks with a numbered amendment trail.",
+    "challenge": "Keeping one report consistent across two disconnected environments: the 1,440 minute day must validate with no gaps and no overlaps before submission, depth must never move backward, and rig submissions must never overwrite an office-approved final but land in a manual conflict queue. Seven roles share one dataset, so every permission is checked on the server rather than hidden in the menu.",
+    "result": "Delivered a live platform at rigdaily.web.id with a public landing plus demo mode covering 7 roles, a five-stage report flow from Draft to Locked with audit log and PDF distribution, and a desktop NSIS x64 .exe that writes to on-device SQLite first and syncs via outbox. Covered by 360 Vitest unit tests plus Playwright end-to-end suites.",
+    "statistics": {
+      "Time validation": "1,440 minutes per day, no gaps",
+      "Roles": "7 with server-checked permissions",
+      "Unit tests": "360 Vitest tests",
+      "Desktop": "Electron NSIS x64 .exe, SQLite local"
+    },
+    "technologies_grouped": {
+      "Frontend": [
+        "Next.js 14",
+        "React 18",
+        "TypeScript",
+        "Tailwind CSS 3"
+      ],
+      "Backend": [
+        "PostgreSQL",
+        "Drizzle ORM",
+        "Zod",
+        "pdfkit"
+      ],
+      "Desktop": [
+        "Electron 31",
+        "better-sqlite3",
+        "NSIS x64 installer"
+      ],
+      "Auth": [
+        "Cookie session",
+        "JWT jose"
+      ],
+      "Quality": [
+        "Vitest",
+        "Playwright"
+      ],
+      "Deployment": [
+        "Vercel"
+      ]
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Login",
+        "description": "Office login with demo mode entry covering all 7 roles.",
+        "src": "/images/portofolio/web/RigDaily-Menu-Login.png"
+      },
+      {
+        "id": 2,
+        "title": "Dashboard",
+        "description": "Office overview of rigs, reports, and pending approvals.",
+        "src": "/images/portofolio/web/RigDaily-Menu-Dashboard.png"
+      },
+      {
+        "id": 3,
+        "title": "DDR Form",
+        "description": "Daily drilling report form following rig work order from well header to next-day plan.",
+        "src": "/images/portofolio/web/RigDaily-Menu-DDR.png"
+      },
+      {
+        "id": 4,
+        "title": "Time Breakdown",
+        "description": "24 hour breakdown validated to exactly 1,440 minutes with IADC and NPT codes.",
+        "src": "/images/portofolio/web/RigDaily-Menu-TimeBreakdown.png"
+      },
+      {
+        "id": 5,
+        "title": "Cost and AFE",
+        "description": "Daily and cumulative cost tracked against AFE usage per well.",
+        "src": "/images/portofolio/web/RigDaily-Menu-Cost.png"
+      },
+      {
+        "id": 6,
+        "title": "Sync Center",
+        "description": "Outbox queue showing rig to office sync state with conflict handling.",
+        "src": "/images/portofolio/web/RigDaily-Menu-SyncCenter.png"
+      }
+    ]
+  }
 ]
