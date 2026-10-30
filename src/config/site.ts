@@ -34,7 +34,7 @@ export const site = {
   ogImage: '/og-image.png',
   // Link sosial: dipakai untuk JSON-LD `sameAs` (penting untuk Knowledge Panel & AI)
   social: {
-    github: 'https://github.com/ItsmeAldy17',
+    github: 'https://github.com/aldyardnsyh',
     linkedin: 'https://www.linkedin.com/in/aldyardiansyah17',
     talent: 'https://buildwithangga.com/talent/aldyardiansyah628',
     email: 'mailto:aldyardiansyah628@gmail.com',

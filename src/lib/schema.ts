@@ -7,7 +7,7 @@ export const personSchema = {
   '@type': 'Person',
   '@id': personId,
   name: site.name,
-  alternateName: ['ItsmeAldy17', 'Aldy Ardiansyah ML'],
+  alternateName: ['aldyardnsyh', 'Aldy Ardiansyah ML'],
   jobTitle: site.jobTitle,
   description: site.description,
   url: SITE_URL,
