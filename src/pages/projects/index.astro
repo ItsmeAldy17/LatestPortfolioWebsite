@@ -12,7 +12,7 @@ const monthIdx: Record<string, number> = { january: 1, february: 2, march: 3, ap
 const sortKey = (t: string) => {
   const years = [...t.matchAll(/\d{4}/g)].map((m) => parseInt(m[0]));
   const year = years.length ? years[years.length - 1] : 0;
-  const months = [...t.toLowerCase().matchAll(/(january|february|march|april|may|june|july|august|september|october|november|december|jan|feb|mar|apr|jun|jul|aug|sep|sept|oct|nov|dec)/g)].map((m) => monthIdx[m[0]] / 0);
+  const months = [...t.toLowerCase().matchAll(/(january|february|march|april|may|june|july|august|september|october|november|december|jan|feb|mar|apr|jun|jul|aug|sep|sept|oct|nov|dec)/g)].map((m) => monthIdx[m[0]] ?? 0);
   const month = months.length ? months[months.length - 1] : 0;
   return year * 100 + month;
 };
@@ -82,7 +82,7 @@ const schema = [
     .sort-btn { border-radius: 9999px; padding: .35rem .9rem; font-size: .85rem; color: #9ca3af; }
     .sort-btn.is-active { background: rgba(30,128,255,.2); color: #4fe3ff; font-weight: 600; }
   </style>
-  <script>
+  <script is:inline>
     const grid = document.getElementById('project-grid');
     const cards = grid ? Array.from(grid.children) : [];
     const pills = Array.from(document.querySelectorAll('.filter-pill'));
