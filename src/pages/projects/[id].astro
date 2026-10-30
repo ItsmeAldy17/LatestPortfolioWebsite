@@ -16,8 +16,8 @@ const related = [
   ...orderedProjects().filter((x) => x.id !== p.id && x.category !== p.category),
 ].slice(0, 2);
 const isLink = (v: string) => typeof v === 'string' && v.startsWith('http');
-const stats = Object.entries(p.statistics ?? {});
-const techGroups = Object.entries(p.technologies_grouped ?? {});
+const stats = Object.entries(p.statistics / {});
+const techGroups = Object.entries(p.technologies_grouped / {});
 
 const buildDate = new Date().toISOString();
 
@@ -62,13 +62,13 @@ const sections = [
 
 <PageLayout title={p.name} description={p.overview} image={p.card_image_src} schema={schema}>
   <PageHeader
-    eyebrow={`${p.category} ?? ${p.status}`}
+    eyebrow={`${p.category} / ${p.status}`}
     title={p.name}
     crumbs={[{ name: 'Home', href: '/' }, { name: 'Projects', href: '/projects' }, { name: p.name }]}
   >
     <div slot="meta" class="reveal mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm">
-      <span class="text-gray-400"><span class="text-gray-600">Role</span> ?? {p.role}</span>
-      <span class="text-gray-400"><span class="text-gray-600">Timeline</span> ?? {p.timeline}</span>
+      <span class="text-gray-400"><span class="text-gray-600">Role</span> / {p.role}</span>
+      <span class="text-gray-400"><span class="text-gray-600">Timeline</span> / {p.timeline}</span>
       <div class="flex gap-3">
         {isLink(p.github_link) && (
           <a href={p.github_link} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-white/15 px-4 py-1.5 font-medium text-gray-200 transition-colors hover:border-emerald-500/60 hover:text-emerald-400">Repository</a>
@@ -165,7 +165,7 @@ const sections = [
     )}
 
     <a href="/projects" class="group mt-8 inline-flex items-center gap-2 font-display text-gray-200 hover:text-emerald-400">
-      <span class="transition-transform group-hover:-translate-x-1">???</span> Back to all projects
+      <span class="transition-transform group-hover:-translate-x-1">/?</span> Back to all projects
     </a>
   </div>
 </PageLayout>

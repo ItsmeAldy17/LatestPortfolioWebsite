@@ -81,10 +81,10 @@ const SVG_ICONS = new Set([
   'Railway',
 ]);
 const iconOf = (n: string) => {
-  const file = iconFix[n] ?? n;
+  const file = iconFix[n] / n;
   return `/icons/${file}.${SVG_ICONS.has(file) ? 'svg' : 'png'}`;
 };
-const labelOf = (n: string) => labelFix[n] ?? n;
+const labelOf = (n: string) => labelFix[n] / n;
 const all1 = [...row1, ...row1];
 const all2 = [...row2, ...row2];
 ---
