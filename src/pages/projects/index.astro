@@ -1,10 +1,10 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
-import PageHeader from '../components/PageHeader.astro';
-import projectsRaw from '../data/project_details.json';
-import { orderedProjects } from '../lib/projects';
-import { breadcrumbSchema } from '../lib/schema';
-import { SITE_URL } from '../config/site';
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import projectsRaw from '../../data/project_details.json';
+import { orderedProjects } from '../../lib/projects';
+import { breadcrumbSchema } from '../../lib/schema';
+import { SITE_URL } from '../../config/site';
 
 const projects = orderedProjects(projectsRaw);
 const categories = [...new Set(projects.map((p) => p.category))].sort();
@@ -17,16 +17,16 @@ const sortKey = (t: string) => {
   return year * 100 + month;
 };
 const schema = [
-  breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Projects', url: '/all-projects' }]),
+  breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Projects', url: '/projects' }]),
   {
     '@type': 'ItemList',
-    '@id': `${SITE_URL}/all-projects#list`,
+    '@id': `${SITE_URL}/projects#list`,
     name: 'All projects by Aldy Ardiansyah',
     itemListElement: projects.map((p, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       name: p.name,
-      url: `${SITE_URL}/project/${p.id}`,
+      url: `${SITE_URL}/projects/${p.id}`,
     })),
   },
 ];
@@ -54,7 +54,7 @@ const schema = [
     </div>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="project-grid">
       {projects.map((p) => (
-        <a href={`/project/${p.id}`} data-category={p.category} data-sort-key={sortKey(p.timeline)} class="tilt border-grad group flex flex-col overflow-hidden rounded-2xl">
+        <a href={`/projects/${p.id}`} data-category={p.category} data-sort-key={sortKey(p.timeline)} class="tilt border-grad group flex flex-col overflow-hidden rounded-2xl">
           <div class="relative aspect-video overflow-hidden">
             <img src={p.card_image_src} alt={p.name} loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" style={`view-transition-name: project-${p.id}`} />
             <span class="absolute right-3 top-3 rounded-full border border-emerald-500/40 bg-gray-950/60 px-2.5 py-1 text-xs text-emerald-400 backdrop-blur-sm">{p.category}</span>

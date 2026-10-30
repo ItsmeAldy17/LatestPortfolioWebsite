@@ -1,0 +1,7 @@
+/all-projects /projects 301
+/all-projects/ /projects/ 301
+/project/* /projects/:splat 301
+/all-achievements /achievements 301
+/all-achievements/ /achievements/ 301
+/all-certifications /certifications 301
+/all-certifications/ /certifications/ 301

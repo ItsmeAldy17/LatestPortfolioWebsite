@@ -22,7 +22,7 @@ export default defineConfig({
           ...item,
           lastmod: buildTime,
           changefreq: item.url === `${SITE_URL}/` ? 'weekly' : 'monthly',
-          priority: item.url === `${SITE_URL}/` ? 1.0 : item.url.includes('/project/') ? 0.8 : 0.6,
+          priority: item.url === `${SITE_URL}/` ? 1.0 : item.url.includes('/projects/') ? 0.8 : 0.6,
         };
       },
     }),

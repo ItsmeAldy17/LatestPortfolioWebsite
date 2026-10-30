@@ -1,11 +1,11 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
-import PageHeader from '../components/PageHeader.astro';
-import achievements from '../data/achievements.json';
-import { breadcrumbSchema } from '../lib/schema';
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import achievements from '../../data/achievements.json';
+import { breadcrumbSchema } from '../../lib/schema';
 
 const norm = (p: string) => (p.startsWith('/') ? p : `/${p}`);
-const schema = [breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Achievements', url: '/all-achievements' }])];
+const schema = [breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Achievements', url: '/achievements' }])];
 ---
 
 <PageLayout title="All Achievements" description="Awards and recognition earned by Aldy Ardiansyah across national and international AI, IoT, and innovation competitions." schema={schema}>
@@ -34,7 +34,7 @@ const schema = [breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Achieveme
       ))}
     </div>
 
-    <div class="mt-10"><a href="/all-certifications" class="group inline-flex items-center gap-2 font-display text-gray-200 hover:text-emerald-400">View all certifications <span class="transition-transform group-hover:translate-x-1">→</span></a></div>
+    <div class="mt-10"><a href="/certifications" class="group inline-flex items-center gap-2 font-display text-gray-200 hover:text-emerald-400">View all certifications <span class="transition-transform group-hover:translate-x-1">→</span></a></div>
     <a href="/" class="group mt-12 inline-flex items-center gap-2 font-display text-gray-200 hover:text-emerald-400"><span class="transition-transform group-hover:-translate-x-1">←</span> Back to home</a>
   </div>
 </PageLayout>

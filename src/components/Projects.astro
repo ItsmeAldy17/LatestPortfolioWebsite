@@ -18,7 +18,7 @@ const clip = (s: string, n = 120) => (s.length > n ? s.slice(0, n).trimEnd() + '
 
   <div class="reveal">
     {featured.map((p, i) => (
-      <a href={`/project/${p.id}`} class="work-row group grid grid-cols-[auto_1fr_auto] items-center gap-x-5 gap-y-2 py-7 sm:gap-x-8">
+      <a href={`/projects/${p.id}`} class="work-row group grid grid-cols-[auto_1fr_auto] items-center gap-x-5 gap-y-2 py-7 sm:gap-x-8">
         <span class="font-display text-sm text-blue-400/70">{String(i + 1).padStart(2, '0')}</span>
         <div class="min-w-0">
           <h3 class="work-name font-display text-2xl font-semibold text-white sm:text-3xl">{p.name}</h3>
@@ -39,7 +39,7 @@ const clip = (s: string, n = 120) => (s.length > n ? s.slice(0, n).trimEnd() + '
     ))}
   </div>
 
-  <a href="/all-projects" class="group mt-12 inline-flex items-center gap-2 font-display text-lg text-gray-200 hover:text-blue-300">
+  <a href="/projects" class="group mt-12 inline-flex items-center gap-2 font-display text-lg text-gray-200 hover:text-blue-300">
     View all {projects.length} projects <span class="transition-transform group-hover:translate-x-1">→</span>
   </a>
 </section>
