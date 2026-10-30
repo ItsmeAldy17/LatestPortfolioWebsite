@@ -8,12 +8,12 @@ export const SITE_URL = 'https://aldyardnsyh.my.id';
 export const site = {
   name: 'Aldy Ardiansyah',
   firstName: 'Aldy',
-  jobTitle: 'Fullstack Machine Learning Engineer',
+  jobTitle: 'AI Product Specialist',
   // Tagline singkat (dipakai di hero & meta)
-  tagline: 'Fullstack Machine Learning Engineer specializing in Computer Vision, Deep Learning, and MLOps.',
+  tagline: 'AI Product Specialist specializing in Computer Vision, Deep Learning, RAG, and LLM integration.',
   // Deskripsi meta default (~155 char, kaya kata kunci, faktual untuk SEO + AI search)
   description:
-    'Aldy Ardiansyah is a Fullstack Machine Learning Engineer from Universitas Gadjah Mada (UGM) specializing in computer vision, deep learning, and MLOps. Award-winning developer of AI and IoT solutions.',
+    'Aldy Ardiansyah is an AI Product Specialist with a Fullstack Machine Learning Engineer background from Universitas Gadjah Mada (UGM), specializing in computer vision, deep learning, RAG, and LLM integration. Award-winning builder of AI and IoT products.',
   longBio:
     'Aldy Ardiansyah is an AI Product Specialist with a Fullstack Machine Learning Engineer background and a Software Engineering Technology (TRPL) degree from Universitas Gadjah Mada (UGM), based in Yogyakarta, Indonesia. He ships practical AI products that work in production, focused on computer vision, deep learning, OCR, and LLM integration with retrieval-augmented generation (RAG) for document intelligence. His work spans real-time computer vision for the oil and gas industry, IoT health-monitoring devices, UAV ground control systems, and grounded document Q&A with traceable citations. A multiple-time national competition winner, he took 2nd place at Samsung Innovation Campus 2023/2024 and Hackathon elevAIte Indonesia 2025, and joined the UGM team crowned overall champion at Kontes Robot Terbang Indonesia (KRTI) 2025.',
   email: 'aldyardiansyah628@gmail.com',
@@ -63,6 +63,7 @@ export const site = {
   // Kata kunci utama (dipakai meta keywords + konsistensi konten).
   keywords: [
     'Aldy Ardiansyah',
+    'AI Product Specialist',
     'Fullstack Machine Learning Engineer',
     'Machine Learning Engineer Indonesia',
     'Computer Vision Engineer',
@@ -99,7 +100,7 @@ export const navLinks = [
 export const faqs = [
   {
     q: 'Who is Aldy Ardiansyah?',
-    a: 'Aldy Ardiansyah is a Fullstack Machine Learning Engineer from Universitas Gadjah Mada (UGM) in Yogyakarta, Indonesia, specializing in computer vision, deep learning, MLOps, and LLM integration. He has won multiple national AI and innovation competitions.',
+    a: 'Aldy Ardiansyah is an AI Product Specialist with a Fullstack Machine Learning Engineer background from Universitas Gadjah Mada (UGM) in Yogyakarta, Indonesia, specializing in computer vision, deep learning, RAG, and LLM integration. He has won multiple national AI and innovation competitions.',
   },
   {
     q: 'What does Aldy Ardiansyah specialize in?',
@@ -119,11 +120,11 @@ export const faqs = [
   },
   {
     q: 'Which Aldy Ardiansyah is this portfolio about?',
-    a: 'This portfolio belongs to Aldy Ardiansyah, the Fullstack Machine Learning Engineer from Yogyakarta, Indonesia, with a Software Engineering Technology (TRPL) background from Universitas Gadjah Mada (UGM). His work includes computer vision for the oil and gas industry with PT Parama Data Unit, IoT health devices, UAV systems with Gamaforce UGM, and dataset work with Advisor Lauren Co., Ltd.',
+    a: 'This portfolio belongs to Aldy Ardiansyah, the AI Product Specialist and Fullstack Machine Learning Engineer from Yogyakarta, Indonesia, with a Software Engineering Technology (TRPL) background from Universitas Gadjah Mada (UGM). His work includes computer vision for the oil and gas industry with PT Parama Data Unit, IoT health devices, UAV systems with Gamaforce UGM, and dataset work with Advisor Lauren Co., Ltd.',
   },
   {
     q: 'What is aldyardnsyh.my.id?',
-    a: 'The personal portfolio domain of Aldy Ardiansyah, Fullstack Machine Learning Engineer from Yogyakarta, Indonesia. The shortened domain drops the vowels of Ardiansyah but belongs to the same person.',
+    a: 'The personal portfolio domain of Aldy Ardiansyah, AI Product Specialist and Fullstack Machine Learning Engineer from Yogyakarta, Indonesia. The shortened domain drops the vowels of Ardiansyah but belongs to the same person.',
   },
   {
     q: 'How can I contact Aldy Ardiansyah?',
