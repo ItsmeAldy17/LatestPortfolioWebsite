@@ -979,7 +979,7 @@
     "timeline": "September - October 2026",
     "status": "Done",
     "github_link": "https://github.com/aldyardnsyh/smart-document-scanner",
-    "demo_link": "https://smart-document-scanner-production.up.railway.app/",
+    "demo_link": "https://smart-document-scanner-indol.vercel.app/",
     "card_image_src": "/images/portofolio/ml/ocr/Cover-Smart-Document-Scanner.webp",
     "category": "ML",
     "overview": "Production-ready scanning pipeline: detects a card or document in a photograph, corrects its perspective, enhances legibility, reads it with a neural OCR engine (RapidOCR / PP-OCRv6 on ONNX Runtime), and emits structured JSON where every field carries a confidence and the rule that produced it. The same Dockerfile runs locally, in Compose, and on Railway.",
