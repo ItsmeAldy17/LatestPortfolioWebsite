@@ -3,10 +3,14 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import projectsRaw from '../../data/project_details.json';
 import { orderedProjects } from '../../lib/projects';
+import { techStack } from '../../lib/tech-icons';
 import { breadcrumbSchema } from '../../lib/schema';
 import { SITE_URL } from '../../config/site';
 
 const projects = orderedProjects(projectsRaw);
+// Five marks on the card, the rest stays in the detail page.
+const CARD_STACK = 5;
+const stacks = new Map(projects.map((p) => [p.id, techStack(p.technologies_grouped)]));
 const CATEGORY_ORDER = ['ML', 'Web', 'IoT', 'DE', 'Mobile', 'PM', 'QA'];
 const categories = CATEGORY_ORDER.filter((c) => projects.some((p) => p.category === c));
 const monthIdx: Record<string, number> = { january: 1, february: 2, march: 3, april: 4, may: 5, june: 6, july: 7, august: 8, september: 9, october: 10, november: 11, december: 12, jan: 1, feb: 2, mar: 3, apr: 4, jun: 6, jul: 7, aug: 8, sep: 9, sept: 9, oct: 10, nov: 11, dec: 12 };
@@ -64,6 +68,20 @@ const schema = [
             <h2 class="font-display text-xl font-semibold text-gray-100 transition-colors group-hover:text-neon">{p.name}</h2>
             <p class="mt-1 text-sm text-neon">{p.role}</p>
             <p class="mt-3 line-clamp-3 flex-1 text-sm leading-relaxed text-gray-400">{p.overview}</p>
+            <div class="mt-4 flex flex-wrap items-center gap-1.5">
+              {(stacks.get(p.id) ?? []).slice(0, CARD_STACK).map((t) => (
+                <span class="tech-chip" title={t.label}>
+                  {t.icon
+                    ? <img src={t.icon} alt={t.label} width="14" height="14" loading="lazy" decoding="async" />
+                    : <span class="tech-badge__mono" aria-hidden="true">{t.mono}</span>}
+                </span>
+              ))}
+              {(stacks.get(p.id) ?? []).length > CARD_STACK && (
+                <span class="tech-chip tech-chip--more" title={`${(stacks.get(p.id) ?? []).length - CARD_STACK} more tools in the project detail`}>
+                  +{(stacks.get(p.id) ?? []).length - CARD_STACK}
+                </span>
+              )}
+            </div>
             <span class="mt-5 inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-emerald-400">
               View project <span class="transition-transform group-hover:translate-x-1">→</span>
             </span>

@@ -214,6 +214,33 @@ body::after {
 .magnetic { transition: transform .25s cubic-bezier(.22,1,.36,1); will-change: transform; }
 .tilt { transform-style: preserve-3d; transition: transform .3s cubic-bezier(.22,1,.36,1); will-change: transform; }
 
+/* ---- Tech badges: the stack documentation on project pages ---- */
+.tech-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  border: 1px solid rgba(120, 180, 255, 0.16);
+  background: rgba(79, 227, 255, 0.04);
+  border-radius: 0.55rem;
+  padding: 0.35rem 0.65rem 0.35rem 0.5rem;
+  font-size: 0.8125rem; line-height: 1.2; color: #c3cfe6;
+}
+.tech-badge img { width: 17px; height: 17px; object-fit: contain; flex-shrink: 0; }
+/* Monogram stands in when no real brand mark ships for that tool. */
+.tech-badge__mono {
+  display: inline-grid; place-items: center; flex-shrink: 0;
+  width: 17px; height: 17px; border-radius: 0.3rem;
+  background: rgba(120, 180, 255, 0.16); color: #a8bcd8;
+  font-family: 'Sora', sans-serif; font-size: 0.58rem; font-weight: 700;
+  letter-spacing: 0;
+}
+.tech-chip {
+  display: inline-grid; place-items: center;
+  width: 26px; height: 26px; border-radius: 0.5rem;
+  border: 1px solid rgba(120, 180, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+}
+.tech-chip img { width: 14px; height: 14px; object-fit: contain; }
+.tech-chip--more { font-size: 0.68rem; color: #8f9db4; }
+
 /* ---- Article prose ---- */
 .prose-lux { color: #c3cfe6; }
 .prose-lux > p { margin-top: 1.5rem; font-size: 1.15rem; line-height: 1.85; }

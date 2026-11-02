@@ -3,6 +3,7 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import projects from '../../data/project_details.json';
 import { orderedProjects } from '../../lib/projects';
+import { techMeta } from '../../lib/tech-icons';
 import { breadcrumbSchema } from '../../lib/schema';
 import { absoluteUrl, SITE_URL } from '../../config/site';
 
@@ -16,8 +17,8 @@ const related = [
   ...orderedProjects().filter((x) => x.id !== p.id && x.category !== p.category),
 ].slice(0, 2);
 const isLink = (v: string) => typeof v === 'string' && v.startsWith('http');
-const stats = Object.entries(p.statistics / {});
-const techGroups = Object.entries(p.technologies_grouped / {});
+const stats = Object.entries(p.statistics ?? {});
+const techGroups = Object.entries(p.technologies_grouped ?? {});
 
 const buildDate = new Date().toISOString();
 
@@ -113,15 +114,27 @@ const sections = [
     {techGroups.length > 0 && (
       <section class="reveal mt-20 grid gap-6 md:grid-cols-12">
         <h2 class="eyebrow md:col-span-3 md:pt-2">Technologies</h2>
-        <div class="space-y-5 md:col-span-9">
+        <div class="space-y-6 md:col-span-9">
           {techGroups.map(([group, techs]) => (
             <div>
-              <p class="mb-2 text-sm font-semibold text-gray-300">{group}</p>
-              <div class="flex flex-wrap gap-2">
-                {(techs as string[]).map((t) => (
-                  <span class="rounded-full border border-white/10 px-3 py-1.5 text-sm text-gray-300">{t}</span>
-                ))}
-              </div>
+              <p class="mb-3 font-display text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">{group}</p>
+              <ul class="flex flex-wrap gap-2" role="list">
+                {(techs as string[]).map((t) => {
+                  const meta = techMeta(t);
+                  return (
+                    <li>
+                      <span class="tech-badge">
+                        {meta.icon ? (
+                          <img src={meta.icon} alt="" width="17" height="17" loading="lazy" decoding="async" />
+                        ) : (
+                          <span class="tech-badge__mono" aria-hidden="true">{meta.mono}</span>
+                        )}
+                        <span>{meta.label}</span>
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           ))}
         </div>
@@ -165,7 +178,7 @@ const sections = [
     )}
 
     <a href="/projects" class="group mt-8 inline-flex items-center gap-2 font-display text-gray-200 hover:text-emerald-400">
-      <span class="transition-transform group-hover:-translate-x-1">/?</span> Back to all projects
+      <span class="transition-transform group-hover:-translate-x-1" aria-hidden="true">&larr;</span> Back to all projects
     </a>
   </div>
 </PageLayout>

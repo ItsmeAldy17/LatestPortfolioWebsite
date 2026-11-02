@@ -11,7 +11,7 @@ export function getStaticPaths() {
 
 const { h } = Astro.props;
 const url = `${SITE_URL}/highlights/${h.slug}`;
-const ogImage = h.coverImage / site.ogImage;
+const ogImage = h.coverImage ?? site.ogImage;
 
 const schema = [
   {
